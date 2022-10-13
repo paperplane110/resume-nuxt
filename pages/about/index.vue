@@ -142,5 +142,3 @@ const uobLink = 'https://en.wikipedia.org/wiki/University_of_Bristol'
 const scutLink =
     'https://zh.wikipedia.org/wiki/%E5%8D%8E%E5%8D%97%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6'
 </script>
-
-  
