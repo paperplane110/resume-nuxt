@@ -14,6 +14,7 @@
             <Text h3>h3: This is a h3 text.</Text>
             <Text h4>h4: This is a h4 text.</Text>
             <Text p>p: This is a <code>p</code> text.</Text>
+            <Text sm>sm: This is a <code>sm</code> text.</Text>
             <Text p>b: This is a <b>bolded</b> text.</Text>
             <Text p>em: This is a <em>emphasized</em> text.</Text>
         </section>
@@ -48,6 +49,12 @@
                     <Text class="text-gray-400">Card footer</Text>
                 </template>
             </Card>
+            <br />
+            <div
+                class="p-1.5rem h-300px w-250px bg-gray-100 rounded-1rem transition-all duration-300 hover:shadow-lg test">
+                <Text class="text-gray-400" sm>TO EXPORE</Text>
+                <Text h4 class="text-white">Find the breathtaking scene in nature</Text>
+            </div>
         </section>
         <section>
             <Text h3 code>NavBar</Text>
@@ -89,5 +96,12 @@ const NextUILink = 'https://nextui.org/docs/components/text'
 <style>
 section {
     margin-bottom: 2rem;
+}
+
+.test {
+    background-image: url(/img/iceberg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
 }
 </style>

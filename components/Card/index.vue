@@ -1,5 +1,5 @@
 <template>
-    <div class="p-1.5rem bg-gray-100 rounded-1rem transition-all duration-300 hover:shadow-lg">
+    <div class="px-6 py-2 bg-gray-100 rounded-1rem transition-all duration-300 hover:shadow-lg">
         <div class="card-header">
             <slot name="header">header</slot>
         </div>
