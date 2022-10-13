@@ -1,51 +1,54 @@
 <template>
-    <span :class="styleList">
-        <slot></slot>
-    </span>
+  <span :class="styleList">
+    <slot></slot>
+  </span>
 </template>
-  
+
 <script setup lang="ts">
 import { computed } from '@vue/reactivity'
 
 type Props = {
-    h1?: boolean
-    h2?: boolean
-    h3?: boolean
-    h4?: boolean
-    sm?: boolean
-    em?: boolean
-    b?: boolean
-    p?: boolean
-    code?: boolean
-    title?: boolean
-    size?: string | number
-    weight?: string | number
-    gradient?: boolean
+  h1?: boolean
+  h2?: boolean
+  h3?: boolean
+  h4?: boolean
+  base?: boolean
+  sm?: boolean
+  p?: boolean
+  em?: boolean
+  b?: boolean
+  code?: boolean
+  title?: boolean
+  size?: string | number
+  weight?: string | number
+  gradient?: boolean
 }
 
 const props = defineProps<Props>()
 
 const styleList = computed(() => {
-    const list: string[] = []
-    if (props.h1) {
-        list.push('h1')
-    } else if (props.h2) {
-        list.push('h2')
-    } else if (props.h3) {
-        list.push('h3')
-    } else if (props.h4) {
-        list.push('h4')
-    } else if (props.sm) {
-        list.push('sm')
-    } else {
-        list.push('p')
-    }
-    if (props.code) list.push('code')
-    if (props.title) list.push('title')
-    if (props.em) list.push('em')
-    if (props.b) list.push('b')
-    if (props.gradient) list.push('gradient')
-    return list
+  const list: string[] = []
+  if (props.h1) {
+    list.push('h1')
+  } else if (props.h2) {
+    list.push('h2')
+  } else if (props.h3) {
+    list.push('h3')
+  } else if (props.h4) {
+    list.push('h4')
+  } else if (props.base) {
+    list.push('base')
+  } else if (props.sm) {
+    list.push('sm')
+  } else {
+    list.push('p')
+  }
+  if (props.code) list.push('code')
+  if (props.title) list.push('title')
+  if (props.em) list.push('em')
+  if (props.b) list.push('b')
+  if (props.gradient) list.push('gradient')
+  return list
 })
 
 // const textGradient = computed(() => {
@@ -63,65 +66,71 @@ const styleList = computed(() => {
 
 console.log()
 </script>
-  
+
 <style scope>
 span {
-    display: block;
+  display: block;
 }
 
 span::selection {
-    @apply text-white bg-gray-500;
+  @apply text-white bg-gray-500;
 }
 
 .h1 {
-    @apply text-5xl my-2.65rem font-semibold;
+  @apply text-5xl my-2.65rem font-semibold;
 }
 
 .h2 {
-    @apply text-4xl my-1.25rem font-medium;
+  @apply text-4xl my-1.25rem font-medium;
 }
 
 .h3 {
-    @apply text-3xl my-1.2rem font-medium;
+  @apply text-3xl my-1.2rem font-medium;
 }
 
 .h4 {
-    @apply text-xl my-2 font-medium;
+  @apply text-xl my-2 font-medium;
 }
 
 .p {
-    @apply text-lg my-2;
+  @apply text-lg my-2;
+}
+
+.base {
+  @apply text-base;
 }
 
 .sm {
-    @apply text-base;
+  @apply text-sm;
 }
 
 span code,
 .code {
-    @apply font-mono font-medium after: content-["`"] before:content-["`"] text-purple-500;
+  @apply font-mono font-medium after: content-["`"] before:content-["`"] text-purple-500;
 }
 
 .title {
-    @apply my-8 font-bold;
+  @apply my-8 font-bold;
 }
 
 span em,
 .em {
-    font-style: italic;
+  font-style: italic;
 }
 
 span b,
 .b {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .gradient {
-    background: -webkit-linear-gradient(45deg,
-            rgb(56, 92, 255) -20%,
-            rgb(194, 96, 255) 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(
+    45deg,
+    rgb(56, 92, 255) -20%,
+    rgb(194, 96, 255) 50%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 </style>
