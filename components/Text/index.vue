@@ -12,6 +12,7 @@ type Props = {
     h2?: boolean
     h3?: boolean
     h4?: boolean
+    sm?: boolean
     em?: boolean
     b?: boolean
     p?: boolean
@@ -34,6 +35,8 @@ const styleList = computed(() => {
         list.push('h3')
     } else if (props.h4) {
         list.push('h4')
+    } else if (props.sm) {
+        list.push('sm')
     } else {
         list.push('p')
     }
@@ -71,33 +74,36 @@ span::selection {
 }
 
 .h1 {
-    @apply text-5xl font-semibold my-4;
+    @apply text-5xl my-2.65rem font-semibold;
 }
 
 .h2 {
-    @apply text-4xl font-medium my-2;
+    @apply text-4xl my-1.25rem font-medium;
 }
 
 .h3 {
-    @apply text-3xl font-medium my-2;
+    @apply text-3xl my-1.2rem font-medium;
 }
 
 .h4 {
-    @apply text-2xl font-medium my-2;
+    @apply text-xl my-2 font-medium;
 }
 
 .p {
-    @apply text-lg;
+    @apply text-lg my-2;
+}
+
+.sm {
+    @apply text-base;
 }
 
 span code,
 .code {
-    @apply font-mono font-normal after: content-["`"] before:content-["`"] text-purple-400;
-
+    @apply font-mono font-medium after: content-["`"] before:content-["`"] text-purple-500;
 }
 
 .title {
-    @apply my-8;
+    @apply my-8 font-bold;
 }
 
 span em,

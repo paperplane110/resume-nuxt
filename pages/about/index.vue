@@ -1,19 +1,19 @@
 <template>
-    <div class="aboutMe">
+    <div class="w-screen-lg px-4">
         <div style="display: flex; align-items: center; justify-content: space-between">
             <Text h1>
                 {{ title }}
             </Text>
-            <router-link to="/zh/cv">
+            <NuxtLink to="/about/zh">
                 <font-awesome-icon class="lang-icon" icon="fa-solid fa-language" size="2x" />
-            </router-link>
+            </NuxtLink>
         </div>
 
         <section>
-            <Text h2>
+            <Text h3>
                 <font-awesome-icon icon="fa-solid fa-smile" /> About me
             </Text>
-            <Text h3 em> Hi! I'm Tianyu 👋 </Text>
+            <Text p em> Hi! I'm Tianyu 👋 </Text>
             <Text>
                 I'm currently doing algorithm testing at
                 <ColorLink type="warning" href="https://www.aibee.cn/">Aibee 🐝</ColorLink>
@@ -23,104 +23,98 @@
         </section>
 
         <section>
-            <Text h2>
+            <Text h3>
                 <font-awesome-icon icon="fa-solid fa-bolt" />
                 Skills
             </Text>
-            <div class="skills">
-                <div class="skills-card">
-                    <Text h3>Test skills</Text>
-                    <ul>
-                        <li>Basic: Python, Shell, Docker</li>
-                        <li>Automation: Airflow, GitLab-CI</li>
-                        <li>Analysis & Visualization: Numpy, Pandas, Opencv, Plotly</li>
-                    </ul>
-                </div>
-                <div class="skills-card">
-                    <Text h3>Full-Stack</Text>
-                    <ul>
-                        <li>Basic: HTML, CSS, JavaScript</li>
-                        <li>Back-End: Express, MongoDB</li>
-                        <li>Front-End: Vue</li>
-                    </ul>
-                </div>
-                <div class="skills-card">
-                    <Text h3>Others</Text>
-                    <ul>
-                        <li>Language: Chinese(Mother tongue), English(IELTS: 7)</li>
-                        <li>Design: Figma, Blender, CATIA</li>
-                    </ul>
-                </div>
+            <div class="grid grid-cols-3 gap-2">
+                <Card v-for="(skillInfo, idx) in skillList" :key="idx">
+                    <template #header>
+                        <Text h4 b>{{ skillInfo.name }}</Text>
+                    </template>
+                    <template #body>
+                        <Text sm>
+                            <ul class="pl-0">
+                                <li v-for="(s, idx) in skillInfo.contentList" :key="idx">{{s}}</li>
+                            </ul>
+                        </Text>
+                    </template>
+                </Card>
             </div>
         </section>
 
         <section>
-            <h2>
+            <Text h3>
                 <font-awesome-icon icon="fa-solid fa-briefcase" /> Work Experience
-            </h2>
-            <h3>Software Engineer in Algorithm Test</h3>
-            <p>
+            </Text>
+            <Text b>Software Engineer in Algorithm Test</Text>
+            <Text p>
                 2020.4-Current<ColorLink type="warning" href="https://www.aibee.cn/">@Aibee 🐝</ColorLink>
-            </p>
-            <h3>Key Qualifications & Responsibilities</h3>
-            <ul>
-                <li>
-                    Responsible for 5+ models' testing and giving test reports including
-                    badcase analysis and data visualization
-                </li>
+            </Text>
+            <Text h4>Key Qualifications & Responsibilities</Text>
+            <Text>
                 <ul>
-                    <li>Face recognition model</li>
-                    <li>Face anti-spoofing model</li>
-                    <li>Face mask classification model</li>
-                    <li>Body 21-attributes model</li>
-                    <li>Car brand classification model</li>
+                    <li>
+                        Responsible for 5+ models' testing and giving test reports including
+                        badcase analysis and data visualization
+                    </li>
+                    <ul>
+                        <li>Face recognition model</li>
+                        <li>Face anti-spoofing model</li>
+                        <li>Face mask classification model</li>
+                        <li>Body 21-attributes model</li>
+                        <li>Car brand classification model</li>
+                    </ul>
+                    <li>
+                        Liases with algorithm researchers and improve the performance of
+                        models
+                    </li>
+                    <li>
+                        Design, write and debugged dev-tools to automate model test
+                        procedures, and boost the model verification flow
+                    </li>
                 </ul>
-                <li>
-                    Liases with algorithm researchers and improve the performance of
-                    models
-                </li>
-                <li>
-                    Design, write and debugged dev-tools to automate model test
-                    procedures, and boost the model verification flow
-                </li>
-            </ul>
+            </Text>
 
-            <h3>Key Achivements</h3>
-            <ul>
-                <li>
-                    Leading a four people group, developing a data management system
-                    called
-                    <ColorLink type="success">Data Manager</ColorLink>, which helps
-                    testers managing millions of images' data and hundreds of benchmarks.
-                    Increasing dataset management efficiency by 20%.
-                </li>
-                <li>
-                    Cooperating with algorithms researchers, pass the key algorithm
-                    certification:
-                    <ColorLink :href="bctcLink" target="_blank">BCTC face anti-spoofing</ColorLink>certification.
-                </li>
-                <li>
-                    Optimized the face recognition test tools with
-                    <ColorLink type="secondary" :href="faissLink" target="_blank">Faiss</ColorLink>, shortening test
-                    time nearly 4X.
-                </li>
-            </ul>
+            <Text h4>Key Achivements</Text>
+            <Text>
+                <ul>
+                    <li>
+                        Leading a four people group, developing a data management system
+                        called
+                        <ColorLink type="success">Data Manager</ColorLink>, which helps
+                        testers managing millions of images' data and hundreds of benchmarks.
+                        Increasing dataset management efficiency by 20%.
+                    </li>
+                    <li>
+                        Cooperating with algorithms researchers, pass the key algorithm
+                        certification:
+                        <ColorLink :href="bctcLink" target="_blank">BCTC face anti-spoofing</ColorLink>certification.
+                    </li>
+                    <li>
+                        Optimized the face recognition test tools with
+                        <ColorLink type="secondary" :href="faissLink" target="_blank">Faiss</ColorLink>, shortening test
+                        time nearly 4X.
+                    </li>
+                </ul>
+            </Text>
         </section>
 
         <section>
-            <h2>
+            <Text h3>
                 <font-awesome-icon icon="fa-solid fa-graduation-cap" /> Education
-            </h2>
-            <h3>MSc. Robotics</h3>
-            <p>
+            </Text>
+            <Text h4>MSc. Robotics</Text>
+            <Text>
                 2019.10-2020.10
                 <ColorLink :href="uobLink">@University of Bristol </ColorLink>, UK
-            </p>
-            <h3>BSc. Vehicle Engineering</h3>
-            <p>
+            </Text>
+            <br />
+            <Text h4>BSc. Vehicle Engineering</Text>
+            <Text>
                 2015.9-2019.6
                 <ColorLink type="secondary" :href="scutLink">@South China University of Technology </ColorLink>, China
-            </p>
+            </Text>
         </section>
     </div>
 </template>
@@ -141,4 +135,32 @@ const bctcLink = 'https://www.bctest.com/content/32.html'
 const uobLink = 'https://en.wikipedia.org/wiki/University_of_Bristol'
 const scutLink =
     'https://zh.wikipedia.org/wiki/%E5%8D%8E%E5%8D%97%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6'
+
+const skillList = [
+    {
+        name: 'Test skills',
+        contentList: [
+            'Basic: Python, Shell, Docker',
+            'Automation: Airflow, GitLab-CI',
+            'Analysis & Visualization: Numpy, Pandas, Opencv, Plotly'
+        ]
+    },
+    {
+        name: 'Full-Stack',
+        contentList: [
+            'Basic: HTML, CSS, JavaScript',
+            'Back-End: Express, MongoDB',
+            'Front-End: Vue3, Nuxt'
+        ]
+    },
+    {
+        name: 'Others',
+        contentList: [
+            'Language: Chinese(Mother tongue), English(IELTS: 7)',
+            '2D Design: Figma',
+            '3D Design: Blender, CATIA'
+        ]
+    },
+]
+
 </script>

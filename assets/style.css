@@ -6,5 +6,17 @@
 :root {
     font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
     font-size: 16px;
+    line-height: 24px;
     color: #213547;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 1.5rem;
+}
+
+ul ul {
+    list-style-type: circle;
+    padding-left: 1.5rem;
 }
