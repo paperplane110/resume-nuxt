@@ -59,13 +59,13 @@
       <Text h3>
         <font-awesome-icon icon="fa-solid fa-briefcase" /> Work Experience
       </Text>
-      <Text b>Software Engineer in Algorithm Test</Text>
+      <Text h4 b>Software Engineer in Algorithm Test</Text>
       <Text p>
         2020.4-Current<ColorLink type="warning" href="https://www.aibee.cn/"
           >@Aibee 🐝</ColorLink
         >
       </Text>
-      <Text h4>Key Qualifications & Responsibilities</Text>
+      <Text b em>Key Qualifications & Responsibilities</Text>
       <Text>
         <ul>
           <li>
@@ -89,8 +89,7 @@
           </li>
         </ul>
       </Text>
-
-      <Text h4>Key Achivements</Text>
+      <Text b em>Key Achivements</Text>
       <Text>
         <ul>
           <li>
@@ -121,13 +120,13 @@
       <Text h3>
         <font-awesome-icon icon="fa-solid fa-graduation-cap" /> Education
       </Text>
-      <Text h4>MSc. Robotics</Text>
+      <Text h4 b>MSc. Robotics</Text>
       <Text>
         2019.10-2020.10
         <ColorLink :href="uobLink">@University of Bristol </ColorLink>, UK
       </Text>
       <br />
-      <Text h4>BSc. Vehicle Engineering</Text>
+      <Text h4 b>BSc. Vehicle Engineering</Text>
       <Text>
         2015.9-2019.6
         <ColorLink type="secondary" :href="scutLink"

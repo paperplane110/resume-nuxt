@@ -57,13 +57,13 @@
         <font-awesome-icon icon="fa-solid fa-briefcase" />
         工作经历
       </Text>
-      <Text b>算法测试开发工程师</Text>
+      <Text h4 b>算法测试开发工程师</Text>
       <Text>
         2020.4-现在<ColorLink type="warning" href="https://www.aibee.cn/"
           >@Aibee 🐝</ColorLink
         >
       </Text>
-      <Text h4>主要职能与职责</Text>
+      <Text b em>主要职能与职责</Text>
       <Text>
         <ul>
           <li>
@@ -83,7 +83,7 @@
         </ul>
       </Text>
 
-      <Text h4>工作亮点</Text>
+      <Text b em>工作亮点</Text>
       <Text>
         <ul>
           <li>
@@ -118,7 +118,7 @@
       <Text h3>
         <font-awesome-icon icon="fa-solid fa-graduation-cap" /> 教育经历
       </Text>
-      <Text h4>机器人学·硕士</Text>
+      <Text h4 b>机器人学·硕士</Text>
       <Text>
         2019.10-2020.10
         <ColorLink :href="uobLink">@布里斯托大学 </ColorLink>, 英国布里斯托
@@ -127,7 +127,7 @@
         核心课程：图像处理与计算机视觉，人工智能导论，智能信息系统，机器人学导论
       </Text>
       <br />
-      <Text h4>车辆工程·学士</Text>
+      <Text h4 b>车辆工程·学士</Text>
       <Text>
         2015.9-2019.6
         <ColorLink type="secondary" :href="scutLink">@华南理工大学 </ColorLink>,

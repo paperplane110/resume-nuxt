@@ -55,7 +55,10 @@
         </template>
       </Card>
       <br />
-
+      <Text>
+        Additionally, you can also design a fine looking card with image cover.
+      </Text>
+      <br />
       <Card class="h-300px w-250px test">
         <template #header>
           <div class="px-1.5rem pt-5">
@@ -64,16 +67,25 @@
         </template>
         <template #body>
           <div class="px-1.5rem">
-            <Text h4 class="text-white"
-              >Find the breathtaking scene in nature</Text
-            >
+            <Text h4 class="text-white">The breathtaking scene in nature</Text>
           </div>
         </template>
         <template #footer>
           <div
             class="p-1rem backdrop-filter backdrop-blur-md rounded-b-1rem border-t-gray-400 border-t-1"
           >
-            <Text sm class="text-gray-300"> Travel App is available </Text>
+            <div class="flex justify-between items-center">
+              <div>
+                <Text sm class="text-gray-300">Travel App </Text>
+              </div>
+              <div>
+                <button
+                  class="px-2 py-1 bg-teal-200 bg-opacity-40 rounded-16px"
+                >
+                  <Text sm b class="text-teal-400">Download</Text>
+                </button>
+              </div>
+            </div>
           </div>
         </template>
       </Card>

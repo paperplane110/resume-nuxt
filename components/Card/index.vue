@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-gray-100 rounded-1rem flex flex-col transition-all duration-300 hover:shadow-lg"
+    class="bg-gray-100 rounded-1rem flex flex-col transition-all duration-300 hover:shadow-xl"
   >
     <div class="card-header">
       <slot name="header">header</slot>
