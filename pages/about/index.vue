@@ -1,11 +1,12 @@
 <template>
-    <div class="w-screen-lg px-4">
+    <div>
         <div style="display: flex; align-items: center; justify-content: space-between">
             <Text h1>
                 {{ title }}
             </Text>
             <NuxtLink to="/about/zh">
-                <font-awesome-icon class="lang-icon" icon="fa-solid fa-language" size="2x" />
+                <font-awesome-icon class="transition duration-200 hover:(text-indigo-500)" icon="fa-solid fa-language"
+                    size="2x" />
             </NuxtLink>
         </div>
 

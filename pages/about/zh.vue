@@ -1,18 +1,19 @@
 <template>
-    <div class="w-screen-lg px-4">
+    <div>
         <div class="flex items-center justify-between">
             <Text h1>
                 {{ title }}
             </Text>
             <NuxtLink to="/about">
-                <font-awesome-icon class="lang-icon" icon="fa-solid fa-language" size="2x" />
+                <font-awesome-icon class="transition duration-200 hover:(text-indigo-500)" icon="fa-solid fa-language"
+                    size="2x" />
             </NuxtLink>
         </div>
         <section>
             <Text h3>
                 <font-awesome-icon icon="fa-solid fa-smile" /> 自我介绍
             </Text>
-            <Text b> 你好，我叫袁天宇！ </Text>
+            <Text b>你好，我叫袁天宇！</Text>
             <Text>
                 我目前就职于一家叫做
                 <ColorLink type="warning" href="https://www.aibee.cn/">

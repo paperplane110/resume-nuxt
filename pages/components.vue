@@ -1,5 +1,5 @@
 <template>
-    <div class="divide-y w-screen-lg">
+    <div class="divide-y">
         <Text h1>Components.</Text>
         <section>
             <Text h3 title>
@@ -52,6 +52,32 @@
         <section>
             <Text h3 code>NavBar</Text>
             <NavBar />
+        </section>
+        <section>
+            <Text h3 code>Sparkle</Text>
+            <Text>
+                This is <Sparkle>sparking text</Sparkle>. You can use it to wrap some
+                text or img elements. Also, it has some interesting effect, like:
+                <Sparkle rainbow> rainbow sparkles </Sparkle>. You can also choose
+                whatever color you like:
+                <Sparkle color="lightseagreen"> lightseagreen sparkle.</Sparkle>
+            </Text>
+        </section>
+        <section>
+            <Text h3 code>Description</Text>
+            <Text>
+                The <Code>Description</Code> component contains an image and it's
+                description. The corners of the image have been rounded. The image is
+                defined by <Code>src</Code> prop. The description could be defined as a
+                child components.
+            </Text>
+            <Description></Description>
+            <Text>The image and text's order could be reversed when you pass
+                <Code>reverse</Code> props. Additionally, the width proportion of the
+                image and text area can be modified by given number to
+                <Code>textSize</Code> or <Code>imgSize</Code> props.
+            </Text>
+            <Description reverse src="/img/sample2.jpg" textSize="3"></Description>
         </section>
     </div>
 </template>
