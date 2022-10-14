@@ -13,10 +13,9 @@
       </NuxtLink>
     </div>
     <section>
-      <Text h3> <font-awesome-icon icon="fa-solid fa-smile" /> 自我介绍 </Text>
+      <!-- <Text h3> <font-awesome-icon icon="fa-solid fa-smile" /> 自我介绍 </Text> -->
       <Description src="/img/london_selfi.jpeg" :imgSize="2" reverse>
-        <Text h4>你好啊，朋友！</Text>
-        <Text h3 b>欢迎来到我的博客</Text>
+        <Text h3 b>你好啊，朋友！</Text>
         <Text>
           我是<b>袁天宇</b>，是一名算法测试开发工程师，我目前就职于一家叫做
           <ColorLink type="warning" href="https://www.aibee.cn/">

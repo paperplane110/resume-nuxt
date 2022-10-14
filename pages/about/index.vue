@@ -16,17 +16,18 @@
     </div>
 
     <section>
-      <Text h3> <font-awesome-icon icon="fa-solid fa-smile" /> About me </Text>
+      <!-- <Text h3> <font-awesome-icon icon="fa-solid fa-smile" /> About me </Text> -->
       <Description src="/img/london_selfi.jpeg" :imgSize="2" reverse>
         <Text> Hi there!</Text>
         <Text h3 b>I'm Tianyu 👋</Text>
         <Text>
           I'm currently doing algorithm testing at
-          <ColorLink type="warning" href="https://www.aibee.cn/"
-            >Aibee 🐝</ColorLink
-          >
-          to ensure and improve the quality of image algorithms. I'm interested
-          in Full-Stack technology, UI design, 3D arts, and games of course.
+          <ColorLink type="warning" href="https://www.aibee.cn/">
+            Aibee 🐝
+          </ColorLink>
+          to ensure and improve the quality of image algorithms. Recently, I'm
+          interested in Full-Stack technology, UI design, 3D arts, and games of
+          course.
         </Text>
       </Description>
     </section>
