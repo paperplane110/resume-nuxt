@@ -20,10 +20,8 @@
     </section>
     <section>
       <Text h3 title><Code>ColorLink</Code></Text>
-      <Text
-        >The links would be rendered by different color according to its
-        <Code>type</Code> attribute.</Text
-      >
+      <Text>The links would be rendered by different color according to its
+        <Code>type</Code> attribute.</Text>
       <Text>
         <ColorLink type="primary">primary</ColorLink>
         <ColorLink type="secondary">secondary</ColorLink>
@@ -36,10 +34,8 @@
       <Text h3><Code>Card</Code></Text>
       <Text>
         The <code>Card</code> component has three parts: header, body, and
-        footer, which can be separately defined by <code>slot</code> tags. It
-        also has the shadow effect while mouse is hovering over it.
+        footer, which can be separately defined by <code>slot</code> tags.
       </Text>
-      <br />
       <Card class="p-1.5rem">
         <template #header><Text h4>Card header</Text></template>
         <template #body>
@@ -55,40 +51,91 @@
         </template>
       </Card>
       <br />
+
+      <Text>
+        Cards' visual styles can be defined by <code>variant</code> attribute.
+        There are three variants: <code>shadow</code>(default), <code>flat</code>, and <code>bordered</code>
+      </Text>
+      <div class="flex gap-2">
+        <Card class="p-1rem flex-1" variant="shadow">
+          <template #body><Text>This is a <code>shadow</code> card</Text></template>
+        </Card>
+        <Card class="p-1rem flex-1" variant="flat">
+          <template #body><Text>This is a <code>flat</code> card</Text></template>
+        </Card>
+        <Card class="p-1rem flex-1" variant="bordered">
+          <template #body><Text>This is a <code>bordered</code> card</Text></template>
+        </Card>
+      </div>
+      <br />
+
+      <Text>
+        If <code>isHoverable</code> attribute is enabled,
+        the card will have shadow effect while mouse is hovering over it.
+      </Text>
+      <Card class="p-1rem" variant="flat" isHoverable>
+        <template #body><Text>Hover effect enabled</Text></template>
+      </Card>
+      <br />
+
       <Text>
         Additionally, you can also design a fine looking card with image cover.
       </Text>
       <br />
-      <Card class="h-300px w-250px test">
-        <template #header>
-          <div class="px-1.5rem pt-5">
-            <Text class="text-gray-400" sm>TO EXPORE</Text>
-          </div>
-        </template>
-        <template #body>
-          <div class="px-1.5rem">
-            <Text h4 class="text-white">The breathtaking scene in nature</Text>
-          </div>
-        </template>
-        <template #footer>
-          <div
-            class="p-1rem backdrop-filter backdrop-blur-md rounded-b-1rem border-t-gray-400 border-t-1"
-          >
-            <div class="flex justify-between items-center">
-              <div>
-                <Text sm class="text-gray-300">Travel App </Text>
-              </div>
-              <div>
-                <button
-                  class="px-2 py-1 bg-teal-200 bg-opacity-40 rounded-16px"
-                >
-                  <Text sm b class="text-teal-400">Download</Text>
-                </button>
+      <div class="flex gap-4">
+        <Card class="h-300px flex-1 test" variant="flat">
+          <template #header>
+            <div class="px-1.5rem pt-5">
+              <Text class="text-gray-400" sm>TO EXPORE</Text>
+            </div>
+          </template>
+          <template #body>
+            <div class="px-1.5rem">
+              <Text h4 class="text-white">The breathtaking scene in nature</Text>
+            </div>
+          </template>
+          <template #footer>
+            <div class="p-1rem backdrop-filter backdrop-blur-md rounded-b-1rem border-t-gray-400 border-t-1">
+              <div class="flex justify-between items-center">
+                <div>
+                  <Text sm class="text-gray-300">Travel App </Text>
+                </div>
+                <div>
+                  <button class="px-2 py-1 bg-cyan-100 bg-opacity-30 rounded-16px">
+                    <Text sm b class="text-cyan-500">Download</Text>
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        </template>
-      </Card>
+          </template>
+        </Card>
+        <Card class="h-300px flex-[2] test2" variant="flat">
+          <template #header>
+            <div class="px-1.5rem pt-5">
+              <Text class="text-gray-300" sm>DIVE INTO</Text>
+            </div>
+          </template>
+          <template #body>
+            <div class="px-1.5rem">
+              <Text h4 class="text-white">Life is best spent by the sea</Text>
+            </div>
+          </template>
+          <template #footer>
+            <div class="p-1rem backdrop-filter backdrop-blur-md rounded-b-1rem border-t-gray-400 border-t-1">
+              <div class="flex justify-between items-center">
+                <div>
+                  <Text sm class="text-gray-300">Travel App </Text>
+                </div>
+                <div>
+                  <button class="px-2 py-1 bg-cyan-100 bg-opacity-30 rounded-16px">
+                    <Text sm b class="text-sky-700">Download</Text>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </template>
+        </Card>
+      </div>
     </section>
     <section>
       <Text h3 code>NavBar</Text>
@@ -113,8 +160,7 @@
         child components.
       </Text>
       <Description></Description>
-      <Text
-        >The image and text's order could be reversed when you pass
+      <Text>The image and text's order could be reversed when you pass
         <Code>reverse</Code> props. Additionally, the width proportion of the
         image and text area can be modified by given number to
         <Code>textSize</Code> or <Code>imgSize</Code> props.
@@ -136,7 +182,14 @@ section {
 .test {
   background-image: url(/img/iceberg.jpg);
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.test2 {
+  background-image: url(/img/sea.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
 }
 </style>

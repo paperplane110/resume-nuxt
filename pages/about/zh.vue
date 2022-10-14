@@ -5,15 +5,14 @@
         {{ title }}
       </Text>
       <NuxtLink to="/about">
-        <font-awesome-icon
-          class="transition duration-200 hover:(text-indigo-500)"
-          icon="fa-solid fa-language"
-          size="2x"
-        />
+        <font-awesome-icon class="transition duration-200 hover:(text-indigo-500)" icon="fa-solid fa-language"
+          size="2x" />
       </NuxtLink>
     </div>
     <section>
-      <Text h3> <font-awesome-icon icon="fa-solid fa-smile" /> 自我介绍 </Text>
+      <Text h3>
+        <font-awesome-icon icon="fa-solid fa-smile" /> 自我介绍
+      </Text>
       <Text b>你好，我叫袁天宇！</Text>
       <Text>
         我目前就职于一家叫做
@@ -31,11 +30,7 @@
         技能速览
       </Text>
       <div class="grid grid-cols-3 gap-2">
-        <Card
-          class="px-1.25rem py-3"
-          v-for="(skillInfo, idx) in skillList"
-          :key="idx"
-        >
+        <Card class="px-1.25rem py-3" is-hoverable v-for="(skillInfo, idx) in skillList" :key="idx">
           <template #header>
             <Text h4 b>{{ skillInfo.name }}</Text>
           </template>
@@ -59,9 +54,7 @@
       </Text>
       <Text h4 b>算法测试开发工程师</Text>
       <Text>
-        2020.4-现在<ColorLink type="warning" href="https://www.aibee.cn/"
-          >@Aibee 🐝</ColorLink
-        >
+        2020.4-现在<ColorLink type="warning" href="https://www.aibee.cn/">@Aibee 🐝</ColorLink>
       </Text>
       <Text b em>主要职能与职责</Text>
       <Text>
@@ -96,9 +89,7 @@
             与算法工程师紧密合作，在测试中发现并总结人脸活体算法在应对实际场景时所暴露的问题。
             积极协调数据采集团队，为算法训练补充数据。
             并最终通过了金融支付领域的关键认证
-            <ColorLink :href="bctcLink" target="_blank"
-              >BCTC 银联活体认证 </ColorLink
-            >。并进行了团队经验分享。
+            <ColorLink :href="bctcLink" target="_blank">BCTC 银联活体认证 </ColorLink>。并进行了团队经验分享。
           </li>
           <li>
             面对千万级底库人脸识别测试时间过长的问题，主动进行相关资料的搜索和学习，

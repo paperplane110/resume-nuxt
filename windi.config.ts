@@ -16,4 +16,6 @@ export default defineConfig({
       danger: '#e3342f',
     }),
   },
+  shortcuts: {
+  }
 })

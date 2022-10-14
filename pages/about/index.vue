@@ -1,28 +1,23 @@
 <template>
   <div>
-    <div
-      style="display: flex; align-items: center; justify-content: space-between"
-    >
+    <div style="display: flex; align-items: center; justify-content: space-between">
       <Text h1>
         {{ title }}
       </Text>
       <NuxtLink to="/about/zh">
-        <font-awesome-icon
-          class="transition duration-200 hover:(text-indigo-500)"
-          icon="fa-solid fa-language"
-          size="2x"
-        />
+        <font-awesome-icon class="transition duration-200 hover:(text-indigo-500)" icon="fa-solid fa-language"
+          size="2x" />
       </NuxtLink>
     </div>
 
     <section>
-      <Text h3> <font-awesome-icon icon="fa-solid fa-smile" /> About me </Text>
+      <Text h3>
+        <font-awesome-icon icon="fa-solid fa-smile" /> About me
+      </Text>
       <Text p em> Hi! I'm Tianyu 👋 </Text>
       <Text>
         I'm currently doing algorithm testing at
-        <ColorLink type="warning" href="https://www.aibee.cn/"
-          >Aibee 🐝</ColorLink
-        >
+        <ColorLink type="warning" href="https://www.aibee.cn/">Aibee 🐝</ColorLink>
         to ensure and improve the quality of image algorithms. I'm interested in
         Full-Stack technology, UI design, 3D arts, and games of course.
       </Text>
@@ -34,11 +29,7 @@
         Skills
       </Text>
       <div class="grid grid-cols-3 gap-2">
-        <Card
-          class="px-1.25rem py-3"
-          v-for="(skillInfo, idx) in skillList"
-          :key="idx"
-        >
+        <Card class="px-1.25rem py-3" variant="flat" is-hoverable v-for="(skillInfo, idx) in skillList" :key="idx">
           <template #header>
             <Text h4 b>{{ skillInfo.name }}</Text>
           </template>
@@ -61,9 +52,7 @@
       </Text>
       <Text h4 b>Software Engineer in Algorithm Test</Text>
       <Text p>
-        2020.4-Current<ColorLink type="warning" href="https://www.aibee.cn/"
-          >@Aibee 🐝</ColorLink
-        >
+        2020.4-Current<ColorLink type="warning" href="https://www.aibee.cn/">@Aibee 🐝</ColorLink>
       </Text>
       <Text b em>Key Qualifications & Responsibilities</Text>
       <Text>
@@ -102,15 +91,12 @@
           <li>
             Cooperating with algorithms researchers, pass the key algorithm
             certification:
-            <ColorLink :href="bctcLink" target="_blank"
-              >BCTC face anti-spoofing</ColorLink
-            >certification.
+            <ColorLink :href="bctcLink" target="_blank">BCTC face anti-spoofing</ColorLink>certification.
           </li>
           <li>
             Optimized the face recognition test tools with
-            <ColorLink type="secondary" :href="faissLink" target="_blank"
-              >Faiss</ColorLink
-            >, shortening test time nearly 4X.
+            <ColorLink type="secondary" :href="faissLink" target="_blank">Faiss</ColorLink>, shortening test time nearly
+            4X.
           </li>
         </ul>
       </Text>
@@ -129,9 +115,7 @@
       <Text h4 b>BSc. Vehicle Engineering</Text>
       <Text>
         2015.9-2019.6
-        <ColorLink type="secondary" :href="scutLink"
-          >@South China University of Technology </ColorLink
-        >, China
+        <ColorLink type="secondary" :href="scutLink">@South China University of Technology </ColorLink>, China
       </Text>
     </section>
   </div>
