@@ -8,6 +8,7 @@
   
 <script setup lang="ts">
 import { reactive } from 'vue'
+import { getUid } from '../../utils/getUid'
 import SparkleInstance from './SparkleInstance.vue'
 
 type sparklesProps = {
@@ -25,7 +26,7 @@ const DEFAULT_COLOR = 'hsl(50deg, 100%, 50%)'
 
 const generateSparkle = (color = DEFAULT_COLOR) => {
     return {
-        id: String(random(10000, 99999)),
+        id: getUid(),
         createdAt: Date.now(),
         color,
         size: random(10, 20),
