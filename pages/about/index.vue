@@ -17,15 +17,18 @@
 
     <section>
       <Text h3> <font-awesome-icon icon="fa-solid fa-smile" /> About me </Text>
-      <Text p em> Hi! I'm Tianyu 👋 </Text>
-      <Text>
-        I'm currently doing algorithm testing at
-        <ColorLink type="warning" href="https://www.aibee.cn/"
-          >Aibee 🐝</ColorLink
-        >
-        to ensure and improve the quality of image algorithms. I'm interested in
-        Full-Stack technology, UI design, 3D arts, and games of course.
-      </Text>
+      <Description src="/img/london_selfi.jpeg" :imgSize="2" reverse>
+        <Text> Hi there!</Text>
+        <Text h3 b>I'm Tianyu 👋</Text>
+        <Text>
+          I'm currently doing algorithm testing at
+          <ColorLink type="warning" href="https://www.aibee.cn/"
+            >Aibee 🐝</ColorLink
+          >
+          to ensure and improve the quality of image algorithms. I'm interested
+          in Full-Stack technology, UI design, 3D arts, and games of course.
+        </Text>
+      </Description>
     </section>
 
     <section>
@@ -35,7 +38,7 @@
       </Text>
       <div class="grid grid-cols-3 gap-2 <md:grid-cols-1">
         <Card
-          class="px-1.25rem py-3"
+          class="px-1.25rem pt-3 pb-6"
           variant="flat"
           is-hoverable
           v-for="(skillInfo, idx) in skillList"

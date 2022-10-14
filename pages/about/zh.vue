@@ -14,15 +14,18 @@
     </div>
     <section>
       <Text h3> <font-awesome-icon icon="fa-solid fa-smile" /> 自我介绍 </Text>
-      <Text b>你好，我叫袁天宇！</Text>
-      <Text>
-        我目前就职于一家叫做
-        <ColorLink type="warning" href="https://www.aibee.cn/">
-          Aibee 🐝
-        </ColorLink>
-        的人工智能企业，是一名算法测试开发工程师，我主要负责保证算法模型的质量并辅助提升其性能。
-        最近，我对于全栈技术、UI设计、3D美术很感兴趣（当然，同时也是一名忠实的Steam玩家）
-      </Text>
+      <Description src="/img/london_selfi.jpeg" :imgSize="2" reverse>
+        <Text h4>你好啊，朋友！</Text>
+        <Text h3 b>欢迎来到我的博客</Text>
+        <Text>
+          我是<b>袁天宇</b>，是一名算法测试开发工程师，我目前就职于一家叫做
+          <ColorLink type="warning" href="https://www.aibee.cn/">
+            Aibee 🐝
+          </ColorLink>
+          的人工智能企业，我主要负责保证算法模型的质量并辅助提升其性能。
+          最近，我对于全栈技术、UI设计、3D美术很感兴趣（当然，同时也是一名忠实的Steam玩家）
+        </Text>
+      </Description>
     </section>
 
     <section>
@@ -32,7 +35,7 @@
       </Text>
       <div class="grid grid-cols-3 gap-2 <md:grid-cols-1">
         <Card
-          class="px-1.25rem py-3"
+          class="px-1.25rem pt-3 pb-6"
           variant="flat"
           is-hoverable
           v-for="(skillInfo, idx) in skillList"
