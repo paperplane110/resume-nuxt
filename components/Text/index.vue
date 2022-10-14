@@ -78,22 +78,27 @@ span::selection {
 
 .h1 {
   @apply text-5xl my-2.65rem font-semibold;
+  @apply <sm:(text-3xl);
 }
 
 .h2 {
   @apply text-4xl my-1.25rem font-medium;
+  @apply <sm:(text-2xl);
 }
 
 .h3 {
   @apply text-3xl my-1.2rem font-medium;
+  @apply <sm:(text-xl);
 }
 
 .h4 {
   @apply text-xl my-2 font-medium;
+  @apply <sm:(text-lg);
 }
 
 .p {
   @apply text-lg my-2;
+  @apply <md:(text-base);
 }
 
 .base {
@@ -106,7 +111,8 @@ span::selection {
 
 span code,
 .code {
-  @apply font-mono font-medium after: content-["`"] before:content-["`"] text-purple-500;
+  @apply font-medium after: content-["`"] before:content-["`"] text-purple-500;
+  font-family: JetBrainsMono, 'Courier New', Courier, monospace;
 }
 
 .title {
