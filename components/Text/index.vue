@@ -112,7 +112,7 @@ span::selection {
 span code,
 .code {
   @apply font-medium after: content-["`"] before:content-["`"] text-purple-500;
-  font-family: JetBrainsMono, 'Courier New', Courier, monospace;
+  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
 }
 
 .title {

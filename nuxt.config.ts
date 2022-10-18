@@ -21,6 +21,9 @@ export default defineNuxtConfig({
     },
     css: [
         'assets/style.css',
+        '@fontsource/lato',
+        '@fontsource/material-icons',
+        '@fontsource/material-icons-outlined',
         '@fortawesome/fontawesome-svg-core/styles.css'
     ],
     modules: [
