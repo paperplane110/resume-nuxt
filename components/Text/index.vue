@@ -117,7 +117,6 @@ span::selection {
   @apply text-sm;
 }
 
-span code,
 .code {
   @apply font-medium after: content-["`"] before:content-["`"] text-purple-500;
   font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
@@ -146,5 +145,12 @@ span b,
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+</style>
+
+<style>
+span code {
+  @apply font-medium after: content-["`"] before:content-["`"] text-purple-500;
+  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
 }
 </style>

@@ -19,12 +19,21 @@ export default defineComponent({
       default: () => [],
     },
   },
+  computed: {
+    isHeader() {
+      return this.language || this.filename
+    },
+    isRounded() {
+      if (this.language || this.filename) return 'rounded-b-1rem'
+      else return 'rounded-1rem'
+    },
+  },
 })
 </script>
 
 <template>
   <Card class="my-6">
-    <template #header>
+    <template #header v-if="isHeader">
       <div
         class="flex-between px-4 py-2 rounded-t-1rem bg-dark-300 text-gray-300"
       >
@@ -40,7 +49,7 @@ export default defineComponent({
       </div>
     </template>
     <template #body>
-      <div class="px-4 py-2 bg-dark-700 rounded-b-1rem">
+      <div class="px-4 py-2 bg-dark-700" :class="isRounded">
         <slot />
       </div>
     </template>
@@ -48,11 +57,8 @@ export default defineComponent({
 </template>
 
 <style>
-code {
-  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
-}
-
 pre code .line {
+  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
   display: block;
   min-height: 1rem;
   color: rgb(211, 211, 211);
