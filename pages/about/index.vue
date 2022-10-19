@@ -1,17 +1,13 @@
 <template>
   <div>
-    <div
-      style="display: flex; align-items: center; justify-content: space-between"
-    >
+    <div class="flex justify-between items-center">
       <Text h1>
         {{ title }}
       </Text>
       <NuxtLink to="/about/zh">
-        <font-awesome-icon
-          class="transition duration-200 hover:(text-indigo-500)"
-          icon="fa-solid fa-language"
-          size="2x"
-        />
+        <div class="group w-12 h-12 flex-center rounded-1 hover:(shadow-nsm)">
+          <span class="material-icons-outlined transition duration-200 group-hover:(text-blue-800)">translate</span>
+        </div>
       </NuxtLink>
     </div>
 
@@ -38,13 +34,7 @@
         Skills
       </Text>
       <div class="grid grid-cols-3 gap-2 <md:grid-cols-1">
-        <Card
-          class="px-1.25rem pt-3 pb-6"
-          variant="flat"
-          is-hoverable
-          v-for="(skillInfo, idx) in skillList"
-          :key="idx"
-        >
+        <Card class="px-1.25rem pt-3 pb-6" variant="flat" is-hoverable v-for="(skillInfo, idx) in skillList" :key="idx">
           <template #header>
             <Text h4 b>{{ skillInfo.name }}</Text>
           </template>
@@ -67,9 +57,7 @@
       </Text>
       <Text h4 b>Software Engineer in Algorithm Test</Text>
       <Text p>
-        2020.4-Current<ColorLink type="warning" href="https://www.aibee.cn/"
-          >@Aibee 🐝</ColorLink
-        >
+        2020.4-Current<ColorLink type="warning" href="https://www.aibee.cn/">@Aibee 🐝</ColorLink>
       </Text>
       <Text b em>Key Qualifications & Responsibilities</Text>
       <Text>
@@ -108,15 +96,12 @@
           <li>
             Cooperating with algorithms researchers, pass the key algorithm
             certification:
-            <ColorLink :href="bctcLink" target="_blank"
-              >BCTC face anti-spoofing</ColorLink
-            >certification.
+            <ColorLink :href="bctcLink" target="_blank">BCTC face anti-spoofing</ColorLink>certification.
           </li>
           <li>
             Optimized the face recognition test tools with
-            <ColorLink type="secondary" :href="faissLink" target="_blank"
-              >Faiss</ColorLink
-            >, shortening test time nearly 4X.
+            <ColorLink type="secondary" :href="faissLink" target="_blank">Faiss</ColorLink>, shortening test time nearly
+            4X.
           </li>
         </ul>
       </Text>
@@ -135,9 +120,7 @@
       <Text h4 b>BSc. Vehicle Engineering</Text>
       <Text>
         2015.9-2019.6
-        <ColorLink type="secondary" :href="scutLink"
-          >@South China University of Technology </ColorLink
-        >, China
+        <ColorLink type="secondary" :href="scutLink">@South China University of Technology </ColorLink>, China
       </Text>
     </section>
   </div>
