@@ -26,7 +26,8 @@ export default defineConfig({
     }
   },
   shortcuts: {
-    'flex-center': 'flex justify-center items-center'
+    'flex-center': 'flex justify-center items-center',
+    'flex-between': 'flex justify-between items-center',
   },
   plugins: [
     require('windicss/plugin/typography'),

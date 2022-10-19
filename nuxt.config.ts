@@ -34,7 +34,7 @@ export default defineNuxtConfig({
   content: {
     // https://content.nuxtjs.org/api/configuration
     highlight: {
-      theme: 'github-light',
+      theme: 'github-dark',
       preload: [
         'c',
         'cpp',
