@@ -48,6 +48,10 @@ export default defineComponent({
 </template>
 
 <style>
+code {
+  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
+}
+
 pre code .line {
   display: block;
   min-height: 1rem;
