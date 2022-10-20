@@ -1,14 +1,22 @@
 <template>
   <div class="divide-y w-full">
-    <Text h1>Components.</Text>
+    <div>
+      <br />
+      <Text hero>Components.</Text>
+      <Text>
+        The DIY components used in this website,
+        inspired by <ColorLink :href="NextUILink">Next UI</ColorLink>.
+      </Text>
+      <br />
+    </div>
     <section>
       <Text h3 title>
         <code>Text</code>
       </Text>
       <Text p>
-        Rich text with well-defined typographic styles, inspired by
-        <ColorLink :href="NextUILink">Next UI</ColorLink>.
+        Rich text with well-defined typographic styles.
       </Text>
+      <Text hero>This is a <em>hero</em> text.</Text>
       <Text h1>h1: This is a h1 text.</Text>
       <Text h2>h2: This is a h2 text.</Text>
       <Text h3>h3: This is a h3 text.</Text>
@@ -20,10 +28,8 @@
     </section>
     <section>
       <Text h3 title><Code>ColorLink</Code></Text>
-      <Text
-        >The links would be rendered by different color according to its
-        <Code>type</Code> attribute.</Text
-      >
+      <Text>The links would be rendered by different color according to its
+        <Code>type</Code> attribute.</Text>
       <Text>
         <ColorLink type="primary">primary</ColorLink>
         <ColorLink type="secondary">secondary</ColorLink>
@@ -61,19 +67,13 @@
       </Text>
       <div class="flex gap-2 <sm:flex-col">
         <Card class="p-1rem flex-1" variant="shadow">
-          <template #body
-            ><Text>This is a <code>shadow</code> card</Text></template
-          >
+          <template #body><Text>This is a <code>shadow</code> card</Text></template>
         </Card>
         <Card class="p-1rem flex-1" variant="flat">
-          <template #body
-            ><Text>This is a <code>flat</code> card</Text></template
-          >
+          <template #body><Text>This is a <code>flat</code> card</Text></template>
         </Card>
         <Card class="p-1rem flex-1" variant="bordered">
-          <template #body
-            ><Text>This is a <code>bordered</code> card</Text></template
-          >
+          <template #body><Text>This is a <code>bordered</code> card</Text></template>
         </Card>
       </div>
       <br />
@@ -100,23 +100,17 @@
           </template>
           <template #body>
             <div class="px-1.5rem">
-              <Text h4 class="text-white"
-                >The breathtaking scene in nature</Text
-              >
+              <Text h4 class="text-white">The breathtaking scene in nature</Text>
             </div>
           </template>
           <template #footer>
-            <div
-              class="p-1rem backdrop-filter backdrop-blur-md rounded-b-1rem border-t-gray-400 border-t-1"
-            >
+            <div class="p-1rem backdrop-filter backdrop-blur-md rounded-b-1rem border-t-gray-400 border-t-1">
               <div class="flex justify-between items-center">
                 <div>
                   <Text sm class="text-gray-300">Travel App </Text>
                 </div>
                 <div>
-                  <button
-                    class="px-2 py-1 bg-cyan-100 bg-opacity-30 rounded-16px"
-                  >
+                  <button class="px-2 py-1 bg-cyan-100 bg-opacity-30 rounded-16px">
                     <Text sm b class="text-cyan-500">Download</Text>
                   </button>
                 </div>
@@ -136,17 +130,13 @@
             </div>
           </template>
           <template #footer>
-            <div
-              class="p-1rem backdrop-filter backdrop-blur-md rounded-b-1rem border-t-gray-400 border-t-1"
-            >
+            <div class="p-1rem backdrop-filter backdrop-blur-md rounded-b-1rem border-t-gray-400 border-t-1">
               <div class="flex justify-between items-center">
                 <div>
                   <Text sm class="text-gray-300">Travel App </Text>
                 </div>
                 <div>
-                  <button
-                    class="px-2 py-1 bg-cyan-100 bg-opacity-30 rounded-16px"
-                  >
+                  <button class="px-2 py-1 bg-cyan-100 bg-opacity-30 rounded-16px">
                     <Text sm b class="text-sky-700">Download</Text>
                   </button>
                 </div>
@@ -158,6 +148,8 @@
     </section>
     <section>
       <Text h3 code>NavBar</Text>
+      <NavBarV1 />
+      <br />
       <NavBar />
     </section>
     <section>
@@ -179,8 +171,7 @@
         child components.
       </Text>
       <Description></Description>
-      <Text
-        >The image and text's order could be reversed when you pass
+      <Text>The image and text's order could be reversed when you pass
         <Code>reverse</Code> props. Additionally, the width proportion of the
         image and text area can be modified by given number to
         <Code>textSize</Code> or <Code>imgSize</Code> props.

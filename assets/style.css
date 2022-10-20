@@ -1,46 +1,43 @@
 @font-face {
-    font-family: "Tengel";
-    src: url("/fonts/tengel__.ttf");
-}
-
-@font-face {
-    font-family: "JetBrainsMono";
-    src: url("/fonts/JetBrainsMono-Regular.ttf");
-}
-
-@font-face {
-    font-family: "JetBrainsMono";
-    src: url("/fonts/JetBrainsMono-Bold.ttf");
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: "JetBrainsMono";
-    src: url("/fonts/JetBrainsMono-Italic.ttf");
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "JetBrainsMono";
-    src: url("/fonts/JetBrainsMono-BoldItalic.ttf");
-    font-weight: bold;
-    font-style: italic;
+  font-family: "Tengel";
+  src: url("/fonts/tengel__.ttf");
 }
 
 :root {
-    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    color: #213547;
+  font-family: Avenir, Lato, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #213547;
 }
 
+h2 {
+  @apply text-4xl my-1.25rem font-medium;
+  @apply <sm: (text-2xl);
+}
+
+h3 {
+  @apply text-3xl my-1.2rem font-medium;
+  @apply <sm: (text-xl);
+}
+
+h4 {
+  @apply text-xl my-2 font-medium;
+  @apply <sm: (text-lg);
+}
+
+p {
+  @apply text-lg my-2;
+  @apply <md: (text-base);
+}
+
+
 ul {
-    list-style-type: disc;
-    list-style-position: inside;
-    padding-left: 1.5rem;
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 1.5rem;
 }
 
 ul ul {
-    list-style-type: circle;
-    padding-left: 1.5rem;
+  list-style-type: circle;
+  padding-left: 1.5rem;
 }

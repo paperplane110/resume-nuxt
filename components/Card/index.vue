@@ -34,18 +34,10 @@ const styleList = computed(() => {
   } else if (props.variant === 'bordered') {
     styles.push('border')
   } else {
-    styles.push('shadow')
+    styles.push('shadow-nsm')
   }
   if (props.isHoverable) styles.push('hover:(shadow-xl -translate-y-2px)')
   return styles
 })
 
 </script>
-
-<style>
-.shadow {
-  box-shadow: 0 2px 8px 2px rgb(104 112 118 / 0.1), 0 2px 4px -1px rgb(104 112 118 / 0.04);
-  /* box-shadow: 0 12px 20px 6px rgb(104 112 118 / 0.08); */
-  /* box-shadow: 0 12px 34px 6px rgb(104 112 118 / 0.18); */
-}
-</style>

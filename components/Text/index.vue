@@ -8,6 +8,7 @@
 import { computed } from '@vue/reactivity'
 
 type Props = {
+  hero?: boolean
   h1?: boolean
   h2?: boolean
   h3?: boolean
@@ -28,7 +29,9 @@ const props = defineProps<Props>()
 
 const styleList = computed(() => {
   const list: string[] = []
-  if (props.h1) {
+  if (props.hero) {
+    list.push('hero')
+  } else if (props.h1) {
     list.push('h1')
   } else if (props.h2) {
     list.push('h2')
@@ -67,7 +70,7 @@ const styleList = computed(() => {
 console.log()
 </script>
 
-<style scope>
+<style scoped>
 span {
   display: block;
 }
@@ -76,29 +79,34 @@ span::selection {
   @apply text-white bg-gray-500;
 }
 
+.hero {
+  @apply !text-7xl !my-3rem !font-light;
+  @apply <sm: ( !text-5xl);
+}
+
 .h1 {
   @apply text-5xl my-2.65rem font-semibold;
-  @apply <sm:(text-3xl);
+  @apply <sm: (text-3xl);
 }
 
 .h2 {
   @apply text-4xl my-1.25rem font-medium;
-  @apply <sm:(text-2xl);
+  @apply <sm: (text-2xl);
 }
 
 .h3 {
   @apply text-3xl my-1.2rem font-medium;
-  @apply <sm:(text-xl);
+  @apply <sm: (text-xl);
 }
 
 .h4 {
   @apply text-xl my-2 font-medium;
-  @apply <sm:(text-lg);
+  @apply <sm: (text-lg);
 }
 
 .p {
   @apply text-lg my-2;
-  @apply <md:(text-base);
+  @apply <md: (text-base);
 }
 
 .base {
@@ -109,10 +117,9 @@ span::selection {
   @apply text-sm;
 }
 
-span code,
 .code {
   @apply font-medium after: content-["`"] before:content-["`"] text-purple-500;
-  font-family: JetBrainsMono, 'Courier New', Courier, monospace;
+  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
 }
 
 .title {
@@ -130,13 +137,18 @@ span b,
 }
 
 .gradient {
-  background: -webkit-linear-gradient(
-    45deg,
-    rgb(56, 92, 255) -20%,
-    rgb(194, 96, 255) 50%
-  );
+  background: -webkit-linear-gradient(45deg,
+      rgb(56, 92, 255) -20%,
+      rgb(194, 96, 255) 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+</style>
+
+<style>
+span code {
+  @apply font-medium after: content-["`"] before:content-["`"] text-purple-500;
+  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
 }
 </style>
