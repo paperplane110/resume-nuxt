@@ -80,8 +80,8 @@ span::selection {
 }
 
 .hero {
-  @apply text-7xl my-3rem font-light;
-  @apply <sm: (text-5xl);
+  @apply !text-7xl !my-3rem !font-light;
+  @apply <sm: ( !text-5xl);
 }
 
 .h1 {
@@ -137,11 +137,9 @@ span b,
 }
 
 .gradient {
-  background: -webkit-linear-gradient(
-    45deg,
-    rgb(56, 92, 255) -20%,
-    rgb(194, 96, 255) 50%
-  );
+  background: -webkit-linear-gradient(45deg,
+      rgb(56, 92, 255) -20%,
+      rgb(194, 96, 255) 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

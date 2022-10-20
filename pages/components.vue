@@ -148,9 +148,9 @@
     </section>
     <section>
       <Text h3 code>NavBar</Text>
-      <NavBar />
+      <NavBarV1 />
       <br />
-      <NavBarB />
+      <NavBar />
     </section>
     <section>
       <Text h3 code>Sparkle</Text>
