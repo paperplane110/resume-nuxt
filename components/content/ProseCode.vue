@@ -34,9 +34,7 @@ export default defineComponent({
 <template>
   <Card class="my-6">
     <template #header v-if="isHeader">
-      <div
-        class="flex-between px-4 py-2 rounded-t-1rem bg-dark-300 text-gray-300"
-      >
+      <div class="flex-between px-4 py-2 rounded-t-1rem bg-dark-300 text-gray-300">
         <div class="flex items-center gap-2 flex-1">
           <div class="w-3 h-3 rounded-1 bg-red-500"></div>
           <div class="w-3 h-3 rounded-1 bg-yellow-500"></div>
@@ -49,7 +47,7 @@ export default defineComponent({
       </div>
     </template>
     <template #body>
-      <div class="px-4 py-2 bg-dark-700" :class="isRounded">
+      <div class="px-4 py-2 bg-dark-700 overflow-auto" :class="isRounded">
         <slot />
       </div>
     </template>
