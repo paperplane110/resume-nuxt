@@ -15,9 +15,9 @@
     </NuxtLink>
     <div id="links" class="flex gap-4 px-3">
       <NavItemB icon="science" to="/projects" :activated="routeActivated" />
-      <NavItemB icon="description" to="/post" :activated="routeActivated" />
+      <NavItemB icon="description" to="/article" :activated="routeActivated" />
       <NavItemB icon="camera" to="/gallery" :activated="routeActivated" />
-      <NavItemB icon="interests" to="/components" :activated="routeActivated"></NavItemB>
+      <NavItemB icon="interests" to="/components" :activated="routeActivated" />
     </div>
     <div id="links" class="flex gap-4 pl-3">
       <NavItemB icon="emoji_people" to="/about" :activated="routeActivated" />
