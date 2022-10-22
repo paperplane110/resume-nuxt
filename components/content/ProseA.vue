@@ -13,7 +13,7 @@ defineProps({
 
 <template>
   <NuxtLink :href="href"
-    class="text-indigo-500 inline-block px-0.3rem rounded-1rem transition-all transform hover:(text-white -translate-y-2px cursor-pointer bg-indigo-500)">
+    class="text-indigo-500 inline-block px-0.3rem rounded-1rem transition-all hover:(text-white cursor-pointer bg-indigo-500)">
     <slot />
   </NuxtLink>
 </template>

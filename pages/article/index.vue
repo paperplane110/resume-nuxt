@@ -11,7 +11,9 @@
           </div>
           <div class="px-4 pb-4">
             <Text h3>{{ article.title }}</Text>
+            <Text class="text-gray-500">{{ article.date }}</Text>
             <Text>{{ article.description }}</Text>
+
           </div>
         </div>
       </NuxtLink>
