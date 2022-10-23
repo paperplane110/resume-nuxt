@@ -1,21 +1,15 @@
 <template>
   <div class="flex-between pt-8 pb-6 border-t-gray-200">
-    <NuxtLink v-if="prev" :to="prev._path">
+    <NuxtLink :to="prev?prev._path:'/article'">
       <PrevNextButton type="prev">
-        {{ prev.title }}
+        {{ prev?prev.title:'Back to Article' }}
       </PrevNextButton>
-    </NuxtLink>
-    <NuxtLink v-else to="/article">
-      Back to Article
     </NuxtLink>
 
-    <NuxtLink v-if="next" :to="next._path">
+    <NuxtLink :to="next?next._path:'/article'">
       <PrevNextButton type="next">
-        {{ next.title }}
+        {{ next?next.title:'Back to Article' }}
       </PrevNextButton>
-    </NuxtLink>
-    <NuxtLink v-else to="/article">
-      Back to Article
     </NuxtLink>
   </div>
 </template>

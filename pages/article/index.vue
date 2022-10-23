@@ -18,6 +18,7 @@
         </div>
       </NuxtLink>
     </div>
+    <br />
   </div>
 </template>
 
