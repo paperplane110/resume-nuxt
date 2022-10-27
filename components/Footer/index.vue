@@ -1,7 +1,8 @@
 <template>
-  <div class="max-w-screen-md h-12 px-8 <lg:w-100vw">
-    <div class="h-full flex items-center text-gray-400">
-      <p>© Designed & Coded by Tianyu</p>
+  <div class="h-12 px-8">
+    <div class="h-full text-gray-400 text-left">
+      <Text sm b>
+        Designed & Coded by Tianyu @2022</Text>
     </div>
   </div>
 </template>

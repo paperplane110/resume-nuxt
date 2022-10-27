@@ -22,6 +22,17 @@
           的人工智能企业，我主要负责保证算法模型的质量并辅助提升其性能。
           最近，我对于全栈技术、UI设计、3D美术很感兴趣（当然，同时也是一名忠实的Steam玩家）
         </Text>
+        <div class="flex items-center gap-2">
+          <Text b>联系方式: </Text>
+          <a href="mailto:tim3-yuan@foxmail.com"
+            class="w-12 h-12 flex-center rounded-1 transition-all hover:(shadow-nsm)">
+            <font-awesome-icon icon="fa-solid fa-envelope" class="text-2xl" />
+          </a>
+          <a href="https://github.com/paperplane110" target="_blank"
+            class="w-12 h-12 flex-center rounded-1 transition-all hover:(shadow-nsm)">
+            <font-awesome-icon icon="fa-brands fa-github" class="text-2xl transition" />
+          </a>
+        </div>
       </Description>
     </section>
 

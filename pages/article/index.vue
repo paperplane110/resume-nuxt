@@ -4,16 +4,16 @@
     <Text hero>
       Article.
     </Text>
-    <div class="grid grid-cols-2 gap-8">
+    <div class="grid grid-cols-3 gap-6 <md:grid-cols-2 <sm:grid-cols-1">
       <NuxtLink v-for="(article, idx) in data" :key="idx" :to="article._path">
-        <div class="h-full border rounded-1rem overflow-clip bg-light-200 shadow-nsm">
-          <div class="h-250px bg-center bg-no-repeat bg-cover" :style="`background-image: url(${article.image.src})`">
+        <div
+          class="h-full border rounded-1rem overflow-clip bg-light-200 shadow-nsm transition-all duration-200 hover:(shadow-nlg)">
+          <div class="h-200px bg-center bg-no-repeat bg-cover" :style="`background-image: url(${article.image.src})`">
           </div>
           <div class="px-4 pb-4">
-            <Text h3>{{ article.title }}</Text>
-            <Text class="text-gray-500">{{ article.date }}</Text>
-            <Text>{{ article.description }}</Text>
-
+            <Text h4>{{ article.title }}</Text>
+            <Text sm class="text-gray-500">{{ article.date }}</Text>
+            <Text base>{{ article.description }}</Text>
           </div>
         </div>
       </NuxtLink>
@@ -23,6 +23,5 @@
 </template>
 
 <script setup lang='ts'>
-const { path } = useRoute()
 const { data } = await useAsyncData('article', () => queryContent('/article').find())
 </script>

@@ -25,6 +25,17 @@
           interested in Full-Stack technology, UI design, 3D arts, and games of
           course.
         </Text>
+        <div class="flex items-center gap-2">
+          <Text b>Contacts: </Text>
+          <a href="mailto:tim3-yuan@foxmail.com"
+            class="w-12 h-12 flex-center rounded-1 transition-all hover:(shadow-nsm)">
+            <font-awesome-icon icon="fa-solid fa-envelope" class="text-2xl" />
+          </a>
+          <a href="https://github.com/paperplane110" target="_blank"
+            class="w-12 h-12 flex-center rounded-1 transition-all hover:(shadow-nsm)">
+            <font-awesome-icon icon="fa-brands fa-github" class="text-2xl transition" />
+          </a>
+        </div>
       </Description>
     </section>
 
