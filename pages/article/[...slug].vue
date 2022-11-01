@@ -1,8 +1,8 @@
 <template>
   <main>
     <br />
-    <Text>Path: {{ route.path }}</Text>
-    <Text>slug: <code>{{ route.params.slug }}</code></Text>
+    <p>{{ articleInfo.date }}</p>
+    <p>{{ articleInfo.tags }}</p>
     <ContentDoc />
     <div class="h-80px" />
     <PrevNext />
@@ -11,4 +11,5 @@
 
 <script setup lang="ts">
 const route = useRoute()
+const articleInfo = await queryContent(route.path).findOne()
 </script>
