@@ -1,8 +1,8 @@
 <template>
   <main>
     <br />
-    <p>{{ articleInfo.date }}</p>
-    <p>{{ articleInfo.tags }}</p>
+    <ArticleTitle :title="articleInfo.title" :date="articleInfo.date" :description="articleInfo.description"
+      :cover="articleInfo.image.src" :tags="articleInfo.tags" />
     <ContentDoc />
     <div class="h-80px" />
     <PrevNext />
