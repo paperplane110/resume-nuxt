@@ -47,7 +47,6 @@ const reverseSection = computed(() => {
 })
 
 const imgAreaStyle = computed(() => {
-  console.log('imgarea', props.imgSize)
   return {
     flex: props.imgSize,
   }

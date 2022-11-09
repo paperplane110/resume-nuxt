@@ -47,5 +47,5 @@ export default defineNuxtConfig({
         'html'
       ]
     }
-  }
+  },
 })

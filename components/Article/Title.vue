@@ -31,9 +31,3 @@ type titleProps = {
 }
 const props = defineProps<titleProps>()
 </script>
-
-<style scoped>
-.code-family {
-  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
-}
-</style>

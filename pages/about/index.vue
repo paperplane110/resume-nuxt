@@ -5,8 +5,8 @@
         {{ title }}
       </Text>
       <NuxtLink to="/about/zh">
-        <div class="group w-12 h-12 flex-center rounded-1 hover:(shadow-nsm)">
-          <span class="material-icons-outlined transition duration-200 group-hover:(text-blue-800)">translate</span>
+        <div class="group w-12 h-12 flex-center transition filter hover:(drop-shadow-md)">
+          <font-awesome-icon icon="fa-solid fa-language" class="text-3xl transition group-hover:(text-[#4f71d1])" />
         </div>
       </NuxtLink>
     </div>

@@ -19,9 +19,3 @@ const props = defineProps<{
   description: string
 }>()
 </script>
-
-<style scoped>
-.code-family {
-  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
-}
-</style>
