@@ -41,3 +41,7 @@ ul ul {
   list-style-type: circle;
   padding-left: 1.5rem;
 }
+
+.code-family {
+  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
+}

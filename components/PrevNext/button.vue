@@ -5,7 +5,7 @@
         <div class="flex items-center h-full px-4 py-6 gap-6" :class="btn.iconSide">
           <div class="flex-center transition-all transform group-hover:(text-purple-500 translate-x-0)"
             :class="btn.iconMv">
-            <span class="material-icons-outlined">{{ btn.icon }}</span>
+            <font-awesome-icon :icon="['fas', btn.icon]" />
           </div>
           <div>
             <slot />
@@ -31,14 +31,14 @@ const btn = computed(() => {
     return {
       iconSide: "flex-row",
       iconMv: "translate-x-2",
-      icon: "arrow_back"
+      icon: "arrow-left"
     }
   }
   else {
     return {
       iconSide: "flex-row-reverse",
       iconMv: "-translate-x-2",
-      icon: "arrow_forward"
+      icon: "arrow-right"
     }
   }
 })

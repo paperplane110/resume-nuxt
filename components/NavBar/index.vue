@@ -14,13 +14,13 @@
       </div>
     </NuxtLink>
     <div id="links" class="flex gap-4 px-3">
-      <NavItemB icon="science" to="/projects" :activated="routeActivated" />
-      <NavItemB icon="description" to="/article" :activated="routeActivated" />
-      <NavItemB icon="camera" to="/gallery" :activated="routeActivated" />
-      <NavItemB icon="interests" to="/components" :activated="routeActivated" />
+      <NavItemB icon="fa-vial" to="/projects" :activated="routeActivated" />
+      <NavItemB icon="fa-feather-pointed" to="/article" :activated="routeActivated" />
+      <NavItemB icon="fa-camera-retro" to="/gallery" :activated="routeActivated" />
+      <NavItemB icon="fa-icons" to="/components" :activated="routeActivated" />
     </div>
     <div id="links" class="flex gap-4 pl-3">
-      <NavItemB icon="emoji_people" to="/about" :activated="routeActivated" />
+      <NavItemB icon="fa-scroll" to="/about" :activated="routeActivated" />
     </div>
   </div>
 </template>
