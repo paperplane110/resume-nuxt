@@ -176,7 +176,14 @@
         image and text area can be modified by given number to
         <Code>textSize</Code> or <Code>imgSize</Code> props.
       </Text>
-      <Description reverse src="/img/sample2.jpg" textSize="3"></Description>
+      <Description reverse src="/img/sample2.jpg" :textSize="3"></Description>
+    </section>
+
+    <section>
+      <Text h3 code>ArticleTitle</Text>
+      <ArticleTitle title="Cyberpunk 2077 is now released" date="2077/10/13"
+        description="Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification"
+        cover="/img/cyberpunk.png" :tags="['Game', 'RPG', 'Cyberpunk', 'CDPR']" />
     </section>
   </div>
 </template>
