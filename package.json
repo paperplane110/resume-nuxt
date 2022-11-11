@@ -9,6 +9,8 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.1.1",
+    "@vueuse/core": "^9.5.0",
+    "@vueuse/nuxt": "^9.5.0",
     "nuxt": "3.0.0-rc.11",
     "nuxt-windicss": "^2.5.2"
   },
