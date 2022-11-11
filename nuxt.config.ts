@@ -30,6 +30,7 @@ export default defineNuxtConfig({
   modules: [
     'nuxt-windicss',
     '@nuxt/content',
+    '@vueuse/nuxt',
   ],
   content: {
     // https://content.nuxtjs.org/api/configuration
