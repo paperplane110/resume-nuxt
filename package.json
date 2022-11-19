@@ -5,14 +5,15 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "upgrade": "nuxi upgrade"
   },
   "devDependencies": {
-    "@nuxt/content": "^2.1.1",
+    "@nuxt/content": "^2.2.2",
     "@vueuse/core": "^9.5.0",
     "@vueuse/nuxt": "^9.5.0",
-    "nuxt": "3.0.0-rc.11",
-    "nuxt-windicss": "^2.5.2"
+    "nuxt": "^3.0.0-rc.14",
+    "nuxt-windicss": "^2.5.5"
   },
   "dependencies": {
     "@fontsource/jetbrains-mono": "^4.5.10",
