@@ -155,7 +155,7 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 .title {
   text-align: center;
 }
