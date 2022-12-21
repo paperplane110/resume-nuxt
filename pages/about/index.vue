@@ -1,7 +1,8 @@
 <template>
   <div>
+    <br />
     <div class="flex justify-between items-center">
-      <Text h1>
+      <Text hero>
         {{ title }}
       </Text>
       <NuxtLink to="/about/zh">
@@ -15,13 +16,17 @@
       <!-- <Text h3> <font-awesome-icon icon="fa-solid fa-smile" /> About me </Text> -->
       <Description src="/img/london_selfi.jpeg" :imgSize="2" reverse>
         <Text> Hi there!</Text>
-        <Text h3 b>I'm Tianyu 👋</Text>
+        <Text h3 b>I'm Tianyu</Text>
         <Text>
-          I'm currently doing algorithm testing at
+          I'm a SET (software engineer in test) in <ColorLink type="secondary"
+            href="https://www.apollo.auto/apollo-self-driving">
+            Baidu Apollo 🚙
+          </ColorLink> group. Focus on advanced driving assistance system's HIL(Hardare in Loop) simulation.
+          <br />
+          Before that, I'm a SET (algorithm test) in
           <ColorLink type="warning" href="https://www.aibee.cn/">
             Aibee 🐝
-          </ColorLink>
-          to ensure and improve the quality of image algorithms. Recently, I'm
+          </ColorLink>. Recently, I'm
           interested in Full-Stack technology, UI design, 3D arts, and games of
           course.
         </Text>
@@ -66,9 +71,22 @@
       <Text h3>
         <font-awesome-icon icon="fa-solid fa-briefcase" /> Work Experience
       </Text>
+      <Text h4 b>Software Engineer in Test (HIL simulation)</Text>
+      <Text>
+        2022.12-Current<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">@Baidu ASD 🚙
+        </ColorLink>
+      </Text>
+      <Text b em>Key Qualifications & Responsibilities</Text>
+      <Text>
+        <ul>
+          <li>Design and conduct ADAS's HIL simulation</li>
+          <li>Build the web platform for managing collections of test scene</li>
+        </ul>
+      </Text>
+      <br />
       <Text h4 b>Software Engineer in Algorithm Test</Text>
       <Text p>
-        2020.4-Current<ColorLink type="warning" href="https://www.aibee.cn/">@Aibee 🐝</ColorLink>
+        2021.4-2022.10<ColorLink type="warning" href="https://www.aibee.cn/">@Aibee 🐝</ColorLink>
       </Text>
       <Text b em>Key Qualifications & Responsibilities</Text>
       <Text>

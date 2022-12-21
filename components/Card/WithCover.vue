@@ -30,11 +30,11 @@
 
 <script setup lang='ts'>
 type cardWithCoverProps = {
-  src: string
-  hdivider?: boolean
-  hdw?: number
-  hdcolor?: string
-  fdivider?: boolean
+  src: string         // the src of cover
+  hdivider?: boolean  // is there a line under the header
+  hdw?: number        // the line width of the header divider
+  hdcolor?: string    // the color of the header divider
+  fdivider?: boolean  // is there a line above the footer
   fdw?: number
   fdcolor: string
 }
