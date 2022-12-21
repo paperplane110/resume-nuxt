@@ -15,11 +15,14 @@
       <Description src="/img/london_selfi.jpeg" :imgSize="2" reverse>
         <Text h3 b>你好啊，朋友！</Text>
         <Text>
-          我是<b>袁天宇</b>，是一名算法测试开发工程师，我目前就职于一家叫做
-          <ColorLink type="warning" href="https://www.aibee.cn/">
+          我是<b>袁天宇</b>，是一名测试开发工程师，是<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">
+            百度阿波罗🚗
+          </ColorLink>团队中的一员，
+          负责自动驾驶系统的HIL（硬件在环）仿真测试，以及场景管理平台的开发。
+          <br />
+          在此之前，我曾以算法测试开发工程师的身份就职于<ColorLink type="warning" href="https://www.aibee.cn/">
             Aibee 🐝
-          </ColorLink>
-          的人工智能企业，我主要负责保证算法模型的质量并辅助提升其性能。
+          </ColorLink>。
           最近，我对于全栈技术、UI设计、3D美术很感兴趣（当然，同时也是一名忠实的Steam玩家）
         </Text>
         <div class="flex items-center gap-2">
@@ -64,9 +67,24 @@
         <font-awesome-icon icon="fa-solid fa-briefcase" />
         工作经历
       </Text>
+      <Text h4 b>测试开发工程师（仿真方向）</Text>
+      <Text>
+        2022.12-至今<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">@Baidu ASD 🚗
+        </ColorLink>
+      </Text>
+      <Text b em>主要职能与职责</Text>
+      <Text>
+        <ul>
+          <li>
+            负责HIL仿真测试和自动化
+          </li>
+          <li>负责组内web平台化建设</li>
+        </ul>
+      </Text>
+      <br />
       <Text h4 b>算法测试开发工程师</Text>
       <Text>
-        2020.4-现在<ColorLink type="warning" href="https://www.aibee.cn/">@Aibee 🐝</ColorLink>
+        2021.4-2022.10<ColorLink type="warning" href="https://www.aibee.cn/">@Aibee 🐝</ColorLink>
       </Text>
       <Text b em>主要职能与职责</Text>
       <Text>
