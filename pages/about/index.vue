@@ -1,7 +1,8 @@
 <template>
   <div>
+    <br />
     <div class="flex justify-between items-center">
-      <Text h1>
+      <Text hero>
         {{ title }}
       </Text>
       <NuxtLink to="/about/zh">
@@ -15,7 +16,7 @@
       <!-- <Text h3> <font-awesome-icon icon="fa-solid fa-smile" /> About me </Text> -->
       <Description src="/img/london_selfi.jpeg" :imgSize="2" reverse>
         <Text> Hi there!</Text>
-        <Text h3 b>I'm Tianyu 👋</Text>
+        <Text h3 b>I'm Tianyu</Text>
         <Text>
           I'm a SET (software engineer in test) in <ColorLink type="secondary"
             href="https://www.apollo.auto/apollo-self-driving">
@@ -72,7 +73,7 @@
       </Text>
       <Text h4 b>Software Engineer in Test (HIL simulation)</Text>
       <Text>
-        2022.12-Current<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">@Baidu ASD 🚗
+        2022.12-Current<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">@Baidu ASD 🚙
         </ColorLink>
       </Text>
       <Text b em>Key Qualifications & Responsibilities</Text>

@@ -1,7 +1,8 @@
 <template>
   <div>
+    <br />
     <div class="flex justify-between items-center">
-      <Text h1>
+      <Text hero>
         {{ title }}
       </Text>
       <NuxtLink to="/about">
@@ -16,7 +17,7 @@
         <Text h3 b>你好啊，朋友！</Text>
         <Text>
           我是<b>袁天宇</b>，是一名测试开发工程师，是<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">
-            百度阿波罗🚗
+            百度阿波罗 🚙
           </ColorLink>团队中的一员，
           负责自动驾驶系统的HIL（硬件在环）仿真测试，以及场景管理平台的开发。
           <br />
@@ -69,15 +70,13 @@
       </Text>
       <Text h4 b>测试开发工程师（仿真方向）</Text>
       <Text>
-        2022.12-至今<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">@Baidu ASD 🚗
+        2022.12-至今<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">@Baidu ASD 🚙
         </ColorLink>
       </Text>
       <Text b em>主要职能与职责</Text>
       <Text>
         <ul>
-          <li>
-            负责HIL仿真测试和自动化
-          </li>
+          <li>负责HIL仿真测试和自动化</li>
           <li>负责组内web平台化建设</li>
         </ul>
       </Text>
