@@ -1,17 +1,19 @@
 <template>
   <a :href="props.link" target="_blank">
-    <div class="mb-10 flex flex-row gap-10 min-h-250px group transition-all hover:(gap-6)">
-      <div class="flex-1 bg-center bg-no-repeat bg-cover border border-dark-300 rounded-1rem min-h-200px"
+    <div class="flex flex-row gap-12 min-h-250px group">
+      <div
+        class="flex-1 bg-center bg-no-repeat bg-cover border shadow-nsm rounded-1rem min-h-200px transition-all duration-200 group-hover:(shadow-nlg)"
         :style="`background-image: url(${props.src})`">
       </div>
       <div
-        class="flex-1 px-2 flex flex-col justify-start transition-all border-l border-transparent group-hover:(border-l-dark-400)">
+        class="flex-1 px-4 flex flex-col justify-start transition-all border-l border-transparent duration-200 group-hover:(border-l-dark-400)">
         <div>
           <Text h2>{{ props.title }}</Text>
           <Text>{{ props.contents }}</Text>
         </div>
+        <br />
         <div>
-          <Text base class="code-family text-gray-500">{{ props.start }} - {{ props.end }}</Text>
+          <Text base b class="code-family text-gray-400">{{ props.start }} - {{ props.end }}</Text>
         </div>
       </div>
     </div>
