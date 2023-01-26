@@ -6,7 +6,7 @@
     <p class="text-3xl font-thin">{{ props.title }}</p>
     <div class="flex gap-4 transition-all">
       <p class="code-family text-sm">{{ props.date }}</p>
-      <p class="text-gray-400 font-thin text-base">{{ props.description }}</p>
+      <p class="text-gray-500 font-thin text-base">{{ props.description }}</p>
     </div>
   </div>
 </template>
