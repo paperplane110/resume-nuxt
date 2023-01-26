@@ -11,7 +11,7 @@ export default {
       cells: cleanTable,
       historyCells: [],
       player1: "⚫",
-      player2: "🟢",
+      player2: "⚪",
       turn: "",
       winner: "",
       isDraw: false,
@@ -218,6 +218,7 @@ export default {
   width: 2rem;
   height: 2rem;
   border: 1px solid black;
+  background-color: burlywood;
   display: grid;
   place-items: center;
   cursor: pointer;

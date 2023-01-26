@@ -2,7 +2,6 @@
   <div>
     <br />
     <Text hero>Gallery.</Text>
-    <Text>{{ width }} * {{ height }}</Text>
     <Text>
       这里汇集了所有我喜爱的作品：从学院派到印象派、从摄影到 3D 艺术。
       生机勃勃的绿、甜美的粉、温暖的橙黄、冷静的蓝，克制的黑白，
