@@ -1,7 +1,7 @@
 <template>
   <div class="mt-6 text-right">
     <div class="rounded-2rem overflow-hidden">
-      <img :src="imgInfo.src" :alt="imgInfo.alt" />
+      <nuxt-img :src="imgInfo.src" :alt="imgInfo.alt" width="960" />
     </div>
     <div class="flex-1 mt-2">
       <Text sm>

@@ -30,6 +30,7 @@ export default defineNuxtConfig({
   modules: [
     'nuxt-windicss',
     '@nuxt/content',
+    '@nuxt/image-edge',
     '@vueuse/nuxt',
   ],
   content: {
