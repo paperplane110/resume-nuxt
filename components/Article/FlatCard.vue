@@ -1,12 +1,13 @@
 <template>
-  <div class="group">
-    <div class="h-250px bg-center bg-no-repeat bg-cover rounded-1rem transition-all group-hover:(rounded-3rem)"
+  <div class="group flex flex-col gap-2">
+    <div
+      class="h-200px <sm:(h-250px) bg-center bg-no-repeat bg-cover rounded-1rem transition-all group-hover:(rounded-2rem)"
       :style="`background-image: url(${props.imgSrc})`">
     </div>
-    <p class="text-3xl font-thin">{{ props.title }}</p>
-    <div class="flex gap-4 transition-all">
-      <p class="code-family text-sm">{{ props.date }}</p>
-      <p class="text-gray-500 font-thin text-base">{{ props.description }}</p>
+    <div class="flex flex-col transition-all">
+      <p class="text-xl">{{ props.title }}</p>
+      <p class="text-gray-700 text-base font-thin">{{ props.description }}</p>
+      <p class="code-family text-gray-400 text-sm">{{ props.date }}</p>
     </div>
   </div>
 </template>
