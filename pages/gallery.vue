@@ -27,18 +27,21 @@ const { width, height } = useWindowSize()
 const imgList = [
   {
     src: "/img/gallery/2022_bj_red_leaf.jpeg",
+    hash: "LVKmwwp{krRj8_xsg4Six]xtWCt6",
     alt: "地坛红叶(Red Leaves in Ditan Park)",
     date: '2022.11',
     place: "Photoed at Beijing, Ditan Park",
   },
   {
     src: "/img/gallery/2022_bj_tree.jpeg",
+    hash: "L4G@So581hX-*:^+-oNw08^$$j}=",
     alt: "秋日的地坛 (Ditan park in Autumn)",
     date: '2022.11',
     place: "Photoed at Beijing, Ditan Park",
   },
   {
     src: "/img/gallery/2022_bj_child.jpeg",
+    hash: "L6GkwItP~V-,?i$xs=IU^%xZIqD*",
     alt: "孩子的地坛 (The Child in Ditan Park)",
     date: '2022.11',
     place: "Photoed at Beijing, Ditan Park",
@@ -53,12 +56,14 @@ const imgList = [
   },
   {
     src: "/img/kidDog.jpeg",
+    hash: "L6EWK%tl?v~X03-=?c%NMci%$+k9",
     alt: "The Kid and His Friend",
     date: '2020.04',
     place: "Photoed at Bristol Brandon hill",
   },
   {
     src: "/img/park.jpeg",
+    hash: "L5CY:lD*004o{XNFTGs,01-o~BWX",
     alt: "A Chair in Spring",
     date: '2020.04',
     place: "Photoed at Bristol Brandon hill",
