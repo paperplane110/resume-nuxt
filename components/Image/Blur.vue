@@ -1,8 +1,6 @@
 <template>
-  <div class="relative">
-    <div :class="`relative h-0 pb-[${props.aspectRatio}%]`">
-      <canvas class="absolute top-0 left-0 right-0 bottom-0 w-full h-full z-10" ref="canvas" width=32 height=32 />
-    </div>
+  <div class="relative h-0" :style="`padding-bottom: ${props.aspectRatio}%`">
+    <canvas class="absolute top-0 left-0 right-0 bottom-0 w-full h-full z-10" ref="canvas" width=32 height=32 />
   </div>
 </template>
 
