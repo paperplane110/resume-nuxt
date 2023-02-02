@@ -1,7 +1,7 @@
 <template>
   <div class="mt-6 text-right">
     <div class="rounded-2rem overflow-hidden">
-      <img :src="imgInfo.src" :alt="imgInfo.alt" />
+      <Image :src="imgInfo.src" :alt="imgInfo.alt" :hash="imgInfo.hash" />
     </div>
     <div class="flex-1 mt-2">
       <Text sm>
@@ -15,6 +15,7 @@
 <script setup lang='ts'>
 type horizontalPictureProps = {
   src: string
+  hash: string
   alt: string
   date: string
   place: string
