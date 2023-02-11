@@ -185,11 +185,71 @@
         description="Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification"
         cover="/img/cyberpunk.png" :tags="['Game', 'RPG', 'Cyberpunk', 'CDPR']" />
     </section>
+
+    <!-- <section>
+      <Text h3 code>CardWithSpotLight</Text>
+      <CardWithSpotLight />
+    </section> -->
+
+    <section>
+      <Text h2>Image Components</Text>
+      <Text>
+        Image components has two main components: <code>Image</code> and <code>ImageBg</code>.
+        Both of them have <Sparkle>blur effect</Sparkle> while loading.
+        Behind the stage, the child component <code>ImageBlur</code> has been builded as the mask of the image,
+        which is powered by <ColorLink :href="BlurHashLink" target="_blank">BlurHash</ColorLink>.
+        Now let's see how it looks!
+      </Text>
+
+      <Text h3 code>Image</Text>
+      <Text>
+        This component is just like <code>&lt;img&gt;</code> elements with blur effect on loading.
+        It has four properties:
+      </Text>
+      <ul>
+        <li>src (string): the source of the image</li>
+        <li>hash (string): the hash string represents the image, see <ColorLink :href="BlurHashLink" target="_blank">
+            BlurHash</ColorLink>.</li>
+        <li>aspectRatio (optional: number): height / width * 100</li>
+        <li>alt (optional: string): the description of the image</li>
+      </ul>
+      <br />
+      <Image src="/img/gallery/2022_bj_red_leaf.jpeg" hash="LVKmwwp{krRj8_xsg4Six]xtWCt6" />
+
+      <Text h3 code>ImageBg</Text>
+      <Text>Define Image as the background of a <code>&lt;div&gt;</code>.
+        The image will be at central, fills div, and won't leave any blank edges.
+        The most important thing it that the image <em><u>won't be disformed</u></em>.
+      </Text>
+      <div class="mb-2 w-300px border-b-2 border-b-black text-center"><Text base>300px</Text></div>
+      <ImageBg class="w-300px h-300px" src="/img/gallery/2022_bj_red_leaf.jpeg" hash="LVKmwwp{krRj8_xsg4Six]xtWCt6">
+      </ImageBg>
+
+      <Text h3 code>ImageBlur</Text>
+      <Text>This component has two properties:</Text>
+      <ul>
+        <li>hash (string): the number represents the image after <b>BlurHash</b> encoding.</li>
+        <li>aspectRatio (number): height / width * 100</li>
+      </ul>
+      <br />
+      <div class="grid grid-cols-2">
+        <div class="text-center">
+          <Image src="/img/gallery/2022_bj_red_leaf.jpeg" hash="LVKmwwp{krRj8_xsg4Six]xtWCt6" />
+          <Text base>Origin picture</Text>
+        </div>
+        <div class="text-center">
+          <ImageBlur />
+          <Text base>Blurred picture</Text>
+        </div>
+      </div>
+
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
 const NextUILink = 'https://nextui.org/docs/components/text'
+const BlurHashLink = 'https://github.com/woltapp/blurhash'
 </script>
 
 <style>

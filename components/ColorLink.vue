@@ -21,7 +21,7 @@ defineProps({
   
 <style scope>
 .primary {
-    @apply text-primary hover: bg-purple-500;
+    @apply text-purple-500 hover: bg-purple-500;
 }
 
 .secondary {

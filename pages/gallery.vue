@@ -55,14 +55,14 @@ const imgList = [
     layout: 'v'
   },
   {
-    src: "/img/kidDog.jpeg",
+    src: "/img/gallery/2020_uk_kidDog.jpeg",
     hash: "L6EWK%tl?v~X03-=?c%NMci%$+k9",
     alt: "The Kid and His Friend",
     date: '2020.04',
     place: "Photoed at Bristol Brandon hill",
   },
   {
-    src: "/img/park.jpeg",
+    src: "/img/gallery/2020_uk_park.jpeg",
     hash: "L5CY:lD*004o{XNFTGs,01-o~BWX",
     alt: "A Chair in Spring",
     date: '2020.04',
