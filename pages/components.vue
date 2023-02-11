@@ -219,7 +219,7 @@
       <Text h3 code>ImageBg</Text>
       <Text>Define Image as the background of a <code>&lt;div&gt;</code>.
         The image will be at central, fills div, and won't leave any blank edges.
-        The most important thing it that the image <em><u>won't be disformed</u></em>.
+        The most important thing it that the image <em><u>won't be deformed</u></em>.
       </Text>
       <div class="mb-2 w-300px border-b-2 border-b-black text-center"><Text base>300px</Text></div>
       <ImageBg class="w-300px h-300px" src="/img/gallery/2022_bj_red_leaf.jpeg" hash="LVKmwwp{krRj8_xsg4Six]xtWCt6">
