@@ -2,8 +2,24 @@
   <div>
     <Text h1>Gobang.</Text>
 
+    <Text>The game's AI is still under building, you could play it in 2 players' mode.</Text>
+    <Text>Here is what I'm going to do: </Text>
+    <ul>
+      <li>Evaluation for the whole board</li>
+      <li>Min-max tree search</li>
+      <li>Alpha-beta pruning</li>
+      <li>Evaluation for partial postions</li>
+    </ul>
+    <br />
+    <hr />
+
+    <div class="flex justify-center py-4">
+      <button class="mx-2 py-2 px-4 text-white bg-green-500 rounded-md" @click="board.reset()">Restart</button>
+      <button class="mx-2 py-2 px-4 text-white bg-gray-500 rounded-md" @click="board.undo()">Undo</button>
+    </div>
+
     <!-- Render Map -->
-    <div class="flex flex-col items-center w-full">
+    <div class="flex flex-col items-center">
       <div v-for="(row, rowIdx) in board.map" :key="rowIdx" class="flex flex-row">
         <div v-for="(chess, colIdx) in row" :key="colIdx" class="relative group w-10 h-10"
           @click="moveChess(rowIdx, colIdx)">
@@ -34,13 +50,13 @@ import { Board } from './board'
 import { Role } from './role'
 
 const board = reactive(new Board())
-const player1 = reactive(new Role(1, "⚪"))
+const player1 = reactive(new Role(1, "🎾"))
 const player2 = reactive(new Role(2, "⚫"))
-
 let curRole = player1.idx
 
 function moveChess(rowIdx: number, colIdx: number) {
   if (board.put(rowIdx, colIdx, curRole)) {
+    // switch player
     if (curRole === player1.idx) curRole = player2.idx
     else curRole = player1.idx
   }

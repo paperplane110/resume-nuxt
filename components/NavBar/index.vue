@@ -18,6 +18,7 @@
       <NavItemB icon="fa-feather-pointed" to="/article" :activated="routeActivated" />
       <NavItemB icon="fa-camera-retro" to="/gallery" :activated="routeActivated" />
       <NavItemB icon="fa-icons" to="/components" :activated="routeActivated" />
+      <NavItemB icon="fa-gamepad" to="/game/gobang" :activated="routeActivated" />
     </div>
     <div id="links" class="flex gap-4 pl-3">
       <NavItemB icon="fa-scroll" to="/about" :activated="routeActivated" />

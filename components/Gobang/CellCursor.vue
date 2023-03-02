@@ -8,9 +8,10 @@ const canvas = ref(null)
 onMounted(() => {
   const ctx = canvas.value.getContext("2d")
   // center point
+  ctx.lineWidth = 5
   ctx.beginPath()
   ctx.arc(50, 50, 20, 0, 2 * Math.PI, 0)
   ctx.closePath()
-  ctx.fill()
+  ctx.stroke()
 })
 </script>
