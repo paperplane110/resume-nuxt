@@ -26,7 +26,7 @@ h4 {
 }
 
 p {
-  @apply text-lg my-2;
+  @apply text-lg my-4;
   @apply <md: (text-base);
 }
 
