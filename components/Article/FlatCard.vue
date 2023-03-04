@@ -4,7 +4,7 @@
       :hash="props.hash" />
     <div class="flex flex-col transition-all">
       <p class="text-xl">{{ props.title }}</p>
-      <p class="text-gray-700 text-base font-thin">{{ props.description }}</p>
+      <p class="my-0 text-gray-700 text-base font-thin">{{ props.description }}</p>
       <p class="code-family text-gray-400 text-sm">{{ props.date }}</p>
     </div>
   </div>

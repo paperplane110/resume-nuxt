@@ -17,6 +17,7 @@
     "nuxt-windicss": "^2.5.5"
   },
   "dependencies": {
+    "@codesandbox/sandpack-client": "^2.0.26",
     "@fontsource/jetbrains-mono": "^4.5.10",
     "@fontsource/lato": "^4.5.9",
     "@fontsource/material-icons": "^4.5.4",

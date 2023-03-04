@@ -33,6 +33,10 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
     '@vueuse/nuxt',
   ],
+  components: {
+    global: true,
+    dirs: ['~/components']
+  },
   content: {
     // https://content.nuxtjs.org/api/configuration
     highlight: {

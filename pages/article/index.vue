@@ -14,7 +14,7 @@
         </div>
         <div class="flex-1 flex flex-col transition-all">
           <p class="text-4xl <md:(text-2xl) <sm:(text-xl)">{{ article.title }}</p>
-          <p class="text-gray-700 text-md <sm:(text-base font-thin)">{{ article.description }}</p>
+          <p class="my-0 text-gray-700 text-md <sm:(text-base font-thin)">{{ article.description }}</p>
           <p class="code-family text-gray-400 text-sm">{{ article.date }}</p>
         </div>
       </div>

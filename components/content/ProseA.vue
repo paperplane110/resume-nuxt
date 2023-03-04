@@ -12,8 +12,8 @@ defineProps({
 </script>
 
 <template>
-  <NuxtLink :href="href" :target="blank?'_blank':'_self'"
-    class="text-indigo-500 transition-all hover:(cursor-pointer underline)">
+  <NuxtLink :href="href" :target="blank ? '_blank' : '_self'"
+    class="underline underline-dashed hover:(cursor-pointer underline-solid)">
     <slot />
   </NuxtLink>
 </template>
