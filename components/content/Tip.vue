@@ -1,6 +1,6 @@
 <template>
-    <div class="my-6 px-4 py-3 border rounded-lg" :class="[type]">
-        <Text>{{ symbol }}{{ title ? title : type?.toUpperCase() }}</Text>
+    <div class="my-6 px-4 py-3 border rounded-2xl" :class="[type]">
+        <Text b>{{ symbol }}{{ title ? title : type?.toUpperCase() }}</Text>
         <ContentSlot :use="$slots.default" unwrap="p" />
     </div>
 </template>
