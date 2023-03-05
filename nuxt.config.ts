@@ -14,6 +14,11 @@ export default defineNuxtConfig({
       ]
     }
   },
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
+  },
   vue: {
     compilerOptions: {
       isCustomElement: tag => ['wrapper'].includes(tag)
