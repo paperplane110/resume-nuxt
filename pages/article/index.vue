@@ -10,7 +10,7 @@
       <div class="group flex flex-row gap-10 my-10 <sm:(flex-col gap-2 my-5)">
         <div
           class="sm:(flex-1 h-250px) <sm:(h-250px) rounded-1rem overflow-hidden transition-all group-hover:(rounded-2rem)">
-          <Image :src="article.image.src" :hash="article.image.hash" />
+          <ImageBg :src="article.image.src" :hash="article.image.hash" />
         </div>
         <div class="flex-1 flex flex-col transition-all">
           <p class="text-4xl <md:(text-2xl) <sm:(text-xl)">{{ article.title }}</p>
