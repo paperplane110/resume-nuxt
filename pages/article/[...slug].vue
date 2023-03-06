@@ -1,9 +1,8 @@
 <template>
   <main>
     <br />
-    <ArticleTitle :title="articleInfo.title" :date="articleInfo.date" :description="articleInfo.description"
-      :cover="articleInfo.image.src" :tags="articleInfo.tags" :cover-url="articleInfo.image.url"
-      :photographer="articleInfo.image.photographer" />
+    <ArticleTitle :title="data?.title" :date="data?.date" :description="data?.description" :cover="data?.image.src"
+      :tags="data?.tags" :cover-url="data?.image.url" :photographer="data?.image.photographer" />
     <ContentDoc />
     <div class="h-80px" />
     <PrevNext />
@@ -11,6 +10,34 @@
 </template>
 
 <script setup lang="ts">
+import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
+
+interface articleInfo extends ParsedContent {
+  title: string
+  date: string
+  description: string
+  image: {
+    src: string
+    alt: string
+    url: string
+    photographer: string
+  }
+  tags: string[]
+}
+
 const route = useRoute()
-const articleInfo = await queryContent(route.path).findOne()
+const { data } = await useAsyncData('article', () => queryContent<articleInfo>(route.path).findOne())
+
+if (data?.value) {
+  useServerSeoMeta({
+    title: data.value.title,
+    ogTitle: data.value.title,
+    description: data.value.description,
+    ogDescription: data.value.description,
+    ogImage: data.value.image.src,
+    ogImageAlt: data.value.image.alt,
+
+    viewport: "width=device-width, initial-scale=1.0",
+  })
+}
 </script>

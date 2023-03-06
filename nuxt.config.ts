@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       meta: [
         {
           name: 'description',
-          content: "Coding, Playing music, and Gaming are three fundamental pillars of this guy's life."
+          content: "Welcom to Tianyu's blog. Here covers tech blogs, photographs, and my resume."
         }
       ],
       link: [
