@@ -31,11 +31,20 @@ const { data } = await useAsyncData('article', () => queryContent<articleInfo>(r
 if (data?.value) {
   useServerSeoMeta({
     title: data.value.title,
-    ogTitle: data.value.title,
     description: data.value.description,
+
+    // open graph
+    ogTitle: data.value.title,
+    ogType: "website",
     ogDescription: data.value.description,
-    ogImage: data.value.image.src,
+    ogImage: `https://tyyuan110.com${data.value.image.src}`,  // TODO hardcode
     ogImageAlt: data.value.image.alt,
+
+    // twitter
+    twitterTitle: data.value.title,
+    twitterCard: "summary_large_image",
+    twitterDescription: data.value.description,
+    twitterImage: `https://tyyuan110.com${data.value.image.src}`,
 
     viewport: "width=device-width, initial-scale=1.0",
   })
