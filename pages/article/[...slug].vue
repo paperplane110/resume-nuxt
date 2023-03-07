@@ -26,7 +26,7 @@ interface articleInfo extends ParsedContent {
 }
 
 const route = useRoute()
-const { data } = await useAsyncData('article', () => queryContent<articleInfo>(route.path).findOne())
+const data = await queryContent<articleInfo>(route.path).findOne()
 
 if (data?.value) {
   useServerSeoMeta({
