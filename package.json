@@ -14,7 +14,8 @@
     "@vueuse/core": "^9.5.0",
     "@vueuse/nuxt": "^9.5.0",
     "nuxt": "^3.0.0-rc.14",
-    "nuxt-windicss": "^2.5.5"
+    "nuxt-windicss": "^2.5.5",
+    "sitemap": "^7.1.1"
   },
   "dependencies": {
     "@codesandbox/sandpack-client": "^2.0.26",

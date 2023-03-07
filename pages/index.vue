@@ -9,7 +9,7 @@
 <script setup lang="ts">
 import { computed } from '@vue/reactivity'
 import { ref } from 'vue'
-import { randomToWord } from '../utils/randomToWord'
+import { randomToWord } from '~~/utils/randomToWord'
 
 const welcom = ref('Hello!👋')
 
