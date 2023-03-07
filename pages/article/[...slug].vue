@@ -32,10 +32,11 @@ if (data?.value) {
   useServerSeoMeta({
     title: data.value.title,
     description: data.value.description,
+    author: "Tianyu",
 
     // open graph
     ogTitle: data.value.title,
-    ogType: "website",
+    ogType: "article",
     ogDescription: data.value.description,
     ogImage: `https://tyyuan110.com${data.value.image.src}`,  // TODO hardcode
     ogImageAlt: data.value.image.alt,
