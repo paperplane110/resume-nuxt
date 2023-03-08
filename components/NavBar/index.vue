@@ -20,9 +20,9 @@
       <NavItemB icon="fa-icons" to="/components" :activated="routeActivated" />
       <NavItemB icon="fa-scroll" to="/about" :activated="routeActivated" />
     </div>
-    <div id="links" class="flex gap-4 pl-3">
-      <NavBarColorSwitch />
+    <div id="links" class="flex items-center gap-4 pl-3">
       <NavItemB icon="fa-brands fa-git" to="https://github.com/paperplane110" :activated="routeActivated" />
+      <NavBarColorSwitch />
     </div>
   </div>
 </template>

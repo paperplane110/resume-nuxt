@@ -146,11 +146,15 @@
         </Card>
       </div>
     </section>
+
+    <!-- NavBar -->
     <section>
       <Text h3 code>NavBar</Text>
       <NavBarV1 />
       <br />
       <NavBar />
+      <Text h4 code>NavBarColorSwitch</Text>
+      <NavBarColorSwitch />
     </section>
     <section>
       <Text h3 code>Sparkle</Text>

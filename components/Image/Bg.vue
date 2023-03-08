@@ -10,6 +10,7 @@
 const props = defineProps<{
   src: string
   hash: string
+  aspectRatio?: number
 }>()
 
 const wrapper = ref<HTMLDivElement | null>(null)
@@ -25,6 +26,9 @@ onMounted(() => {
 
   // when image full loaded, pass it to bg-image
   bgImage.onload = () => {
+    if (!wrapper.value) {
+      return;
+    }
     wrapper.value.style.backgroundImage = `url(${props.src})`
     onLoaded.value = true
   }
