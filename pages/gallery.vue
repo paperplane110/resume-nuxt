@@ -7,7 +7,7 @@
       生机勃勃的绿、甜美的粉、温暖的橙黄、冷静的蓝，克制的黑白，
       这<Sparkle rainbow>一切的色彩</Sparkle>组成了我们生活的全部
     </Text>
-    <Text class="text-gray-500">
+    <Text class="text-gray-500 dark:text-gray-400">
       From academic to impressionism, from photographs to 3D arts,
       here collects all of my favorite artworks.
       Vibrant green, sweet pink, warm orange, calm blue, rustic black & white,
@@ -52,7 +52,8 @@ const imgList = [
     date: '2022.11',
     place: "Photoed at Beijing, the North Gate of Ditan Park",
     detail: '人生海海，你我亦是画中人',
-    layout: 'v'
+    layout: 'v',
+    aspectRatio: 175,
   },
   {
     src: "/img/gallery/2020_uk_kidDog.jpeg",
@@ -71,7 +72,7 @@ const imgList = [
   },
 ]
 
-const isShowV = (layout: string) => {
+const isShowV = (layout: string | undefined) => {
   if (layout === 'v' && width.value > 640) {
     return true
   } else {

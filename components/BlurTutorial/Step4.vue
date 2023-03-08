@@ -36,7 +36,7 @@ onMounted(() => {
   height: 400px;
   border-radius: 2rem;
   overflow: hidden;
-  background-image: url(/img/article_cover/blur_cover.jpg);
+  background-image: url(/img/articles/9_blur/blur_cover.jpg);
   background-position: center;
   background-size: cover;
 }

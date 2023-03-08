@@ -12,7 +12,8 @@
           class="sm:(flex-1 h-250px) <sm:(h-250px) overflow-hidden rounded-1rem transition-all group-hover:(rounded-2rem)"
           :src="article.image.src" :hash="article.image.hash" />
         <div class="flex-1 flex flex-col transition-all">
-          <p class="text-4xl <md:(text-2xl) <sm:(text-xl)">{{ article.title }}</p>
+          <!-- <p class="text-4xl <md:(text-2xl) <sm:(text-xl)">{{ article.title }}</p> -->
+          <Text h2>{{ article.title }}</Text>
           <p class="my-0 text-gray-700 text-md <sm:(text-base font-thin)">{{ article.description }}</p>
           <p class="code-family text-gray-400 text-sm">{{ article.date }}</p>
         </div>

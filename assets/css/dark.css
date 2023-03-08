@@ -1,0 +1,48 @@
+.dark body {
+  background-color: #0c1625;
+  color: #ebf4f1;
+}
+
+.dark p {
+  @apply text-gray-400;
+}
+
+p::selection,
+strong::selection,
+em::selection,
+code::selection,
+ul::selection,
+ol::selection,
+li::selection,
+a::selection {
+  @apply text-white bg-gray-500;
+}
+
+.dark ul,
+.dark ol {
+  @apply text-gray-400;
+}
+
+.dark strong {
+  @apply text-gray-100;
+}
+
+.dark a {
+  @apply text-gray-100;
+}
+
+.dark h1 {
+  @apply text-gray-100;
+}
+
+.dark h2 {
+  @apply text-gray-100;
+}
+
+.dark h3 {
+  @apply text-gray-100;
+}
+
+.dark h4 {
+  @apply text-gray-100;
+}

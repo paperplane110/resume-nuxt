@@ -148,7 +148,7 @@ span b,
 
 <style>
 span code {
-  @apply font-medium after: content-["`"] before:content-["`"] text-purple-500;
+  @apply font-medium after: content-["`"] before:content-["`"] text-purple-500 dark:text-purple-400;
   font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
 }
 </style>

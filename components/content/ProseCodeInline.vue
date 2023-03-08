@@ -1,5 +1,5 @@
 <template>
-  <code class="text-purple-500"><slot /></code>
+  <code class="text-purple-500 dark:text-light-100"><slot /></code>
 </template>
 
 <style scoped>

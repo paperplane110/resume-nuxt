@@ -25,7 +25,8 @@ export default defineNuxtConfig({
     }
   },
   css: [
-    'assets/style.css',
+    '@/assets/css/style.css',
+    '@/assets/css/dark.css',
     '@fontsource/lato',
     '@fontsource/jetbrains-mono',
     '@fontsource/material-icons',
@@ -37,7 +38,11 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image-edge',
     '@vueuse/nuxt',
+    '@nuxtjs/color-mode',
   ],
+  colorMode: {
+    classSuffix: '',
+  },
   components: {
     global: true,
     dirs: ['~/components']

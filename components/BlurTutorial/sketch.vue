@@ -2,7 +2,7 @@
   <div class="flex justify-center">
     <div id="container" class="relative w-300px h-200px">
       <ImageBlur id="blur" class="absolute top-0 w-300px h-200px z-10" hash="LIA_9M%3L~-.yYRO8{OGuPX8ITo#" />
-      <ImageBg id="image" class="absolute top-0 w-300px h-200px" src="/img/article_cover/blur_cover.jpg"
+      <ImageBg id="image" class="absolute top-0 w-300px h-200px" src="/img/articles/9_blur/blur_cover.jpg"
         hash="LIA_9M%3L~-.yYRO8{OGuPX8ITo#" />
     </div>
   </div>
