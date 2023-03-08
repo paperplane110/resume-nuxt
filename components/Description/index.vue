@@ -3,7 +3,8 @@
     <!-- <div class="flex items-center" :style="imgAreaStyle">
       <img class="rounded-2xl transition-all hover:(rounded-4xl)" :src="props.src" alt="images" />
     </div> -->
-    <ImageBg class="rounded-2xl transition-all hover:(rounded-4xl)" :style="imgAreaStyle" v-bind="props" />
+    <ImageBg class="rounded-2xl overflow-hidden transition-all hover:(rounded-4xl)" :style="imgAreaStyle"
+      v-bind="props" />
     <div class="p-4 <md:(p-0 mb-2)" :style="textAreaStyle">
       <slot>
         <Text>Hi there!</Text>
