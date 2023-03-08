@@ -45,3 +45,13 @@ ul ul {
 .code-family {
   font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
 }
+
+body {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.sepia-mode body {
+  background-color: #f1e7d0;
+  color: #433422;
+}

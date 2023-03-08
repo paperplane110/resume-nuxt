@@ -50,7 +50,8 @@
         Skills
       </Text>
       <div class="grid grid-cols-3 gap-2 <md:grid-cols-1">
-        <Card class="px-1.25rem pt-3 pb-6" variant="flat" is-hoverable v-for="(skillInfo, idx) in skillList" :key="idx">
+        <Card class="px-1.25rem pt-3 pb-6 dark:bg-opacity-10" variant="flat" is-hoverable
+          v-for="(skillInfo, idx) in skillList" :key="idx">
           <template #header>
             <Text h4 b>{{ skillInfo.name }}</Text>
           </template>

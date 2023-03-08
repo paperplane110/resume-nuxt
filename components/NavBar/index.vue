@@ -18,9 +18,11 @@
       <NavItemB icon="fa-feather-pointed" to="/article" :activated="routeActivated" />
       <NavItemB icon="fa-camera-retro" to="/gallery" :activated="routeActivated" />
       <NavItemB icon="fa-icons" to="/components" :activated="routeActivated" />
+      <NavItemB icon="fa-scroll" to="/about" :activated="routeActivated" />
     </div>
     <div id="links" class="flex gap-4 pl-3">
-      <NavItemB icon="fa-scroll" to="/about" :activated="routeActivated" />
+      <NavBarColorSwitch />
+      <NavItemB icon="fa-brands fa-git" to="https://github.com/paperplane110" :activated="routeActivated" />
     </div>
   </div>
 </template>

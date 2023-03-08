@@ -235,7 +235,7 @@
       <div class="grid grid-cols-2">
         <div class="text-center">
           <Image src="/img/gallery/2022_bj_red_leaf.jpeg" hash="LVKmwwp{krRj8_xsg4Six]xtWCt6" />
-          <Text base>Origin picture</Text>
+          <Text base>Original picture</Text>
         </div>
         <div class="text-center">
           <ImageBlur />

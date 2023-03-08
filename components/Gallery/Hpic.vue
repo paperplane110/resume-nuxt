@@ -1,10 +1,10 @@
 <template>
   <div class="mt-6 text-right">
     <div class="rounded-2rem overflow-hidden">
-      <Image :src="imgInfo.src" :alt="imgInfo.alt" :hash="imgInfo.hash" />
+      <Image v-bind="imgInfo" />
     </div>
     <div class="flex-1 mt-2">
-      <Text sm>
+      <Text sm class="dark:text-gray-300">
         {{ imgInfo.date }} / <b>{{ imgInfo.alt }}</b> / {{ imgInfo.place }}
       </Text>
       <Text sm class="text-gray-400">{{ imgInfo.detail }}</Text>
@@ -20,6 +20,7 @@ type horizontalPictureProps = {
   date: string
   place: string
   detail?: string
+  aspectRatio?: number
 }
 
 const imgInfo = defineProps<horizontalPictureProps>()
