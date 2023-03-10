@@ -30,11 +30,11 @@
           <Text b>联系方式: </Text>
           <a href="mailto:tim3-yuan@foxmail.com"
             class="w-12 h-12 flex-center rounded-1 transition-all hover:(shadow-nsm)">
-            <font-awesome-icon icon="fa-solid fa-envelope" class="text-2xl" />
+            <font-awesome-icon icon="fa-solid fa-envelope" class="text-2xl transition-color" />
           </a>
           <a href="https://github.com/paperplane110" target="_blank"
             class="w-12 h-12 flex-center rounded-1 transition-all hover:(shadow-nsm)">
-            <font-awesome-icon icon="fa-brands fa-github" class="text-2xl transition" />
+            <font-awesome-icon icon="fa-brands fa-github" class="text-2xl transition-color" />
           </a>
         </div>
       </Description>
