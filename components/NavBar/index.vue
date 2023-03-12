@@ -14,14 +14,15 @@
       </div>
     </NuxtLink>
     <div id="links" class="flex gap-4 px-3">
-      <NavItemB icon="fa-vial" to="/projects" :activated="routeActivated" />
-      <NavItemB icon="fa-feather-pointed" to="/article" :activated="routeActivated" />
-      <NavItemB icon="fa-camera-retro" to="/gallery" :activated="routeActivated" />
-      <NavItemB icon="fa-icons" to="/components" :activated="routeActivated" />
-      <NavItemB icon="fa-scroll" to="/about" :activated="routeActivated" />
+      <NavItemB icon="fa-vial" to="/projects" tooltip="Projects" :activated="routeActivated" />
+      <NavItemB icon="fa-feather-pointed" to="/article" tooltip="Articles" :activated="routeActivated" />
+      <NavItemB icon="fa-camera-retro" to="/gallery" tooltip="Gallery" :activated="routeActivated" />
+      <NavItemB icon="fa-icons" to="/components" tooltip="Compoents" :activated="routeActivated" />
+      <NavItemB icon="fa-scroll" to="/about" tooltip="About" :activated="routeActivated" />
     </div>
     <div id="links" class="flex items-center gap-4 pl-3">
-      <NavItemB icon="fa-brands fa-git" to="https://github.com/paperplane110" :activated="routeActivated" />
+      <NavItemB icon="fa-brands fa-git" to="https://github.com/paperplane110" tooltip="Github" target="_blank"
+        :activated="routeActivated" />
       <NavBarColorSwitch />
     </div>
   </div>
