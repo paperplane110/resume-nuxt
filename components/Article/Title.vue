@@ -18,7 +18,9 @@
 
         <!-- Cover Image -->
         <div v-if="props.photographer && props.coverUrl" class="flex gap-2">
-          <Text sm class="text-gray-700 dark:text-gray-300">Cover image thanks to</Text>
+          <Text sm class="text-gray-700 dark:text-gray-300">
+            {{ props.isZh ? "封面图来自" : "Cover image thanks to" }}
+          </Text>
           <span class="text-sm">
             <NuxtLink :to="props.coverUrl" target="_blank"
               class="text-indigo-700 hover:(text-indigo-300) dark:(text-indigo-400)">
@@ -26,6 +28,14 @@
               <font-awesome-icon :icon="`fa-solid fa-link fa-lg`" />
             </NuxtLink>
           </span>
+        </div>
+
+        <!-- en zh Link -->
+        <div v-if="props.enzhLink" class="group text-sm mt-2 text-gray-700 hover:(text-gray-500) dark:(text-gray-300)">
+          <NuxtLink :to="props.enzhLink">
+            {{ props.isZh ? "Avaliable in English" : "可阅读中文版" }}
+            <font-awesome-icon class="group-hover:(text-yellow-400)" :icon="`fa-solid fa-lightbulb`" />
+          </NuxtLink>
         </div>
       </div>
     </Description>
@@ -43,6 +53,8 @@ type titleProps = {
   photographer?: string
   coverUrl?: string
   tags?: Array<string>
+  isZh: boolean
+  enzhLink?: string
 }
 const props = defineProps<titleProps>()
 </script>

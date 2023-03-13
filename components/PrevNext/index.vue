@@ -18,6 +18,7 @@
 const route = useRoute()
 const [prev, next] = await queryContent('/article')
   .only(['_path', 'title'])
+  .where({ _partial: false })
   .sort({ date: -1 })
   .findSurround(route.path)
 </script>

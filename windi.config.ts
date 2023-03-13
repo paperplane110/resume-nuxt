@@ -29,6 +29,7 @@ export default defineConfig({
   shortcuts: {
     'flex-center': 'flex justify-center items-center',
     'flex-between': 'flex justify-between items-center',
+    'btn': 'px-4 py-2 border rounded-lg transition-all transform duration-250 hover:(border-gray-500) active:(scale-90)'
   },
   plugins: [
     require('windicss/plugin/typography'),

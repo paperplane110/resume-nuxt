@@ -3,8 +3,8 @@
     <br />
     <Text hero>Projects.</Text>
     <div v-for="(info, idx) in projects_info" :key="idx" class="mb-12">
-      <DescriptionRight :src="info.src" :title="info.title" :contents="info.contents" :start="info.start"
-        :end="info.end" :link="info.link" />
+      <DescriptionRight :src="info.src" :title="info.title" :contents="info.contents" :start="info.start" :end="info.end"
+        :link="info.link" />
     </div>
   </div>
 </template>
