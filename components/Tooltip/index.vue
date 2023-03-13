@@ -15,11 +15,13 @@
 import { createPopper } from '@popperjs/core'
 import type { Placement } from '@popperjs/core'
 
-const props = defineProps<{
-  placement?: Placement
+type tooltipProps = {
+  placement?: Placement;
   x?: number
   y?: number
-}>()
+}
+
+const props = defineProps<tooltipProps>()
 
 const outter = ref<HTMLElement | null>(null)
 const inner = ref(null)
