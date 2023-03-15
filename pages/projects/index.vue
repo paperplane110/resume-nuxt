@@ -2,28 +2,49 @@
   <div>
     <br />
     <Text hero>Projects.</Text>
-    <div v-for="(info, idx) in projects_info" :key="idx" class="mb-12">
+    <!-- <div v-for="(info, idx) in projects_info" :key="idx" class="mb-12">
       <DescriptionRight :src="info.src" :title="info.title" :contents="info.contents" :start="info.start" :end="info.end"
         :link="info.link" />
+    </div> -->
+
+    <div class="grid grid-cols-1 gap-10 mt-8">
+      <ProjectBrief v-for="(info, idx) in projectsInfo" :key="idx" v-bind="info" class="group flex items-center gap-8" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const projects_info = [
+import { projectBriefProps } from '~~/utils/interfaces';
+const projectsInfo: projectBriefProps[] = [
   {
-    src: "img/project/kilo_cover.jpg",
-    title: "Kilo",
-    contents: "使用 C 语言编写的极简文本编辑器",
+    fromColor: 'from-lime-400',
+    toColor: 'to-green-500',
+    backColor: 'bg-lime-300',
+    abbr: 'Ba',
+    name: 'Badges',
+    description: '设定目标，收获徽章，让生活充满正反馈',
+    start: '2023.02',
+    end: 'now',
+    link: 'https://badges-fe.pages.dev/'
+  },
+  {
+    fromColor: 'from-gray-400',
+    toColor: 'to-gray-800',
+    backColor: 'bg-gray-200',
+    abbr: 'Kilo',
+    name: 'Kilo',
+    description: '使用 C 语言编写的极简文本编辑器',
     start: "2022.12",
     end: "2023.01",
     link: "https://github.com/paperplane110/kilo-text-editor",
-    side: "right"
   },
   {
-    src: "img/project/dm_cover.jpeg",
-    title: "Data Manager",
-    contents: "DM (Data Manager) 是一个数据集管理平台，旨在实现数据多维标签的管理。兼顾用户权限管理、数据备份、数据版本回滚等功能。同时还提供一套便于用户使用的Python SDK、CLI",
+    fromColor: 'from-green-300',
+    toColor: 'to-cyan-500',
+    backColor: 'bg-teal-200',
+    abbr: 'DM',
+    name: 'Data Manager',
+    description: '千万级图片数据集管理平台，旨在实现数据多维标签的管理。',
     start: "2021.10",
     end: "2022.10",
     link: "#"
