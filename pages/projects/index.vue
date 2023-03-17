@@ -19,7 +19,7 @@ const projectsInfo: projectBriefProps[] = [
   {
     fromColor: 'from-lime-400',
     toColor: 'to-green-500',
-    backColor: 'bg-lime-300',
+    backColor: 'bg-lime-300/70',
     abbr: 'Ba',
     name: 'Badges',
     description: '设定目标，收获徽章，让生活充满正反馈',
@@ -30,7 +30,7 @@ const projectsInfo: projectBriefProps[] = [
   {
     fromColor: 'from-gray-400',
     toColor: 'to-gray-800',
-    backColor: 'bg-gray-200',
+    backColor: 'bg-gray-300/70',
     abbr: 'Kilo',
     name: 'Kilo',
     description: '使用 C 语言编写的极简文本编辑器',
@@ -41,13 +41,24 @@ const projectsInfo: projectBriefProps[] = [
   {
     fromColor: 'from-green-300',
     toColor: 'to-cyan-500',
-    backColor: 'bg-teal-200',
+    backColor: 'bg-teal-200/70',
     abbr: 'DM',
     name: 'Data Manager',
     description: '千万级图片数据集管理平台，旨在实现数据多维标签的管理。',
     start: "2021.10",
     end: "2022.10",
     link: "#"
+  },
+  {
+    fromColor: 'from-sky-300',
+    toColor: 'to-blue-500',
+    backColor: 'bg-sky-200/70',
+    abbr: 'GT',
+    name: 'Gobang in Termial',
+    description: 'A gobang game that could be played in a termial',
+    start: "2021.01",
+    end: "2022.01",
+    link: "https://github.com/paperplane110/gobang"
   }
 ]
 </script>
