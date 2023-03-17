@@ -25,7 +25,7 @@
             <NuxtLink :to="props.coverUrl" target="_blank"
               class="text-indigo-700 hover:(text-indigo-300) dark:(text-indigo-400)">
               {{ props.photographer }}
-              <font-awesome-icon :icon="`fa-solid fa-link fa-lg`" />
+              <font-awesome-icon icon="fa-solid fa-link fa-lg" />
             </NuxtLink>
           </span>
         </div>
