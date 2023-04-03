@@ -1,11 +1,11 @@
 <template>
-  <div class="inline-block cursor-help">
-    <div class="inline outter" ref="outter" @mouseenter="showTip" @mouseleave="hideTip" @focusin="showTip"
+  <div class="inline-block">
+    <div class="inline cursor-help" ref="outter" @mouseenter="showTip" @mouseleave="hideTip" @focusin="showTip"
       @focusout="hideTip">
       <slot></slot><sup class="font-bold text-pink-600">?</sup>
     </div>
     <div ref="inner"
-      class="opacity-0 inline-block text-white py-1 px-2 bg-slate-700 rounded-lg shadow-nmd transition-opacity"
+      class="opacity-0 inline-block text-white py-1 px-2 bg-slate-700 rounded-lg shadow-nmd transition-opacity cursor-default"
       :class="isShow ? 'opacity-100' : 'opacity-0'">
       <slot name="tooltip">{{ props.tip }}</slot>
     </div>
