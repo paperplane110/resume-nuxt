@@ -27,6 +27,13 @@
       <Text p>em: This is a <em>emphasized</em> text.</Text>
     </section>
     <section>
+      <Text h3 title><Code>AbbrTip</Code></Text>
+      <Text>
+        This componet uses the tooltip to show the meaning of a <AbbrTip tip="abbreviation">abbr</AbbrTip>.
+        The abbr would be decorated with a pink '?' mark at the top right corner.
+      </Text>
+    </section>
+    <section>
       <Text h3 title><Code>ColorLink</Code></Text>
       <Text>The links would be rendered by different color according to its
         <Code>type</Code> attribute.</Text>

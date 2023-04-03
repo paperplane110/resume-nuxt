@@ -19,7 +19,7 @@
           我是<b>袁天宇</b>，是一名测试开发工程师，是<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">
             百度阿波罗 🚙
           </ColorLink>团队中的一员，
-          负责自动驾驶系统的HIL（硬件在环）仿真测试，以及场景管理平台的开发。
+          负责自动驾驶系统的 <AbbrTip tip="Hardware In Loop 硬件在环">HIL</AbbrTip>仿真测试，以及场景管理平台的开发。
           <br />
           在此之前，我曾以算法测试开发工程师的身份就职于<ColorLink type="warning" href="https://www.aibee.cn/">
             Aibee 🐝
