@@ -18,10 +18,11 @@
         <Text> Hi there!</Text>
         <Text h3 b>I'm Tianyu</Text>
         <Text>
-          I'm a SET (software engineer in test) in <ColorLink type="secondary"
+          I'm a <AbbrTip tip="software engineer in test">SET</AbbrTip> in <ColorLink type="secondary"
             href="https://www.apollo.auto/apollo-self-driving">
             Baidu Apollo 🚙
-          </ColorLink> group. Focus on advanced driving assistance system's HIL(Hardare in Loop) simulation.
+          </ColorLink> group. Focus on advanced driving assistance system's <AbbrTip tip="Hardare in Loop">HIL</AbbrTip>
+          simulation.
           <br />
           Before that, I'm a SET (algorithm test) in
           <ColorLink type="warning" href="https://www.aibee.cn/">
@@ -81,7 +82,7 @@
       <Text>
         <ul>
           <li>Design and conduct ADAS's HIL simulation</li>
-          <li>Build the web platform for managing collections of test scene</li>
+          <li>Build the web platform for managing collections of test scenarios</li>
         </ul>
       </Text>
       <br />
