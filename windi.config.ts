@@ -23,6 +23,12 @@ export default defineConfig({
         nmd: '0 12px 20px 6px rgb(104 112 118 / 0.08)',
         nlg: '0 12px 34px 6px rgb(104 112 118 / 0.18)',
         nxl: '0 25px 65px 0px rgb(104 112 118 / 0.35)'
+      },
+      dropShadow: {
+        yellow: '0 0 0.75rem rgb(243, 254, 89)',
+        orange: '0 0 0.75rem rgb(240, 146, 70)',
+        indigo: '0 0 0.75rem rgb(108, 95, 254)',
+        red: '0 0 0.75rem rgb(254, 89, 111)',
       }
     }
   },
