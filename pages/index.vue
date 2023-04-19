@@ -1,38 +1,45 @@
 <template>
-  <div class="container mx-auto">
-    <div class="welcome">
-      <NuxtLink class="group" to="/projects">
-        <p class="super-bold">
-          Code<span class="filter transition-colors group-hover:(text-orange-400 drop-shadow-orange)">.
+  <!-- <div class="container mx-auto"> -->
+  <div class="pt-[20vh] flex flex-col">
+    <div v-for="(link, idx) in heroLinks" :key="idx"
+      class="group my-[-2rem] text-center transition transform duration-300 animate-ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:(-translate-y-4) <md:(my-[-1.5rem] hover:-translate-y-2)">
+      <p class="block super-hero">
+        <NuxtLink :to="link.to">
+          {{ link.text }}<span class="filter transition-colors group-hover:(text-indigo-400 drop-shadow-indigo)">.
           </span>
-        </p>
-      </NuxtLink>
-      <NuxtLink class="group" to="/article">
-        <p class="super-bold">Writing<span
+        </NuxtLink>
+      </p>
+    </div>
+
+    <!-- <NuxtLink class="group" to="/article">
+        <p class="super-hero">Writing<span
             class="filter transition-colors group-hover:(text-indigo-500 drop-shadow-indigo)">.
           </span></p>
       </NuxtLink>
       <NuxtLink class="group" to="/gallery">
-        <p class="super-bold">Art<span class="filter transition-colors group-hover:(text-red-500 drop-shadow-red)">.
+        <p class="super-hero">Art<span class="filter transition-colors group-hover:(text-red-500 drop-shadow-red)">.
           </span></p>
-      </NuxtLink>
-      <div>
-        <!-- <span class="text-base font-bold text-gray-400" :style="isTengel">{{ welcom }}</span> -->
-        <p class="text-base text-gray-400">Welcome to <b class="text-gray-500">Tianyu's</b> blog</p>
-        <div class="grid grid-cols-3 gap-4">
-          <button class="btn">
-            <NuxtLink to="about">About me</NuxtLink>
-          </button>
-          <button class="btn">
-            <NuxtLink to="components">Compts.</NuxtLink>
-          </button>
-          <button class="btn">
-            <NuxtLink to="game/gobang">Game</NuxtLink>
-          </button>
+      </NuxtLink> -->
+
+    <div class="z-10">
+      <!-- <span class="text-base font-bold text-gray-400" :style="isTengel">{{ welcom }}</span> -->
+      <p class="text-center text-base text-gray-400">Welcome to <b class="text-gray-500">Tianyu's</b> blog</p>
+      <div class="flex gap-4 justify-center">
+        <div class="btn">
+          <NuxtLink to="about">About me</NuxtLink>
         </div>
+        <div class="btn">
+          <NuxtLink to="components">Compts.</NuxtLink>
+        </div>
+        <NuxtLink to="game/gobang">
+          <div class="btn">
+            Game
+          </div>
+        </NuxtLink>
       </div>
     </div>
   </div>
+  <!-- </div> -->
 </template>
 
 <script setup lang="ts">
@@ -65,29 +72,27 @@ const isTengel = computed(() => {
     return { fontFamily: 'Tengel' }
   } else return {}
 })
+
+const heroLinks = [
+  {
+    text: "Code",
+    to: "/projects",
+  },
+  {
+    text: "Writing",
+    to: "/article",
+  },
+  {
+    text: "Art",
+    to: "/gallery",
+  }
+]
+
 </script>
 
 <style scoped>
 .container {
   height: 100%;
-}
-
-.welcome {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 92px - 70px);
-}
-
-.super-bold {
-  margin-top: -3rem;
-  font-size: 12rem;
-  font-weight: bold;
-  line-height: 100%;
 }
 
 .about {

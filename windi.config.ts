@@ -35,7 +35,8 @@ export default defineConfig({
   shortcuts: {
     'flex-center': 'flex justify-center items-center',
     'flex-between': 'flex justify-between items-center',
-    'btn': 'px-4 py-2 border rounded-lg transition-all transform duration-250 hover:(border-gray-500) active:(scale-90)'
+    'btn': 'px-4 py-2 border rounded-xl transition-all transform duration-250 hover:(border-gray-500) active:(scale-90)',
+    'super-hero': 'text-[12rem] font-bold <2xl:(text-10rem) <lg:(text-9rem) <md:(text-8rem) <sm:(text-6rem)'
   },
   plugins: [
     require('windicss/plugin/typography'),
