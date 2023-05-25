@@ -26,6 +26,28 @@
 const { width, height } = useWindowSize()
 const imgList = [
   {
+    src: "/img/gallery/2023_wh_sunset.jpg",
+    hash: "LmH1lFjtEga|~Uj[R+a|X-a|sTjt",
+    alt: "海上落日(The Sunset)",
+    date: '2023.05',
+    place: "Photoed at Weihai",
+  },
+  {
+    src: "/img/gallery/2023_wh_qiaoxiang.jpg",
+    hash: "L%FjKwt9t7R*tpRjf6j]IURjayof",
+    alt: "侨乡号邮轮(Qiaoxiang)",
+    date: '2023.05',
+    place: "Photoed at Weihai, LiuGong Island",
+  },
+  {
+    src: "/img/gallery/2023_wh_sunset_hotel.jpg",
+    hash: "LMIqoc~p004U5YN1$~%L0LRj%MR.",
+    alt: "窗外落日(The Sunset out the Window)",
+    date: '2023.05',
+    place: "Photoed at Weihai",
+    aspectRatio: 46,
+  },
+  {
     src: "/img/gallery/2022_bj_red_leaf.jpeg",
     hash: "LVKmwwp{krRj8_xsg4Six]xtWCt6",
     alt: "地坛红叶(Red Leaves in Ditan Park)",
@@ -38,6 +60,15 @@ const imgList = [
     alt: "秋日的地坛 (Ditan park in Autumn)",
     date: '2022.11',
     place: "Photoed at Beijing, Ditan Park",
+  },
+  {
+    src: "/img/gallery/2022_bj_tree_roof.jpg",
+    hash: "LKD8q8I;0#bb}?ofNGI?S$WW$yWW",
+    alt: "地坛一角 (Ditan park)",
+    date: '2022.11',
+    place: "Photoed at Beijing, Ditan Park",
+    layout: 'v',
+    aspectRatio: 175,
   },
   {
     src: "/img/gallery/2022_bj_child.jpeg",
