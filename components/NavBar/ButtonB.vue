@@ -5,7 +5,7 @@
         <div
           class="group w-12 h-12 flex-center rounded-1rem transition-all transform hover:(bg-gradient-to-br from-yellow-300 to-orange-400) active:(scale-95)"
           :class="activatedStyles">
-          <font-awesome-icon :icon="`fa-solid ${props.icon} fa-lg`" class="text-xl group-hover:(text-white)" />
+          <Icon :name="props.icon" class="text-xl group-hover:text-white dark:text-white" />
         </div>
       </NuxtLink>
     </template>

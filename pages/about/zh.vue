@@ -7,17 +7,18 @@
       </Text>
       <NuxtLink to="/about">
         <div class="group w-12 h-12 flex-center transition filter hover:(drop-shadow-md)">
-          <font-awesome-icon icon="fa-solid fa-language" class="text-3xl transition group-hover:(text-[#4f71d1])" />
+          <Icon name="fa6-solid:language" class="text-4xl transition group-hover:(text-indigo-500)" />
         </div>
       </NuxtLink>
     </div>
     <section>
-      <!-- <Text h3> <font-awesome-icon icon="fa-solid fa-smile" /> 自我介绍 </Text> -->
+      <!-- <Text h3> <Icon icon="fa-solid fa-smile" /> 自我介绍 </Text> -->
       <Description src="/img/london_selfi.jpeg" :imgSize="2" reverse>
         <Text h3 b>你好啊，朋友！</Text>
         <Text>
           我是<b>袁天宇</b>，是一名测试开发工程师，是<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">
-            百度阿波罗 🚙
+            <Icon name="ri:baidu-fill" class="text-2xl transform -translate-y-0.8" />
+            百度阿波罗
           </ColorLink>团队中的一员，
           负责自动驾驶系统的 <AbbrTip tip="Hardware In Loop 硬件在环">HIL</AbbrTip>仿真测试，以及场景管理平台的开发。
           <br />
@@ -30,11 +31,11 @@
           <Text b>联系方式: </Text>
           <a href="mailto:tim3-yuan@foxmail.com"
             class="w-12 h-12 flex-center rounded-1 transition-all hover:(shadow-nsm)">
-            <font-awesome-icon icon="fa-solid fa-envelope" class="text-2xl transition-color" />
+            <Icon name="fa6-solid:envelope" class="text-2xl transition-color" />
           </a>
           <a href="https://github.com/paperplane110" target="_blank"
             class="w-12 h-12 flex-center rounded-1 transition-all hover:(shadow-nsm)">
-            <font-awesome-icon icon="fa-brands fa-github" class="text-2xl transition-color" />
+            <Icon name="logos:github-icon" class="text-2xl transition-color" />
           </a>
         </div>
       </Description>
@@ -42,7 +43,7 @@
 
     <section>
       <Text h3>
-        <font-awesome-icon icon="fa-solid fa-bolt" />
+        <Icon name="fa6-solid:bolt" class="transform -translate-y-1" />
         技能速览
       </Text>
       <div class="grid grid-cols-3 gap-2 <md:grid-cols-1">
@@ -66,12 +67,14 @@
 
     <section>
       <Text h3>
-        <font-awesome-icon icon="fa-solid fa-briefcase" />
+        <Icon name="fa6-solid:briefcase" class="transform -translate-y-1" />
         工作经历
       </Text>
       <Text h4 b>测试开发工程师（仿真方向）</Text>
       <Text>
-        2022.12-至今<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">@Baidu ASD 🚙
+        2022.12-至今<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">
+          <Icon name="ri:baidu-fill" class="text-2xl transform -translate-y-0.8" />
+          Baidu Apollo ASD
         </ColorLink>
       </Text>
       <Text b em>主要职能与职责</Text>
@@ -142,7 +145,7 @@
 
     <section>
       <Text h3>
-        <font-awesome-icon icon="fa-solid fa-graduation-cap" /> 教育经历
+        <Icon name="fa6-solid:graduation-cap" class="transform -translate-y-1" /> 教育经历
       </Text>
       <Text h4 b>机器人学·硕士</Text>
       <Text>

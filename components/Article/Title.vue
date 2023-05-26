@@ -25,7 +25,7 @@
             <NuxtLink :to="props.coverUrl" target="_blank"
               class="text-indigo-700 hover:(text-indigo-300) dark:(text-indigo-400)">
               {{ props.photographer }}
-              <font-awesome-icon icon="fa-solid fa-link fa-lg" />
+              <Icon name="fa6-solid:link" class="text-lg" />
             </NuxtLink>
           </span>
         </div>
@@ -34,7 +34,7 @@
         <div v-if="props.enzhLink" class="group text-sm mt-2 text-gray-700 hover:(text-gray-500) dark:(text-gray-300)">
           <NuxtLink :to="props.enzhLink">
             {{ props.isZh ? "Avaliable in English" : "可阅读中文版" }}
-            <font-awesome-icon class="group-hover:(text-yellow-400)" :icon="`fa-solid fa-lightbulb`" />
+            <Icon class="group-hover:(text-yellow-400)" name="fa6-solid:lightbulb" />
           </NuxtLink>
         </div>
       </div>

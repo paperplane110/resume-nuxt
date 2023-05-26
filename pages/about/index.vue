@@ -7,20 +7,21 @@
       </Text>
       <NuxtLink to="/about/zh">
         <div class="group w-12 h-12 flex-center transition filter hover:(drop-shadow-md)">
-          <font-awesome-icon icon="fa-solid fa-language" class="text-3xl transition group-hover:(text-[#4f71d1])" />
+          <Icon name="fa6-solid:language" class="text-4xl transition group-hover:(text-indigo-500)" />
         </div>
       </NuxtLink>
     </div>
 
     <section>
-      <!-- <Text h3> <font-awesome-icon icon="fa-solid fa-smile" /> About me </Text> -->
+      <!-- <Text h3> <Icon icon="fa-solid fa-smile" /> About me </Text> -->
       <Description src="/img/london_selfi.jpeg" :imgSize="2" reverse>
         <Text> Hi there!</Text>
         <Text h3 b>I'm Tianyu</Text>
         <Text>
           I'm a <AbbrTip tip="software engineer in test">SET</AbbrTip> in <ColorLink type="secondary"
             href="https://www.apollo.auto/apollo-self-driving">
-            Baidu Apollo 🚙
+            <Icon name="ri:baidu-fill" class="text-2xl transform -translate-y-0.8" />
+            Baidu Apollo
           </ColorLink> group. Focus on advanced driving assistance system's <AbbrTip tip="Hardare in Loop">HIL</AbbrTip>
           simulation.
           <br />
@@ -35,11 +36,11 @@
           <Text b>Contacts: </Text>
           <a href="mailto:tim3-yuan@foxmail.com"
             class="w-12 h-12 flex-center rounded-1 transition-all hover:(shadow-nsm)">
-            <font-awesome-icon icon="fa-solid fa-envelope" class="text-2xl transition-color" />
+            <Icon name="fa6-solid:envelope" class="text-2xl transition-color" />
           </a>
           <a href="https://github.com/paperplane110" target="_blank"
             class="w-12 h-12 flex-center rounded-1 transition-all hover:(shadow-nsm)">
-            <font-awesome-icon icon="fa-brands fa-github" class="text-2xl transition-color" />
+            <Icon name="logos:github-icon" class="text-2xl transition-color" />
           </a>
         </div>
       </Description>
@@ -47,7 +48,7 @@
 
     <section>
       <Text h3>
-        <font-awesome-icon icon="fa-solid fa-bolt" />
+        <Icon name="fa6-solid:bolt" class="transform -translate-y-1" />
         Skills
       </Text>
       <div class="grid grid-cols-3 gap-2 <md:grid-cols-1">
@@ -71,11 +72,13 @@
 
     <section>
       <Text h3>
-        <font-awesome-icon icon="fa-solid fa-briefcase" /> Work Experience
+        <Icon name="fa6-solid:briefcase" class="transform -translate-y-1" /> Work Experience
       </Text>
       <Text h4 b>Software Engineer in Test (HIL simulation)</Text>
       <Text>
-        2022.12-Current<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">@Baidu ASD 🚙
+        2022.12-Current<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">
+          <Icon name="ri:baidu-fill" class="text-2xl transform -translate-y-0.8" />
+          Baidu Apollo ASD
         </ColorLink>
       </Text>
       <Text b em>Key Qualifications & Responsibilities</Text>
@@ -140,7 +143,7 @@
 
     <section>
       <Text h3>
-        <font-awesome-icon icon="fa-solid fa-graduation-cap" /> Education
+        <Icon name="fa6-solid:graduation-cap" class="transform -translate-y-1" /> Education
       </Text>
       <Text h4 b>MSc. Robotics</Text>
       <Text>

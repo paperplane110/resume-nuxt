@@ -31,7 +31,6 @@ export default defineNuxtConfig({
     '@fontsource/jetbrains-mono',
     '@fontsource/material-icons',
     '@fontsource/material-icons-outlined',
-    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
   modules: [
     'nuxt-windicss',
@@ -39,6 +38,7 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
     '@vueuse/nuxt',
     '@nuxtjs/color-mode',
+    'nuxt-icon',
   ],
   colorMode: {
     classSuffix: '',
