@@ -13,7 +13,7 @@
       <NavBarButtonB icon="fa6-solid:feather-pointed" to="/article" tooltip="Articles" :activated="routeActivated" />
       <NavBarButtonB icon="fa6-solid:camera-retro" to="/gallery" tooltip="Gallery" :activated="routeActivated" />
       <NavBarButtonB icon="fa6-solid:icons" to="/components" tooltip="Compoents" :activated="routeActivated" />
-      <NavBarButtonB icon="fa6-solid:briefcase" to="/about" tooltip="CV" :activated="routeActivated" />
+      <NavBarButtonB icon="fa6-solid:briefcase" to="/about" tooltip="About" :activated="routeActivated" />
     </div>
     <div id="links" class="flex items-center gap-4 pl-3">
       <NavBarButtonB icon="fa6-brands:git" to="https://github.com/paperplane110" tooltip="Github" target="_blank"

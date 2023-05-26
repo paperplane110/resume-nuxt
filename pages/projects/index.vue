@@ -1,16 +1,19 @@
 <template>
-  <div>
-    <br />
-    <Text hero>Projects.</Text>
-    <!-- <div v-for="(info, idx) in projects_info" :key="idx" class="mb-12">
-      <DescriptionRight :src="info.src" :title="info.title" :contents="info.contents" :start="info.start" :end="info.end"
-        :link="info.link" />
-    </div> -->
+  <Container>
+    <div>
+      <br />
+      <Text hero>Projects.</Text>
+      <!-- <div v-for="(info, idx) in projects_info" :key="idx" class="mb-12">
+        <DescriptionRight :src="info.src" :title="info.title" :contents="info.contents" :start="info.start" :end="info.end"
+          :link="info.link" />
+      </div> -->
 
-    <div class="grid grid-cols-1 gap-10 mt-8">
-      <ProjectBrief v-for="(info, idx) in projectsInfo" :key="idx" v-bind="info" class="group flex items-center gap-8" />
+      <div class="grid grid-cols-1 gap-10 mt-8">
+        <ProjectBrief v-for="(info, idx) in projectsInfo" :key="idx" v-bind="info"
+          class="group flex items-center gap-8" />
+      </div>
     </div>
-  </div>
+  </Container>
 </template>
 
 <script setup lang="ts">

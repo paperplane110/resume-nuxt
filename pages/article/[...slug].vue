@@ -1,13 +1,15 @@
 <template>
-  <main>
-    <br />
-    <ArticleTitle :title="data?.title" :date="data?.date" :description="data?.description" :cover="data?.image.src"
-      :tags="data?.tags" :cover-url="data?.image.url" :photographer="data?.image.photographer"
-      :enzh-link="linkedArticle?._path" :isZh="isZh()" />
-    <ContentDoc />
-    <div class="h-80px" />
-    <PrevNext />
-  </main>
+  <Container>
+    <main>
+      <br />
+      <ArticleTitle :title="data?.title" :date="data?.date" :description="data?.description" :cover="data?.image.src"
+        :tags="data?.tags" :cover-url="data?.image.url" :photographer="data?.image.photographer"
+        :enzh-link="linkedArticle?._path" :isZh="isZh()" />
+      <ContentDoc />
+      <div class="h-80px" />
+      <PrevNext />
+    </main>
+  </Container>
 </template>
 
 <script setup lang="ts">

@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <Container>
+
     <br />
     <Text hero>Gallery.</Text>
     <Text>
@@ -15,10 +16,12 @@
       </Sparkle>.
     </Text>
     <br />
-    <div v-for="(imgInfo, idx) in imgList" :key="idx">
-      <GalleryVpic v-if="isShowV(imgInfo.layout)" v-bind="imgInfo" />
-      <GalleryHpic v-else v-bind="imgInfo" />
-    </div>
+  </Container>
+  <div class="mx-6 <lg:mx-2" v-for="(imgInfo, idx) in imgList" :key="idx">
+    <GalleryVpic v-if="isShowV(imgInfo.layout)" v-bind="imgInfo" />
+    <GalleryLargeHpicL v-else-if="(width >= 1024) && isEven(idx)" v-bind="imgInfo" />
+    <GalleryLargeHpicR v-else-if="(width >= 1024) && !isEven(idx)" v-bind="imgInfo" />
+    <GalleryHpic v-else v-bind="imgInfo" />
   </div>
 </template>
 
@@ -102,6 +105,14 @@ const imgList = [
     detail: "春日的布里斯托，落英缤纷，美不胜收"
   },
 ]
+
+const isEven = (idx: number): boolean => {
+  if (idx % 2 === 0) {
+    return true
+  } else {
+    return false
+  }
+}
 
 const isShowV = (layout: string | undefined) => {
   if (layout === 'v' && width.value > 640) {
