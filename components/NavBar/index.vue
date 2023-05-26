@@ -7,17 +7,17 @@
             class="rotating text-2xl group-hover:(text-indigo-500)" />
         </div>
       </NuxtLink>
-      <NavItemB icon="fa-blank" to="/playground" tooltip="???" :activated="routeActivated" />
+      <NavBarButtonB icon="fa-blank" to="/playground" tooltip="???" :activated="routeActivated" />
     </div>
     <div id="links" class="flex gap-4 px-3">
-      <NavItemB icon="fa-vial" to="/projects" tooltip="Projects" :activated="routeActivated" />
-      <NavItemB icon="fa-feather-pointed" to="/article" tooltip="Articles" :activated="routeActivated" />
-      <NavItemB icon="fa-camera-retro" to="/gallery" tooltip="Gallery" :activated="routeActivated" />
-      <NavItemB icon="fa-icons" to="/components" tooltip="Compoents" :activated="routeActivated" />
-      <NavItemB icon="fa-scroll" to="/about" tooltip="About" :activated="routeActivated" />
+      <NavBarButtonB icon="fa-vial" to="/projects" tooltip="Projects" :activated="routeActivated" />
+      <NavBarButtonB icon="fa-feather-pointed" to="/article" tooltip="Articles" :activated="routeActivated" />
+      <NavBarButtonB icon="fa-camera-retro" to="/gallery" tooltip="Gallery" :activated="routeActivated" />
+      <NavBarButtonB icon="fa-icons" to="/components" tooltip="Compoents" :activated="routeActivated" />
+      <NavBarButtonB icon="fa-scroll" to="/about" tooltip="About" :activated="routeActivated" />
     </div>
     <div id="links" class="flex items-center gap-4 pl-3">
-      <NavItemB icon="fa-brands fa-git" to="https://github.com/paperplane110" tooltip="Github" target="_blank"
+      <NavBarButtonB icon="fa-brands fa-git" to="https://github.com/paperplane110" tooltip="Github" target="_blank"
         :activated="routeActivated" />
       <NavBarColorSwitch />
     </div>
