@@ -20,9 +20,9 @@
     "sitemap": "^7.1.1"
   },
   "dependencies": {
-    "@codesandbox/sandpack-client": "^2.6.6",
+    "@codesandbox/sandpack-client": "^2.6.7",
+    "@fontsource/dm-sans": "^5.0.1",
     "@fontsource/jetbrains-mono": "^5.0.1",
-    "@fontsource/lato": "^5.0.1",
     "@fontsource/material-icons": "^5.0.1",
     "@fontsource/material-icons-outlined": "^5.0.1",
     "@fontsource/roboto-flex": "^5.0.1",

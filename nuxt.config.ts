@@ -27,8 +27,8 @@ export default defineNuxtConfig({
   css: [
     '@/assets/css/style.css',
     '@/assets/css/dark.css',
-    '@fontsource/lato',
     '@fontsource/jetbrains-mono',
+    '@fontsource/dm-sans',
     '@fontsource/material-icons',
     '@fontsource/material-icons-outlined',
   ],
