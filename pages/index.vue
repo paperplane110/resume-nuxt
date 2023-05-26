@@ -1,8 +1,8 @@
 <template>
   <!-- <div class="container mx-auto"> -->
-  <div class="pt-[20vh] flex flex-col">
+  <div class="pt-[18vh] flex flex-col">
     <div v-for="(link, idx) in heroLinks" :key="idx"
-      class="group my-[-2rem] text-center transition transform duration-300 animate-ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:(-translate-y-4) <md:(my-[-1.5rem] hover:-translate-y-2)">
+      class="group my-[-2rem] text-center transition transform duration-300 <md:(my-[-1.5rem])">
       <p class="block super-hero">
         <NuxtLink :to="link.to">
           {{ link.text }}<span class="filter transition-colors group-hover:(text-indigo-400 drop-shadow-indigo)">.
@@ -12,18 +12,18 @@
     </div>
 
     <!-- <NuxtLink class="group" to="/article">
-        <p class="super-hero">Writing<span
-            class="filter transition-colors group-hover:(text-indigo-500 drop-shadow-indigo)">.
-          </span></p>
-      </NuxtLink>
-      <NuxtLink class="group" to="/gallery">
-        <p class="super-hero">Art<span class="filter transition-colors group-hover:(text-red-500 drop-shadow-red)">.
-          </span></p>
-      </NuxtLink> -->
+      <p class="super-hero">Writing<span
+          class="filter transition-colors group-hover:(text-indigo-500 drop-shadow-indigo)">.
+        </span></p>
+    </NuxtLink>
+    <NuxtLink class="group" to="/gallery">
+      <p class="super-hero">Art<span class="filter transition-colors group-hover:(text-red-500 drop-shadow-red)">.
+        </span></p>
+    </NuxtLink> -->
 
     <div class="z-10">
       <!-- <span class="text-base font-bold text-gray-400" :style="isTengel">{{ welcom }}</span> -->
-      <p class="text-center text-base text-gray-400">Welcome to <b class="text-gray-500">Tianyu's</b> blog</p>
+      <p class="text-center text-gray-400">Welcome to <b class="text-gray-500">Tianyu's</b> blog</p>
       <div class="flex gap-4 justify-center">
         <div class="btn">
           <NuxtLink to="about">About me</NuxtLink>
