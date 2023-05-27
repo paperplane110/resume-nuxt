@@ -1,8 +1,8 @@
 <template>
   <div class="group flex items-center gap-4 mt-6">
     <div
-      class="flex-[0.7] <md:(flex-1) rounded-2rem overflow-hidden max-h-[100px] filter blur-sm transition-all duration-500 transform group-hover:(max-h-[1000px] filter-none)">
-      <img :src="imgInfo.src" :alt="imgInfo.alt" />
+      class="flex-[0.7] <md:(flex-1) rounded-2rem overflow-hidden max-h-[100px] filter blur-sm transition-all duration-500 transform group-hover:(max-h-[1500px] filter-none)">
+      <img v-bind="imgInfo" />
     </div>
     <div class="flex flex-col justify-between">
       <div class="mt-2 pl-2 border-l-black border-l-2 dark:(border-l-gray-500 text-gray-300) ">
