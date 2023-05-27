@@ -165,6 +165,7 @@ const imgList = [
     date: '1903',
     place: "John William Godward",
     layout: 'v',
+    aspectRatio: 180,
   },
 ]
 
