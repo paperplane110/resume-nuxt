@@ -1,43 +1,42 @@
 <template>
-    <a
-        :class="`inline-block px-0.3rem rounded-1rem transition-all transform hover:(text-white -translate-y-2px cursor-pointer) active:(translate-y-1px) ${type}`">
-        <slot></slot>
-    </a>
+  <a :class="`inline-block px-0.3rem rounded-1rem transition-colors hover:(text-white cursor-pointer) ${type}`">
+    <slot></slot>
+  </a>
 </template>
-  
+
 <script setup lang="ts">
 defineProps({
-    type: {
-        type: String,
-        default: "primary",
-        validator(value: string) {
-            return ["primary", "secondary", "success", "warning", "error"].includes(
-                value
-            );
-        },
+  type: {
+    type: String,
+    default: "primary",
+    validator(value: string) {
+      return ["primary", "secondary", "success", "warning", "error"].includes(
+        value
+      );
     },
+  },
 });
 </script>
-  
+
 <style scope>
 .primary {
-    @apply text-purple-500 hover: bg-purple-500;
+  @apply text-purple-500 hover: bg-purple-500;
 }
 
 .secondary {
-    @apply text-secondary hover: bg-indigo-500;
+  @apply text-secondary hover: bg-indigo-500;
 }
 
 .success {
-    @apply text-teal-500 hover: bg-teal-500;
+  @apply text-teal-500 hover: bg-teal-500;
 }
 
 .warning {
-    @apply text-orange-500 hover: bg-orange-500;
+  @apply text-orange-500 hover: bg-orange-500;
 }
 
 .error {
-    @apply text-red-500 hover: bg-red-500;
+  @apply text-red-500 hover: bg-red-500;
 }
 
 /* @mixin linkColor($color: $primary-color) {

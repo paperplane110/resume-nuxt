@@ -9,25 +9,25 @@
     "upgrade": "nuxi upgrade"
   },
   "devDependencies": {
-    "@nuxt/content": "^2.2.2",
-    "@nuxt/image-edge": "^1.0.0-27913696.5d122a3",
-    "@vueuse/core": "^9.5.0",
-    "@vueuse/nuxt": "^9.5.0",
-    "nuxt": "^3.0.0-rc.14",
-    "nuxt-windicss": "^2.5.5"
+    "@nuxt/content": "^2.6.0",
+    "@nuxt/image-edge": "^1.0.0-28059208.2abef1b",
+    "@nuxtjs/color-mode": "^3.2.0",
+    "@vueuse/core": "^10.1.2",
+    "@vueuse/nuxt": "^10.1.2",
+    "nuxt": "^3.5.1",
+    "nuxt-icon": "^0.4.1",
+    "nuxt-windicss": "^2.6.1",
+    "sitemap": "^7.1.1"
   },
   "dependencies": {
-    "@fontsource/jetbrains-mono": "^4.5.10",
-    "@fontsource/lato": "^4.5.9",
-    "@fontsource/material-icons": "^4.5.4",
-    "@fontsource/material-icons-outlined": "^4.5.4",
-    "@fontsource/roboto": "^4.5.8",
-    "@fontsource/roboto-flex": "^4.5.2",
-    "@fortawesome/fontawesome-svg-core": "^6.2.0",
-    "@fortawesome/free-brands-svg-icons": "^6.2.0",
-    "@fortawesome/free-regular-svg-icons": "^6.2.0",
-    "@fortawesome/free-solid-svg-icons": "^6.2.0",
-    "@fortawesome/vue-fontawesome": "^3.0.1",
-    "blurhash": "^2.0.4"
+    "@codesandbox/sandpack-client": "^2.6.7",
+    "@fontsource/dm-sans": "^5.0.1",
+    "@fontsource/jetbrains-mono": "^5.0.1",
+    "@fontsource/material-icons": "^5.0.1",
+    "@fontsource/material-icons-outlined": "^5.0.1",
+    "@fontsource/roboto-flex": "^5.0.1",
+    "@headlessui/vue": "^1.7.13",
+    "@popperjs/core": "^2.11.7",
+    "blurhash": "^2.0.5"
   }
 }

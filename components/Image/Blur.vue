@@ -7,21 +7,27 @@
 <script setup lang='ts'>
 import { decode } from "blurhash"
 
-
-
 const props = defineProps({
   hash: { type: String, default: "LVKmwwp{krRj8_xsg4Six]xtWCt6" },
   aspectRatio: { type: Number, default: 56.25 },
 })
 
 const pixels = decode(props.hash, 32, 32)
-const canvas = ref(null)
+const canvas = ref<HTMLCanvasElement | null>(null)
 
 onMounted(() => {
+  if (!canvas.value) {
+    // ensure to get the ref of the canvase element
+    console.log("Canvase is not ready")
+    return;
+  }
   const ctx = canvas.value.getContext("2d")
-  const imageData = ctx.createImageData(32, 32)
-  imageData.data.set(pixels)
-  ctx.putImageData(imageData, 0, 0)
+  if (ctx) {
+    // ensure ctx is not null
+    const imageData = ctx.createImageData(32, 32)
+    imageData.data.set(pixels)
+    ctx.putImageData(imageData, 0, 0)
+  }
 })
 
 </script>

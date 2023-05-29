@@ -1,6 +1,7 @@
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
+  darkMode: 'class',
   theme: {
     textColor: theme => ({
       ...theme('colors'),
@@ -22,12 +23,20 @@ export default defineConfig({
         nmd: '0 12px 20px 6px rgb(104 112 118 / 0.08)',
         nlg: '0 12px 34px 6px rgb(104 112 118 / 0.18)',
         nxl: '0 25px 65px 0px rgb(104 112 118 / 0.35)'
+      },
+      dropShadow: {
+        yellow: '0 0 0.75rem rgb(243, 254, 89)',
+        orange: '0 0 0.75rem rgb(240, 146, 70)',
+        indigo: '0 0 0.75rem rgb(108, 95, 254)',
+        red: '0 0 0.75rem rgb(254, 89, 111)',
       }
     }
   },
   shortcuts: {
     'flex-center': 'flex justify-center items-center',
     'flex-between': 'flex justify-between items-center',
+    'btn': 'px-4 py-2 border rounded-xl transition-all transform duration-250 hover:(border-gray-500) active:(scale-90)',
+    'super-hero': 'text-[12rem] font-bold <2xl:(text-10rem) <lg:(text-9rem) <md:(text-8rem) <sm:(text-6rem)'
   },
   plugins: [
     require('windicss/plugin/typography'),

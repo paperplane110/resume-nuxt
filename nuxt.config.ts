@@ -6,12 +6,17 @@ export default defineNuxtConfig({
       meta: [
         {
           name: 'description',
-          content: "Coding, Playing music, and Gaming are three fundamental pillars of this guy's life."
+          content: "Welcom to Tianyu's blog. Here covers tech blogs, photographs, and my resume."
         }
       ],
       link: [
         { rel: 'icon', type: 'image/svg', href: '/svg/favicon.svg' }
       ]
+    }
+  },
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
     }
   },
   vue: {
@@ -20,19 +25,28 @@ export default defineNuxtConfig({
     }
   },
   css: [
-    'assets/style.css',
-    '@fontsource/lato',
+    '@/assets/css/style.css',
+    '@/assets/css/dark.css',
     '@fontsource/jetbrains-mono',
+    '@fontsource/dm-sans',
     '@fontsource/material-icons',
     '@fontsource/material-icons-outlined',
-    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
   modules: [
     'nuxt-windicss',
     '@nuxt/content',
     '@nuxt/image-edge',
     '@vueuse/nuxt',
+    '@nuxtjs/color-mode',
+    'nuxt-icon',
   ],
+  colorMode: {
+    classSuffix: '',
+  },
+  components: {
+    global: true,
+    dirs: ['~/components']
+  },
   content: {
     // https://content.nuxtjs.org/api/configuration
     highlight: {

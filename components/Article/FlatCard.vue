@@ -3,8 +3,8 @@
     <ImageBg class="overflow-hidden rounded-1rem transition-all group-hover:(rounded-2rem)" :src="props.imgSrc"
       :hash="props.hash" />
     <div class="flex flex-col transition-all">
-      <p class="text-xl">{{ props.title }}</p>
-      <p class="text-gray-700 text-base font-thin">{{ props.description }}</p>
+      <h4>{{ props.title }}</h4>
+      <p class="my-0 text-gray-700 text-base">{{ props.description }}</p>
       <p class="code-family text-gray-400 text-sm">{{ props.date }}</p>
     </div>
   </div>
