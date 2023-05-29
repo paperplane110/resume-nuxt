@@ -12,6 +12,7 @@
     "@nuxt/content": "^2.6.0",
     "@nuxt/image-edge": "^1.0.0-28059208.2abef1b",
     "@nuxtjs/color-mode": "^3.2.0",
+    "@types/lodash": "^4.14.195",
     "@vueuse/core": "^10.1.2",
     "@vueuse/nuxt": "^10.1.2",
     "nuxt": "^3.5.1",
@@ -28,6 +29,7 @@
     "@fontsource/roboto-flex": "^5.0.1",
     "@headlessui/vue": "^1.7.13",
     "@popperjs/core": "^2.11.7",
-    "blurhash": "^2.0.5"
+    "blurhash": "^2.0.5",
+    "lodash": "^4.17.21"
   }
 }
