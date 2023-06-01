@@ -21,8 +21,8 @@
     <hr />
 
     <div class="flex justify-center py-4">
-      <button class="mx-2 py-2 px-4 text-white bg-green-500 rounded-md" @click="board.reset()">Restart</button>
-      <button class="mx-2 py-2 px-4 text-white bg-gray-500 rounded-md" @click="board.undo()">Undo</button>
+      <button class="mx-2 py-2 px-4 text-white bg-green-500 rounded-md" @click="reset()">Restart</button>
+      <button class="mx-2 py-2 px-4 text-white bg-gray-500 rounded-md" @click="undo()">Undo</button>
     </div>
 
     <!-- Render Map -->
@@ -64,11 +64,19 @@ const curRole = ref(player1.idx)
 function moveChess(rowIdx: number, colIdx: number) {
   if (board.put(rowIdx, colIdx, curRole.value)) {
     // switch player
-    if (curRole.value === player1.idx) curRole.value = player2.idx
-    else curRole.value = player1.idx
+    curRole.value = 3 - curRole.value
   }
 }
 
+const reset = () => {
+  board.reset()
+  curRole.value = 1
+}
+
+const undo = () => {
+  board.undo()
+  curRole.value = 3 - curRole.value
+}
 // const evalLines = computed(() => {
 //   console.log("compute")
 //   return getEvalArray(board.map, curRole.value)
