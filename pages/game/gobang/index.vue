@@ -10,6 +10,9 @@
       <li>Alpha-beta pruning</li>
       <li>Evaluation for partial postions</li>
     </ul>
+    <p>
+      {{ getEvalArray(board.map, curRole) }}
+    </p>
     <br />
     <hr />
 
@@ -48,17 +51,18 @@
 <script setup lang='ts'>
 import { Board } from './board'
 import { Role } from './role'
+import { getEvalArray } from './eval'
 
 const board = reactive(new Board())
 const player1 = reactive(new Role(1, "🎾"))
 const player2 = reactive(new Role(2, "⚫"))
-let curRole = player1.idx
+const curRole = ref(player1.idx)
 
 function moveChess(rowIdx: number, colIdx: number) {
-  if (board.put(rowIdx, colIdx, curRole)) {
+  if (board.put(rowIdx, colIdx, curRole.value)) {
     // switch player
-    if (curRole === player1.idx) curRole = player2.idx
-    else curRole = player1.idx
+    if (curRole.value === player1.idx) curRole.value = player2.idx
+    else curRole.value = player1.idx
   }
 }
 
