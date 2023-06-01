@@ -10,9 +10,13 @@
       <li>Alpha-beta pruning</li>
       <li>Evaluation for partial postions</li>
     </ul>
-    <p>
-      {{ getEvalArray(board.map, curRole) }}
-    </p>
+    <Text>Now player: {{ curRole }} : {{ curRole === 1 ? player1.symbol : player2.symbol }}</Text>
+    <Text>Now player score: {{ evalBoard(board.map, curRole) }}</Text>
+    <!-- <div v-for="(row, idx) in getEvalArray(board.map)" :key="idx">
+      {{ row }} : {{ evalLine(row, curRole) }}
+    </div> -->
+    <br />
+    <!-- <div v-for="(row, idx) in board.map" :key="idx">{{ row }}</div> -->
     <br />
     <hr />
 
@@ -36,7 +40,7 @@
           <GobangCellBottom v-else-if="rowIdx === board.width - 1" />
           <GobangCellInner v-else />
           <div class="absolute top-0 left-0 right-0 bottom-0 w-full h-full">
-            <p :class="`my-0 text-center align-middle leading-10 z-10`" style="font-size:24px;">
+            <p class="my-0 text-center align-middle leading-10 z-10" style="font-size:24px;">
               {{ chess === player1.idx ? player1.symbol : (chess === player2.idx ? player2.symbol : "") }}
             </p>
           </div>
@@ -45,13 +49,12 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script setup lang='ts'>
 import { Board } from './board'
 import { Role } from './role'
-import { getEvalArray } from './eval'
+import { getEvalArray, evalLine, evalBoard } from './eval'
 
 const board = reactive(new Board())
 const player1 = reactive(new Role(1, "🎾"))
@@ -66,5 +69,9 @@ function moveChess(rowIdx: number, colIdx: number) {
   }
 }
 
+// const evalLines = computed(() => {
+//   console.log("compute")
+//   return getEvalArray(board.map, curRole.value)
+// })
 
 </script>
