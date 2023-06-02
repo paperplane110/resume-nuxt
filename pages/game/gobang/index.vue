@@ -12,17 +12,19 @@
     </ul>
     <Text>Now player: {{ curRole }} : {{ curRole === 1 ? player1.symbol : player2.symbol }}</Text>
     <Text>Now player score: {{ evalBoard(board.map, curRole) }}</Text>
-    <!-- <div v-for="(row, idx) in getEvalArray(board.map)" :key="idx">
-      {{ row }} : {{ evalLine(row, curRole) }}
-    </div> -->
+    <Text>Ai Idx: {{ aiIdx }}</Text>
+    <Text>Strategy allMax: {{ allMax(board.map, curRole) }}</Text>
     <br />
-    <!-- <div v-for="(row, idx) in board.map" :key="idx">{{ row }}</div> -->
     <br />
     <hr />
 
     <div class="flex justify-center py-4">
       <button class="mx-2 py-2 px-4 text-white bg-green-500 rounded-md" @click="reset()">Restart</button>
       <button class="mx-2 py-2 px-4 text-white bg-gray-500 rounded-md" @click="undo()">Undo</button>
+      <label for="aiIdx" class="border flex items-center">
+        aiIdx:
+        <input class="w-10" id="aiIdx" type="number" max="2" min="1" v-model="aiIdx" />
+      </label>
     </div>
 
     <!-- Render Map -->
@@ -54,10 +56,12 @@
 <script setup lang='ts'>
 import { Board } from './board'
 import { Role } from './role'
-import { getEvalArray, evalLine, evalBoard } from './eval'
+import { evalBoard } from './eval'
+import { allMax } from './strategy'
 
 const board = reactive(new Board())
-const player1 = reactive(new Role(1, "🎾"))
+const aiIdx = ref(2)
+const player1 = reactive(new Role(1, "🟢"))
 const player2 = reactive(new Role(2, "⚫"))
 const curRole = ref(player1.idx)
 
@@ -79,6 +83,13 @@ const undo = () => {
   }
   board.undo()
 }
+
+watch(curRole, (curIdx, old, _) => {
+  if (curIdx === aiIdx.value) {
+    const nextStep = allMax(board.map, curIdx)
+    moveChess(nextStep.row, nextStep.col)
+  }
+})
 // const evalLines = computed(() => {
 //   console.log("compute")
 //   return getEvalArray(board.map, curRole.value)
