@@ -74,8 +74,10 @@ const reset = () => {
 }
 
 const undo = () => {
+  if (board.historyLog.length !== 0) {
+    curRole.value = 3 - curRole.value
+  }
   board.undo()
-  curRole.value = 3 - curRole.value
 }
 // const evalLines = computed(() => {
 //   console.log("compute")
