@@ -1,3 +1,6 @@
+/**
+ * Evaluation, including evalate all board or focus on one point
+ */
 import _ from "lodash"
 
 type ChessBoard = number[][]
@@ -38,14 +41,12 @@ const c5ToScore = new Map([
 const c6ToScore = new Map([
   ['011110', ALIVE_4],
   ['211110', DEAD_4], ['011112', DEAD_4],
-  ['011100', ALIVE_3], ['001110', ALIVE_3],
   ['011010', ALIVE_3], ['010110', ALIVE_3],
   ['211100', DEAD_3], ['001112', DEAD_3],
   ['211010', DEAD_3], ['010112', DEAD_3],
   ['210110', DEAD_3], ['011012', DEAD_3],
   ['001100', ALIVE_2],
-  ['001010', ALIVE_2], ['010100', ALIVE_2],
-  ['001001', ALIVE_2], ['100100', ALIVE_2],
+  ['010010', ALIVE_2],
   ['211000', DEAD_2], ['000112', DEAD_2],
   ['210100', DEAD_2], ['001012', DEAD_2],
   ['210010', DEAD_2], ['010012', DEAD_2],
@@ -53,6 +54,10 @@ const c6ToScore = new Map([
 ])
 
 const c7ToScore = new Map([
+  ['0010100', ALIVE_2],
+  ['0010102', ALIVE_2], ['2010100', ALIVE_2],
+  ['0011100', ALIVE_3],
+  ['2011100', ALIVE_3], ['0011102', ALIVE_3],
   ['2011102', DEAD_3],
   ['2011002', DEAD_2], ['2001102', DEAD_2],
   ['2010102', DEAD_2],
@@ -61,7 +66,7 @@ const c7ToScore = new Map([
   ['2001002', DEAD_1]
 ])
 
-
+/** Match chesses with pattern and return the score */
 const evalPattern = (chesses: string, patternToScore: Map<string, number>, curIdx: string, nextIdx: string) => {
   let _chesses = convertChesses(chesses, curIdx, nextIdx)
   const score = patternToScore.get(_chesses)
@@ -154,8 +159,11 @@ export const evalLine = (l: string, curIdx: number) => {
   return score
 }
 
-/*
+/**
  * Evaluate all board, for one role
+ * @param b the chessboard
+ * @param curIdx the current player's idx
+ * @returns the score for the current player
  */
 export function evalBoard(b: number[][], curIdx: number) {
   const nextIdx = 3 - curIdx
