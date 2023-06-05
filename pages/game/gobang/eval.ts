@@ -165,7 +165,7 @@ export const evalLine = (l: string, curIdx: number) => {
  * @param curIdx the current player's idx
  * @returns the score for the current player
  */
-export function evalBoard(b: number[][], curIdx: number) {
+export function evalBoard(b: ChessBoard, curIdx: number) {
   const nextIdx = 3 - curIdx
   const lines = getEvalArray(b)
   let curPlayerScore = 0
@@ -175,4 +175,20 @@ export function evalBoard(b: number[][], curIdx: number) {
     nextPlayerScore += evalLine(line, nextIdx)
   }
   return curPlayerScore - nextPlayerScore
+}
+
+
+export function isWin(b: ChessBoard, curIdx: number): boolean {
+  const nextIdxStr = (3 - curIdx).toString()
+  const curIdxStr = curIdx.toString()
+  const lines = getEvalArray(b)
+
+  for (const line of lines) {
+    let convertedLine = convertChesses(line, curIdxStr, nextIdxStr)
+    for (let i = 0; i < convertedLine.length - 5; i++) {
+      const chess5 = line.slice(i, i + 5)
+      if (chess5 === '11111') return true
+    }
+  }
+  return false
 }

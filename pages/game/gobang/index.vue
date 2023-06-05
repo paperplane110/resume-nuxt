@@ -13,18 +13,18 @@
     <Text>Now player: {{ curRole }} : {{ curRole === 1 ? player1.symbol : player2.symbol }}</Text>
     <Text>Now player score: {{ evalBoard(board.map, curRole) }}</Text>
     <Text>Ai Idx: {{ aiIdx }}</Text>
-    <Text>Strategy allMax: {{ allMax(board.map, curRole) }}</Text>
-    <br />
+    <!-- <Text>Strategy allMax: {{ maxMinSearch(0, board.map, curRole) }}</Text> -->
+    <Text>Winner is: {{ winner }} : {{ winner === 0 ? '?' : (winner === 1 ? player1.symbol : player2.symbol) }}</Text>
     <br />
     <hr />
 
     <div class="flex justify-center py-4">
       <button class="mx-2 py-2 px-4 text-white bg-green-500 rounded-md" @click="reset()">Restart</button>
       <button class="mx-2 py-2 px-4 text-white bg-gray-500 rounded-md" @click="undo()">Undo</button>
-      <label for="aiIdx" class="border flex items-center">
+      <!-- <label for="aiIdx" class="border flex items-center">
         aiIdx:
         <input class="w-10" id="aiIdx" type="number" max="2" min="1" v-model="aiIdx" />
-      </label>
+      </label> -->
     </div>
 
     <!-- Render Map -->
@@ -56,14 +56,15 @@
 <script setup lang='ts'>
 import { Board } from './board'
 import { Role } from './role'
-import { evalBoard } from './eval'
-import { allMax } from './strategy'
+import { evalBoard, isWin } from './eval'
+import { allMax, maxMinSearch, alphaBetaSearch } from './strategy'
 
 const board = reactive(new Board())
 const aiIdx = ref(2)
 const player1 = reactive(new Role(1, "🟢"))
 const player2 = reactive(new Role(2, "⚫"))
 const curRole = ref(player1.idx)
+const winner = ref(0)
 
 function moveChess(rowIdx: number, colIdx: number) {
   if (board.put(rowIdx, colIdx, curRole.value)) {
@@ -75,6 +76,7 @@ function moveChess(rowIdx: number, colIdx: number) {
 const reset = () => {
   board.reset()
   curRole.value = 1
+  winner.value = 0
 }
 
 const undo = () => {
@@ -82,17 +84,25 @@ const undo = () => {
     curRole.value = 3 - curRole.value
   }
   board.undo()
+  winner.value = 0
 }
 
+/**
+ * Game loop
+ */
 watch(curRole, (curIdx, old, _) => {
+  // check whether game is over
+  const prevIdx = 3 - curIdx
+  if (isWin(board.map, prevIdx)) {
+    winner.value = prevIdx
+    return
+  }
+
+  // whether it's ai turn
   if (curIdx === aiIdx.value) {
-    const nextStep = allMax(board.map, curIdx)
+    const nextStep = alphaBetaSearch(2, -100000, board.map, curIdx, true)
+    console.log(nextStep)
     moveChess(nextStep.row, nextStep.col)
   }
 })
-// const evalLines = computed(() => {
-//   console.log("compute")
-//   return getEvalArray(board.map, curRole.value)
-// })
-
 </script>
