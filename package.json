@@ -10,24 +10,26 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.6.0",
-    "@nuxt/image-edge": "^1.0.0-28059208.2abef1b",
+    "@nuxt/image-edge": "^1.0.0-28094330.102af81",
     "@nuxtjs/color-mode": "^3.2.0",
+    "@types/lodash": "^4.14.195",
     "@vueuse/core": "^10.1.2",
     "@vueuse/nuxt": "^10.1.2",
-    "nuxt": "^3.5.1",
+    "nuxt": "^3.5.2",
     "nuxt-icon": "^0.4.1",
     "nuxt-windicss": "^2.6.1",
     "sitemap": "^7.1.1"
   },
   "dependencies": {
     "@codesandbox/sandpack-client": "^2.6.7",
-    "@fontsource/dm-sans": "^5.0.1",
-    "@fontsource/jetbrains-mono": "^5.0.1",
-    "@fontsource/material-icons": "^5.0.1",
-    "@fontsource/material-icons-outlined": "^5.0.1",
-    "@fontsource/roboto-flex": "^5.0.1",
-    "@headlessui/vue": "^1.7.13",
-    "@popperjs/core": "^2.11.7",
-    "blurhash": "^2.0.5"
+    "@fontsource/dm-sans": "^5.0.2",
+    "@fontsource/jetbrains-mono": "^5.0.2",
+    "@fontsource/material-icons": "^5.0.2",
+    "@fontsource/material-icons-outlined": "^5.0.2",
+    "@fontsource/roboto-flex": "^5.0.2",
+    "@headlessui/vue": "^1.7.14",
+    "@popperjs/core": "^2.11.8",
+    "blurhash": "^2.0.5",
+    "lodash": "^4.17.21"
   }
 }
