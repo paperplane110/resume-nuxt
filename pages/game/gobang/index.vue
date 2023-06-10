@@ -100,9 +100,9 @@ watch(curRole, (curIdx, old, _) => {
 
   // whether it's ai turn
   if (curIdx === aiIdx.value) {
-    const nextStep = alphaBetaSearch(2, -100000, board.map, curIdx, true)
-    console.log(nextStep)
-    moveChess(nextStep.row, nextStep.col)
+    // const nextStep = alphaBetaSearch(2, -100000, board.map, curIdx, true)
+    // console.log(nextStep)
+    // moveChess(nextStep.row, nextStep.col)
   }
 })
 </script>

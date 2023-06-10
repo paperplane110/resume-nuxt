@@ -135,6 +135,11 @@ export const getEvalArray = (b: ChessBoard) => {
 }
 
 /**
+ * { line: {aiIdxStr: score, humanIdxStr: score}}
+ */
+const historyLine2Score = new Map()
+
+/**
  * Eval one line
  * @param l one line to eval
  * @param curIdx current turn's player idx
@@ -142,7 +147,17 @@ export const getEvalArray = (b: ChessBoard) => {
 export const evalLine = (l: string, curIdx: number) => {
   const nextIdxStr = (3 - curIdx).toString()
   const curIdxStr = curIdx.toString()
+  if (historyLine2Score.get(l)?.get(curIdxStr)) return historyLine2Score.get(l).get(curIdxStr)
+  if (!historyLine2Score.get(l)) historyLine2Score.set(l, new Map())
+
   let score = 0
+
+  const mid = l.slice(1, -1)
+  if (mid === '0'.repeat(mid.length)) {
+    historyLine2Score.get(l).set(curIdx, 0)
+    return 0
+  }
+
   for (let i = 0; i < l.length - 5; i++) {
     score += evalPattern(l.slice(i, i + 5), c5ToScore, curIdxStr, nextIdxStr)
   }
@@ -156,6 +171,7 @@ export const evalLine = (l: string, curIdx: number) => {
       score += evalPattern(l.slice(i, i + 7), c7ToScore, curIdxStr, nextIdxStr)
     ]
   }
+  historyLine2Score.get(l).set(curIdx, score)
   return score
 }
 
