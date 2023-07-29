@@ -20,6 +20,17 @@
 import { projectBriefProps } from '~~/utils/interfaces';
 const projectsInfo: projectBriefProps[] = [
   {
+    fromColor: 'from-pink-300',
+    toColor: 'to-purple-700',
+    backColor: 'bg-pink-200/70',
+    abbr: 'SD',
+    name: 'Stable Diffusion Art',
+    description: 'Created artworks with stable diffusion',
+    start: '2023.07',
+    end: 'now',
+    link: 'gallery/'
+  },
+  {
     fromColor: 'from-lime-400',
     toColor: 'to-green-500',
     backColor: 'bg-lime-300/70',

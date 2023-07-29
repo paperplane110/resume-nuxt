@@ -29,6 +29,14 @@
 const { width, height } = useWindowSize()
 const imgList = [
   {
+    src: "/img/gallery/sd_deer.png",
+    hash: "LWGvd$=q0OOZ~msl9bNHQ.RPS#t6",
+    alt: "A deer in the forest",
+    date: "2023.07",
+    place: "by Stable Diffusion (AI)",
+    aspectRatio: 50
+  },
+  {
     src: "/img/gallery/painting_lily.jpg",
     hash: "L8Ci,eMwE09E~WIU%MM{00NH%NNL",
     alt: "Carnation, Lily, Lily, Rose(康乃馨，百合，百合，玫瑰)",

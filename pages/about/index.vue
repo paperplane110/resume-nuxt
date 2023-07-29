@@ -75,7 +75,7 @@
         <Text h3>
           <Icon name="fa6-solid:briefcase" class="transform -translate-y-1" /> Work Experience
         </Text>
-        <Text h4 b>Software Engineer in Test (HIL simulation)</Text>
+        <Text h4 b>Software Engineer in Test (Test tool chain dev & HIL sim)</Text>
         <Text>
           2022.12-Current<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">
             <Icon name="ri:baidu-fill" class="text-2xl transform -translate-y-0.8" />
@@ -85,8 +85,8 @@
         <Text b em>Key Qualifications & Responsibilities</Text>
         <Text>
           <ul>
-            <li>Design and conduct ADAS's HIL simulation</li>
-            <li>Build the web platform for managing collections of test scenarios</li>
+            <li>Develope test tool chain for L2、L3 testing</li>
+            <li>Design and conduct 'Lite' HIL simulation</li>
           </ul>
         </Text>
         <br />
@@ -159,6 +159,36 @@
         </Text>
       </section>
     </div>
+
+    <section>
+      <Text h3>
+        <Icon name="fa6-solid:dice-d20" class="transform -translate-y-1" /> Side Projects
+      </Text>
+      <div class="grid grid-cols-2 gap-2 <md:grid-cols-1">
+        <Card class="sd-card col-span-2 min-h-200px" variant="flat">
+          <template #header>
+            <div class="px-1.5rem pt-5">
+              <Text class="text-white" sm>EXPERIMENT</Text>
+            </div>
+          </template>
+          <template #body>
+            <div class="px-1.5rem">
+              <Text h2 b class="text-white shadow-nmd">Stable Diffusion Art</Text>
+            </div>
+          </template>
+          <template #footer>
+            <div class="flex px-1.5rem py-2 justify-end">
+              <NuxtLink to="https://civitai.com/user/paperplane110">
+                <button class="px-2 py-1 bg-green-100 bg-opacity-30 rounded-16px">
+                  <Text sm b class="text-white">More Art</Text>
+                </button>
+              </NuxtLink>
+            </div>
+          </template>
+        </Card>
+      </div>
+    </section>
+
   </Container>
 </template>
 
@@ -206,3 +236,12 @@ const skillList = [
   },
 ]
 </script>
+
+<style scoped>
+.sd-card {
+  background-image: url(/img/gallery/sd_deer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+</style>
