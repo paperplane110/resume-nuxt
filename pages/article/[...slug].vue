@@ -4,7 +4,7 @@
       <br />
       <ArticleTitle :title="data?.title" :date="data?.date" :description="data?.description" :cover="data?.image.src"
         :tags="data?.tags" :cover-url="data?.image.url" :photographer="data?.image.photographer"
-        :enzh-link="linkedArticle?._path" :isZh="isZh()" />
+         :isZh="false" />
       <ContentDoc />
       <div class="h-80px" />
       <PrevNext />
@@ -62,11 +62,12 @@ const interLanguagePath = () => {
   return route.path.replace(slug, interLanguageSlug())
 }
 
-let linkedArticle: articleInfo | null = null
-try {
-  linkedArticle = await queryContent<articleInfo>(interLanguagePath()).findOne()
-} catch (e) {
-  linkedArticle = null
-}
+// BUG cannot work with nuxt 3.6.x
+// let linkedArticle: articleInfo | null = null
+// try {
+//   linkedArticle = await queryContent<articleInfo>(interLanguagePath()).findOne()
+// } catch (e) {
+//   linkedArticle = null
+// }
 
 </script>
