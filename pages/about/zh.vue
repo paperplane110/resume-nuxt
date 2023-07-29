@@ -81,11 +81,15 @@
         <Text b em>主要职能与职责</Text>
         <Text>
           <ul>
-            <li>负责HIL仿真测试和自动化</li>
-            <li>负责组内web平台化建设</li>
+            <li>负责 L2、L3 测试工具链开发</li>
+            <ul>
+              <li>Bag Mock 工具：修改路测数据包，离线仿真的基础工具</li>
+            </ul>
+            <li>负责轻量化 HIL 仿真测试和自动化</li>
           </ul>
         </Text>
         <br />
+
         <Text h4 b>算法测试开发工程师</Text>
         <Text>
           2021.4-2022.10<ColorLink type="warning" href="https://www.aibee.cn/">@Aibee 🐝</ColorLink>
@@ -165,6 +169,36 @@
         </Text>
         <Text>核心课程：汽车构造，汽车发动机原理，汽车理论，单片机原理</Text>
       </section>
+
+      <section>
+        <Text h3>
+          <Icon name="fa6-solid:dice-d20" class="transform -translate-y-1" /> 个人项目
+        </Text>
+        <div class="grid grid-cols-2 gap-2 <md:grid-cols-1">
+          <Card class="sd-card col-span-2 min-h-200px" variant="flat">
+            <template #header>
+              <div class="px-1.5rem pt-5">
+                <Text class="text-white" sm>EXPERIMENT</Text>
+              </div>
+            </template>
+            <template #body>
+              <div class="px-1.5rem">
+                <Text h2 b class="text-white shadow-nmd">Stable Diffusion Art</Text>
+              </div>
+            </template>
+            <template #footer>
+              <div class="flex px-1.5rem py-2 justify-end">
+                <NuxtLink to="https://civitai.com/user/paperplane110">
+                  <button class="px-2 py-1 bg-green-100 bg-opacity-30 rounded-16px">
+                    <Text sm b class="text-white">More Art</Text>
+                  </button>
+                </NuxtLink>
+              </div>
+            </template>
+          </Card>
+        </div>
+      </section>
+
     </div>
   </Container>
 </template>
@@ -213,3 +247,12 @@ const skillList = [
   },
 ]
 </script>
+
+<style scoped>
+.sd-card {
+  background-image: url(/img/gallery/sd_deer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+</style>
