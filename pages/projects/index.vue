@@ -28,7 +28,7 @@ const projectsInfo: projectBriefProps[] = [
     description: 'A tomato timer inspired by Simonheys\' wordclock',
     start: '2023.08',
     end: '2023.08',
-    link: 'project/timer'
+    link: 'projects/timer'
   },
   {
     fromColor: 'from-pink-300',
