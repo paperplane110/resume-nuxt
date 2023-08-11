@@ -20,6 +20,17 @@
 import { projectBriefProps } from '~~/utils/interfaces';
 const projectsInfo: projectBriefProps[] = [
   {
+    fromColor: 'from-orange-300',
+    toColor: 'to-red-700',
+    backColor: 'bg-orange-200/70',
+    abbr: 'TT',
+    name: 'Tomato Timer',
+    description: 'A tomato timer inspired by Simonheys\' wordclock',
+    start: '2023.08',
+    end: '2023.08',
+    link: 'projects/timer'
+  },
+  {
     fromColor: 'from-pink-300',
     toColor: 'to-purple-700',
     backColor: 'bg-pink-200/70',
