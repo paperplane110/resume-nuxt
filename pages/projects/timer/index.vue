@@ -1,6 +1,9 @@
 <template>
   <div class="w-full relative text-center">
     <Text hero>Timer</Text>
+    <Text em class="text-gray-200 dark:text-gray-600">Inspired by simonheys's 
+      <a href="https://github.com/simonheys/wordclock" target="_blank">#wordclock</a>
+    </Text>
 
     <div class="screen-left z-20 flex-center flex-col w-200px h-200px border rounded-1 shadow transition hover:(shadow-nmd)">
       <Text class="text-gray-400">{{ formatCountdown().min }}:{{ formatCountdown().sec }}</Text>
