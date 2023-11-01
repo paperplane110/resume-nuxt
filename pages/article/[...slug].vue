@@ -4,7 +4,7 @@
       <br />
       <ArticleTitle :title="data?.title" :date="data?.date" :description="data?.description" :cover="data?.image.src"
         :tags="data?.tags" :cover-url="data?.image.url" :photographer="data?.image.photographer"
-         :isZh="false" />
+         :isZh="isZh()" />
       <ContentDoc />
       <div class="h-80px" />
       <PrevNext />
@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { articleInfo } from '~~/utils/interfaces'
+import type { articleInfo } from '~~/utils/interfaces'
 
 const route = useRoute()
 const data = await queryContent<articleInfo>(route.path).findOne()

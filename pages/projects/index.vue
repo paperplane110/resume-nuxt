@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { projectBriefProps } from '~~/utils/interfaces';
+import type { projectBriefProps } from '~~/utils/interfaces';
 const projectsInfo: projectBriefProps[] = [
   {
     fromColor: 'from-orange-300',

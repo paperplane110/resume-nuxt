@@ -5,7 +5,8 @@
 </template>
 
 <script setup lang="ts">
-import { ClientOptions, loadSandpackClient, SandboxSetup, SandpackClient } from '@codesandbox/sandpack-client';
+import { loadSandpackClient } from '@codesandbox/sandpack-client';
+import type { ClientOptions, SandboxSetup, SandpackClient } from '@codesandbox/sandpack-client';
 import type { PropType } from 'vue'
 
 const props = defineProps({
