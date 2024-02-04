@@ -47,8 +47,8 @@
           <Icon name="fa6-solid:bolt" class="transform -translate-y-1" />
           技能速览
         </Text>
-        <div class="grid grid-cols-3 gap-2 <md:grid-cols-1">
-          <Card class="px-1.25rem pt-3 pb-6 dark:bg-opacity-10" variant="flat" is-hoverable
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <Card class="px-1.25rem pt-3 pb-6 dark:bg-opacity-10" variant="flat"
             v-for="(skillInfo, idx) in skillList" :key="idx">
             <template #header>
               <Text h4 b>{{ skillInfo.name }}</Text>
@@ -75,17 +75,15 @@
         <Text>
           2022.12-至今<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">
             <Icon name="ri:baidu-fill" class="text-2xl transform -translate-y-0.8" />
-            Baidu Apollo ASD
+            Baidu Apollo
           </ColorLink>
         </Text>
         <Text b em>主要职能与职责</Text>
         <Text>
           <ul>
-            <li>负责 L2、L3 测试工具链开发</li>
-            <ul>
-              <li>Bag Mock 工具：修改路测数据包，离线仿真的基础工具</li>
-            </ul>
-            <li>负责轻量化 HIL 仿真测试和自动化</li>
+            <li>负责 L2、L3 测试工具链的开发和维护，主要包括路测数据搜索、批量数据构造、数据可视化检查、多平台兼容等多项功能</li>
+            <li>负责 L3 项目 HIL 测试环境的开发</li>
+            <li>支撑多个部门的 CI、流水线、代码扫描等多项运维服务</li>
           </ul>
         </Text>
         <br />
@@ -222,7 +220,17 @@ const scutLink =
 
 const skillList = [
   {
-    name: '测试技术',
+    name: 'L3 测试开发',
+    contentList: [
+      '基本技能: Python, Cybertron, Protobuf',
+      'HIL: Vector, CAN, CANFD, FlexRay',
+      '自动化: iPipe, Shell, Docker',
+      '代码扫描: Parasoft',
+      '可视化: Matplotlib, Plotext',
+    ],
+  },
+  {
+    name: '图像算法测试开发',
     contentList: [
       '基本技能: Python, Shell, Docker',
       '自动化: Airflow, GitLab-CI',
@@ -233,7 +241,8 @@ const skillList = [
     name: '全栈开发',
     contentList: [
       '基本技能: HTML, CSS, JavaScript',
-      '后端: Express, MongoDB',
+      '数据库: MongoDB, Sqlite',
+      '后端: Express, Fastapi',
       '前端: Vue3, Nuxt',
     ],
   },

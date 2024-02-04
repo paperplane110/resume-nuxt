@@ -23,7 +23,7 @@
               href="https://www.apollo.auto/apollo-self-driving">
               <Icon name="ri:baidu-fill" class="text-2xl transform -translate-y-0.8" />
               Baidu Apollo
-            </ColorLink> group. Focus on advanced driving assistance system's <AbbrTip tip="Hardare in Loop">HIL</AbbrTip>
+            </ColorLink> group. Focus on L3 system's <AbbrTip tip="Hardare in Loop">HIL</AbbrTip>
             simulation.
             <br />
             Before that, I'm a SET (algorithm test) in
@@ -52,8 +52,8 @@
           <Icon name="fa6-solid:bolt" class="transform -translate-y-1" />
           Skills
         </Text>
-        <div class="grid grid-cols-3 gap-2 <md:grid-cols-1">
-          <Card class="px-1.25rem pt-3 pb-6 dark:bg-opacity-10" variant="flat" is-hoverable
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <Card class="px-1.25rem pt-3 pb-6 dark:bg-opacity-10" variant="flat"
             v-for="(skillInfo, idx) in skillList" :key="idx">
             <template #header>
               <Text h4 b>{{ skillInfo.name }}</Text>
@@ -75,20 +75,36 @@
         <Text h3>
           <Icon name="fa6-solid:briefcase" class="transform -translate-y-1" /> Work Experience
         </Text>
-        <Text h4 b>Software Engineer in Test (Test tool chain dev & HIL sim)</Text>
+        <Text h4 b>Software Engineer in Test (Test tool chain dev & HIL & CI)</Text>
         <Text>
           2022.12-Current<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">
             <Icon name="ri:baidu-fill" class="text-2xl transform -translate-y-0.8" />
-            Baidu Apollo ASD
+            Baidu Apollo
           </ColorLink>
         </Text>
         <Text b em>Key Qualifications & Responsibilities</Text>
         <Text>
           <ul>
-            <li>Develope test tool chain for L2、L3 testing</li>
-            <li>Design and conduct 'Lite' HIL simulation</li>
+            <li>
+              Developed and maintained L2 and L3 testing toolchains,
+              including functionalities such as road test data search,
+              batch data generation, data visualization inspection, and cross-platform compatibility.
+            </li>
+            <li>
+              Led the development of the HIL testing environment for L3 projects.</li>
+            <li>
+              Provided support for multiple departments in various operations,
+              including CI, pipeline management, and automotive-grade code scanning (Parasoft).
+            </li>
           </ul>
         </Text>
+        <!-- <Text b em>Key Achivements</Text>
+        <Text>
+          <ul>
+            <li>
+            </li>
+          </ul>
+        </Text> -->
         <br />
         <Text h4 b>Software Engineer in Algorithm Test</Text>
         <Text p>
@@ -211,7 +227,17 @@ const scutLink =
 
 const skillList = [
   {
-    name: 'Test skills',
+    name: 'L3 Test Development',
+    contentList: [
+      'Basic: Python, Cybertron, Protobuf',
+      'HIL: Vector, CAN, CANFD, FlexRay',
+      'Automation: iPipe, Shell, Docker',
+      'Code Scan: Parasoft',
+      'Visualization: Matplotlib, Plotext',
+    ],
+  },
+  {
+    name: 'Image Algorithm Test skills',
     contentList: [
       'Basic: Python, Shell, Docker',
       'Automation: Airflow, GitLab-CI',
@@ -222,7 +248,8 @@ const skillList = [
     name: 'Full-Stack',
     contentList: [
       'Basic: HTML, CSS, JavaScript',
-      'Back-End: Express, MongoDB',
+      'Databased: MongoDB, Sqlite',
+      'Back-End: Express, Fastapi',
       'Front-End: Vue3, Nuxt',
     ],
   },
