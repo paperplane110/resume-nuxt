@@ -122,7 +122,7 @@ export default {
 <template>
   <div>
     <div class="title">
-      <Text h1>Gobang Game</Text>
+      <Text h1>Gobang in Web</Text>
       <span v-if="isDraw">
         <h3>🤜🤛 Draw. Let's have another round!</h3>
       </span>

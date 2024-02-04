@@ -64,6 +64,17 @@ const projectsInfo: projectBriefProps[] = [
     link: "https://github.com/paperplane110/kilo-text-editor",
   },
   {
+    fromColor: 'from-yellow-300',
+    toColor: 'to-orange-500',
+    backColor: 'bg-yellow-200/70',
+    abbr: 'GW',
+    name: 'Gobang in Web',
+    description: 'A gobang game in web',
+    start: "2022.11",
+    end: "2022.11",
+    link: "/game/gobang"
+  },
+  {
     fromColor: 'from-green-300',
     toColor: 'to-cyan-500',
     backColor: 'bg-teal-200/70',
