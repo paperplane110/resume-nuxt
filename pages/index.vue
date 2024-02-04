@@ -60,13 +60,6 @@ const welcomList = [
 ]
 let i = 1
 
-setInterval(() => {
-  const target = welcomList[i]
-  randomToWord(welcom, target)
-  if (i === welcomList.length - 1) i = 0
-  else i++
-}, 5000)
-
 const isTengel = computed(() => {
   if (welcom.value.startsWith('5#t')) {
     return { fontFamily: 'Tengel' }
@@ -87,6 +80,15 @@ const heroLinks = [
     to: "/gallery",
   }
 ]
+
+onMounted(() => {
+  setInterval(() => {
+  const target = welcomList[i]
+  randomToWord(welcom, target)
+  if (i === welcomList.length - 1) i = 0
+  else i++
+}, 5000)
+})
 
 </script>
 
