@@ -24,7 +24,10 @@
             :key="idx"
             :to="info.link"
           >
-            <div class="grid items-center justify-center w-8 h-8 lg:(w-80px h-80px rounded-2xl text-4xl) border-1 border-black rounded-md dark:border-white select-none filter blur-sm transition-all hover:(filter-none)">
+            <div
+              class="grid items-center justify-center w-80px h-80px rounded-4xl text-3xl bg-gradient-to-tr text-white dark:border-white select-none filter blur-md transition-all hover:(blur-0 opacity-100)"
+              :class="`bg-gradient-to-br ${info.fromColor} ${info.toColor}`"
+            >
               {{ info.abbr }}
             </div>
           </NuxtLink>
@@ -40,16 +43,10 @@
         <NuxtLink to="/articles">
           <p class="text-7xl sm:text-8xl lg:text-9xl dark:text-white">Articles</p>
         </NuxtLink>
-        <div v-show="width > 1024" class="grid grid-cols-3">
-          <div class="grid w-80px h-80px items-center justify-center text-4xl font-bold select-none filter blur-sm transition-all hover:(filter-none)">
-            ……
-          </div>
-          <div class="grid w-70px h-80px items-center justify-center text-4xl font-bold select-none filter blur-sm transition-all hover:(filter-none)">
-            …
-          </div>
-          <div class="grid w-20px h-80px items-center justify-center text-4xl font-bold select-none filter blur-sm transition-all hover:(filter-none)">
-            ..
-          </div>
+        <div v-show="width > 1024" class="flex gap-4 items-center">
+          <div class="w-100px h-100px rounded-1 bg-gradient-to-tl from-orange-300 to-rose-400 filter blur-md transition-all hover:(blur-sm)"></div>
+          <div class="w-75px h-100px rounded-1 bg-gradient-to-l from-lime-300 to-green-400 filter blur-md transition-all hover:(blur-sm)"></div>
+          <div class="w-50px h-100px rounded-1 bg-gradient-to-bl from-pink-300 to-purple-400 filter blur-md transition-all hover:(blur-sm)"></div>
         </div>
         <div v-show="width<=1024" class="w-80px h-80px rounded-1 bg-gradient-to-br from-lime-300 to-sky-400 filter blur-md transition-all hover:(blur-sm)"></div>
       </div>
@@ -82,20 +79,48 @@ const roleList = [
 ]
 const projectList = [
   {
+    fromColor: 'from-orange-300',
+    toColor: 'to-red-700',
+    backColor: 'bg-orange-200/70',
     abbr: 'Ft',
+    name: 'Focus Timer',
+    description: 'A tomato timer inspired by Simonheys\' wordclock',
+    start: '2023.08',
+    end: '2023.11',
     link: 'https://focustimer.pages.dev/'
   },
   {
+    fromColor: 'from-pink-300',
+    toColor: 'to-purple-700',
+    backColor: 'bg-pink-200/70',
     abbr: 'Sd',
+    name: 'Stable Diffusion Art',
+    description: 'Created artworks with stable diffusion',
+    start: '2023.07',
+    end: 'now',
     link: 'gallery/'
   },
   {
+    fromColor: 'from-lime-400',
+    toColor: 'to-green-500',
+    backColor: 'bg-lime-300/70',
     abbr: 'Ba',
+    name: 'Badges',
+    description: '设定目标，收获徽章，让生活充满正反馈',
+    start: '2023.02',
+    end: 'now',
     link: 'https://badges-fe.pages.dev/'
   },
   {
+    fromColor: 'from-gray-400',
+    toColor: 'to-gray-800',
+    backColor: 'bg-gray-300/70',
     abbr: 'Ki',
-    link: 'https://github.com/paperplane110/kilo-text-editor'
+    name: 'Kilo',
+    description: '使用 C 语言编写的极简文本编辑器',
+    start: "2022.12",
+    end: "2023.01",
+    link: "https://github.com/paperplane110/kilo-text-editor",
   },
 ]
 
@@ -119,10 +144,6 @@ onMounted(() => {
 
 .about {
   box-shadow: 0 5 10 15 rgba(0, 0, 0, 0.445);
-}
-
-.drop-orange {
-  filter: drop-shadow(0 0 0.75rem rgb(254, 89, 111))
 }
 
 .hero {
