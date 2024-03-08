@@ -1,24 +1,21 @@
 <template>
-  <div class="relative h-18 w-full flex justify-between items-center">
-    <div id="links" class="flex gap-4">
-      <NuxtLink to="/">
-        <div class="group w-12 h-12 flex-center rounded-1rem transition-all transform active:(scale-95)">
-          <Icon name="fa6-solid:circle-notch" class="rotating text-2xl group-hover:(text-indigo-500)" />
-        </div>
-      </NuxtLink>
-      <NavBarButtonB icon="" to="/playground" tooltip="???" :activated="routeActivated" />
+  <div class="relative h-18 px-4 flex items-center sm:(justify-center mt-1rem rounded-3xl) ">
+    <div id="links" class="flex items-center gap-4">
+      <NavBarButtonB icon="fa6-solid:house" to="/" tooltip="Home" :activated="routeActivated" />
     </div>
     <div v-show="width > 640" id="links" class="flex gap-4 px-3">
+      <NuxtLink class="h-12 border-r dark:(border-gray-400)" to="/playground"></NuxtLink>
       <NavBarButtonB icon="fa6-solid:vial" to="/projects" tooltip="Projects" :activated="routeActivated" />
-      <NavBarButtonB icon="fa6-solid:feather-pointed" to="/article" tooltip="Articles" :activated="routeActivated" />
+      <NavBarButtonB icon="fa6-solid:feather-pointed" to="/articles" tooltip="Articles" :activated="routeActivated" />
       <NavBarButtonB icon="fa6-solid:camera-retro" to="/gallery" tooltip="Gallery" :activated="routeActivated" />
       <NavBarButtonB icon="fa6-solid:icons" to="/components" tooltip="Compoents" :activated="routeActivated" />
       <NavBarButtonB icon="fa6-solid:user-tie" to="/about" tooltip="About" :activated="routeActivated" />
+      <div class="h-12 border-r dark:(border-gray-400)"></div>
     </div>
-    <div v-show="width > 640" id="links" class="flex items-center gap-4 pl-3">
+    <div v-show="width > 640" id="links" class="flex items-center gap-4">
+      <NavBarColorSwitch />
       <NavBarButtonB icon="fa6-brands:git" to="https://github.com/paperplane110" tooltip="Github" target="_blank"
         :activated="routeActivated" />
-      <NavBarColorSwitch />
     </div>
     <div v-show="width <= 640" class="absolute right-2 z-50">
       <NavBarDropDown />

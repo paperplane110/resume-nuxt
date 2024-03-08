@@ -8,7 +8,7 @@
           :link="info.link" />
       </div> -->
 
-      <div class="grid grid-cols-1 gap-10 mt-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
         <ProjectBrief v-for="(info, idx) in projectsInfo" :key="idx" v-bind="info"
           class="group flex items-center gap-8" />
       </div>
@@ -23,12 +23,12 @@ const projectsInfo: projectBriefProps[] = [
     fromColor: 'from-orange-300',
     toColor: 'to-red-700',
     backColor: 'bg-orange-200/70',
-    abbr: 'TT',
-    name: 'Tomato Timer',
+    abbr: 'FT',
+    name: 'Focus Timer',
     description: 'A tomato timer inspired by Simonheys\' wordclock',
     start: '2023.08',
-    end: '2023.08',
-    link: 'projects/timer'
+    end: '2023.11',
+    link: 'https://focustimer.pages.dev/'
   },
   {
     fromColor: 'from-pink-300',
@@ -62,6 +62,17 @@ const projectsInfo: projectBriefProps[] = [
     start: "2022.12",
     end: "2023.01",
     link: "https://github.com/paperplane110/kilo-text-editor",
+  },
+  {
+    fromColor: 'from-yellow-300',
+    toColor: 'to-orange-500',
+    backColor: 'bg-yellow-200/70',
+    abbr: 'GW',
+    name: 'Gobang in Web',
+    description: 'A gobang game in web',
+    start: "2022.11",
+    end: "2022.11",
+    link: "/game/gobang"
   },
   {
     fromColor: 'from-green-300',

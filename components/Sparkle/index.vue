@@ -66,7 +66,9 @@ const setRandomInterval = (
 }
 
 // setInterval(regenerate, 400)
-setRandomInterval(regenerate, 400, 1000)
+onMounted(() => {
+  setRandomInterval(regenerate, 400, 1000)
+})
 </script>
 
 <style scoped>

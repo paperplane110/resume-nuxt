@@ -61,8 +61,8 @@ const linkList = [
     icon: "fa6-solid:vial"
   },
   {
-    to: "/article",
-    text: "Article",
+    to: "/articles",
+    text: "Articles",
     icon: "fa6-solid:feather-pointed"
   },
   {

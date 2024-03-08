@@ -13,9 +13,7 @@
 
     <Text h2 code>Threejs</Text>
     <div ref="webgl" />
-    <div>
 
-    </div>
   </div>
 </template>
 
