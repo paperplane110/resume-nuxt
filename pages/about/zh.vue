@@ -14,7 +14,7 @@
       </div>
       <section>
         <!-- <Text h3> <Icon icon="fa-solid fa-smile" /> 自我介绍 </Text> -->
-        <Description src="/img/london_selfi.jpeg" :imgSize="2" reverse>
+        <Description src="/img/shafberg_selfi_2.jpeg" :imgSize="2" reverse>
           <Text h3 b>你好啊，朋友！</Text>
           <Text>
             我是<b>袁天宇</b>，是一名测试开发工程师，是<ColorLink type="secondary" href="https://www.apollo.auto/apollo-self-driving">

@@ -37,5 +37,5 @@
 
 <script setup lang='ts'>
 import type { articleInfo } from "~~/utils/interfaces"
-const { data } = await useAsyncData('article', () => queryContent<articleInfo>('/article').where({ _partial: false }).sort({ date: -1 }).find())
+const { data } = await useAsyncData('articles', () => queryContent<articleInfo>('/articles').where({ _partial: false }).sort({ date: -1 }).find())
 </script>

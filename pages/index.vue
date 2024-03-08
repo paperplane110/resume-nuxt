@@ -1,91 +1,111 @@
 <template>
-  <!-- <div class="container mx-auto"> -->
-  <div class="pt-[18vh] flex flex-col">
-    <div v-for="(link, idx) in heroLinks" :key="idx"
-      class="group my-[-2rem] text-center transition transform duration-300 <md:(my-[-1.5rem])">
-      <p class="block super-hero">
-        <NuxtLink :to="link.to">
-          {{ link.text }}<span class="filter transition-colors group-hover:(text-indigo-400 drop-shadow-indigo)">.
-          </span>
+  <div class="h-full grid items-center">
+    <div class="grid items-center justify-center gap-8 sm:(gap-4) lg:(gap-0)">
+
+      <!-- Tianyu -->
+      <div class="flex items-center -m-3 transform sm:(translate-x-15)">
+        <div>
+          <NuxtLink to="/about">
+            <p class="text-7xl sm:text-8xl lg:text-9xl dark:text-white">Tianyu</p>
+          </NuxtLink>
+        </div>
+        <div>
+          <p class="text-xl pt-3 pl-2 sm:(text-2xl pt-3 pl-2) lg:(text-4xl pt-4 pl-4) leading-none text-gray-600">
+            is a {{ width > 1024 ? role : "foodie"  }},<br /> who can code
+          </p>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <div class="flex items-center gap-4 -m-3 transform lg:(-translate-x-10)">
+        <div v-show="width > 1024" class="grid gap-4 grid-cols-4">
+          <NuxtLink
+            v-for="(info, idx) in projectList"
+            :key="idx"
+            :to="info.link"
+          >
+            <div class="grid items-center justify-center w-8 h-8 lg:(w-80px h-80px rounded-2xl text-4xl) border-1 border-black rounded-md dark:border-white select-none filter blur-sm transition-all hover:(filter-none)">
+              {{ info.abbr }}
+            </div>
+          </NuxtLink>
+        </div>
+        <div v-show="width<=1024" class="w-60px h-60px sm:(w-80px h-80px) rounded-1 bg-gradient-to-tr from-orange-300 to-rose-400 filter blur-md transition-all hover:(blur-sm)"></div>
+        <NuxtLink to="/projects">
+          <p class="text-7xl sm:text-8xl lg:text-9xl dark:text-white">Projects</p>
         </NuxtLink>
-      </p>
-    </div>
+      </div>
 
-    <!-- <NuxtLink class="group" to="/article">
-      <p class="super-hero">Writing<span
-          class="filter transition-colors group-hover:(text-indigo-500 drop-shadow-indigo)">.
-        </span></p>
-    </NuxtLink>
-    <NuxtLink class="group" to="/gallery">
-      <p class="super-hero">Art<span class="filter transition-colors group-hover:(text-red-500 drop-shadow-red)">.
-        </span></p>
-    </NuxtLink> -->
-
-    <div class="z-10">
-      <!-- <span class="text-base font-bold text-gray-400" :style="isTengel">{{ welcom }}</span> -->
-      <p class="text-center text-gray-400">Welcome to <b class="text-gray-500">Tianyu's</b> blog</p>
-      <div class="flex gap-4 justify-center">
-        <div class="btn">
-          <NuxtLink to="about">About me</NuxtLink>
-        </div>
-        <div class="btn">
-          <NuxtLink to="components">Compts.</NuxtLink>
-        </div>
-        <NuxtLink to="game/gobang">
-          <div class="btn">
-            Game
+      <!-- Articles -->
+      <div class="flex items-center gap-4 -m-3 transform sm:(translate-x-5)">
+        <NuxtLink to="/articles">
+          <p class="text-7xl sm:text-8xl lg:text-9xl dark:text-white">Articles</p>
+        </NuxtLink>
+        <div v-show="width > 1024" class="grid grid-cols-3">
+          <div class="grid w-80px h-80px items-center justify-center text-4xl font-bold select-none filter blur-sm transition-all hover:(filter-none)">
+            ……
           </div>
+          <div class="grid w-70px h-80px items-center justify-center text-4xl font-bold select-none filter blur-sm transition-all hover:(filter-none)">
+            …
+          </div>
+          <div class="grid w-20px h-80px items-center justify-center text-4xl font-bold select-none filter blur-sm transition-all hover:(filter-none)">
+            ..
+          </div>
+        </div>
+        <div v-show="width<=1024" class="w-80px h-80px rounded-1 bg-gradient-to-br from-lime-300 to-sky-400 filter blur-md transition-all hover:(blur-sm)"></div>
+      </div>
+
+      <!-- Arts -->
+      <div class="flex items-center gap-4 -m-3 transform translate-x-10 sm:(translate-x-20)">
+        <div v-show="width > 1024" class="w-50px h-100px rounded-1 bg-gradient-to-tr from-orange-300 to-rose-400 filter blur-md transition-all hover:(blur-sm)"></div>
+        <div v-show="width > 1024" class="w-75px h-100px rounded-1 bg-gradient-to-br from-lime-300 to-sky-400 filter blur-md transition-all hover:(blur-sm)"></div>
+        <div class="w-100px h-100px rounded-1 bg-gradient-to-br from-sky-300 to-purple-400 filter blur-md transition-all hover:(blur-sm)"></div>
+        <NuxtLink to="/gallery">
+          <p class="text-7xl sm:text-8xl lg:text-9xl dark:text-white">Arts</p>
         </NuxtLink>
       </div>
     </div>
   </div>
-  <!-- </div> -->
 </template>
 
 <script setup lang="ts">
-import { computed } from '@vue/reactivity'
 import { ref } from 'vue'
 import { randomToWord } from '~~/utils/randomToWord'
 
-const welcom = ref('Hello!👋')
-const welcomList = [
-  'Hello!👋',
-  '你好啊，朋友!👏',
-  '5#t~C7T`V ✨',
-  'Aloha!🌴',
-  'こんにちは!🙌',
-  'Bonjour!🍾',
-  'Hallo!🍻',
-  'नमस्ते🙏',
+const { width, height } = useWindowSize()
+const role = ref('foodie 🍱')
+const roleList = [
+  'foodie 🍱',
+  'violinist 🎵',
+  'gamer 🎮',
+  'bookworm🐛',
+  'traveler 🧗'
 ]
+const projectList = [
+  {
+    abbr: 'Ft',
+    link: 'https://focustimer.pages.dev/'
+  },
+  {
+    abbr: 'Sd',
+    link: 'gallery/'
+  },
+  {
+    abbr: 'Ba',
+    link: 'https://badges-fe.pages.dev/'
+  },
+  {
+    abbr: 'Ki',
+    link: 'https://github.com/paperplane110/kilo-text-editor'
+  },
+]
+
 let i = 1
-
-const isTengel = computed(() => {
-  if (welcom.value.startsWith('5#t')) {
-    return { fontFamily: 'Tengel' }
-  } else return {}
-})
-
-const heroLinks = [
-  {
-    text: "Code",
-    to: "/projects",
-  },
-  {
-    text: "Writing",
-    to: "/article",
-  },
-  {
-    text: "Art",
-    to: "/gallery",
-  }
-]
 
 onMounted(() => {
   setInterval(() => {
-  const target = welcomList[i]
-  randomToWord(welcom, target)
-  if (i === welcomList.length - 1) i = 0
+  const target = roleList[i]
+  randomToWord(role, target)
+  if (i === roleList.length - 1) i = 0
   else i++
 }, 5000)
 })
@@ -104,4 +124,10 @@ onMounted(() => {
 .drop-orange {
   filter: drop-shadow(0 0 0.75rem rgb(254, 89, 111))
 }
+
+.hero {
+  font-size: 150px;
+  font-weight: bold;
+}
+
 </style>

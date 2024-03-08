@@ -1,12 +1,12 @@
 <template>
-  <div class="relative h-18 px-4 flex items-center sm:(justify-center mt-1rem rounded-3xl) shadow-nsm  bg-gradient-to-br from-light-100 to-gray-100/50 dark:(from-purple-400/20 to-blue-300/20)">
+  <div class="relative h-18 px-4 flex items-center sm:(justify-center mt-1rem rounded-3xl) ">
     <div id="links" class="flex items-center gap-4">
       <NavBarButtonB icon="fa6-solid:house" to="/" tooltip="Home" :activated="routeActivated" />
     </div>
     <div v-show="width > 640" id="links" class="flex gap-4 px-3">
       <NuxtLink class="h-12 border-r dark:(border-gray-400)" to="/playground"></NuxtLink>
       <NavBarButtonB icon="fa6-solid:vial" to="/projects" tooltip="Projects" :activated="routeActivated" />
-      <NavBarButtonB icon="fa6-solid:feather-pointed" to="/article" tooltip="Articles" :activated="routeActivated" />
+      <NavBarButtonB icon="fa6-solid:feather-pointed" to="/articles" tooltip="Articles" :activated="routeActivated" />
       <NavBarButtonB icon="fa6-solid:camera-retro" to="/gallery" tooltip="Gallery" :activated="routeActivated" />
       <NavBarButtonB icon="fa6-solid:icons" to="/components" tooltip="Compoents" :activated="routeActivated" />
       <NavBarButtonB icon="fa6-solid:user-tie" to="/about" tooltip="About" :activated="routeActivated" />

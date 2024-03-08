@@ -15,7 +15,7 @@
 
       <section>
         <!-- <Text h3> <Icon icon="fa-solid fa-smile" /> About me </Text> -->
-        <Description src="/img/london_selfi.jpeg" :imgSize="2" reverse>
+        <Description src="/img/shafberg_selfi_2.jpeg" :imgSize="2" reverse>
           <Text> Hi there!</Text>
           <Text h3 b>I'm Tianyu</Text>
           <Text>
