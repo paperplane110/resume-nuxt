@@ -23,6 +23,7 @@
             v-for="(info, idx) in projectList"
             :key="idx"
             :to="info.link"
+            target="_blank"
           >
             <div
               class="grid items-center justify-center w-80px h-80px rounded-4xl text-3xl bg-gradient-to-tr text-white dark:border-white select-none filter blur-md transition-all hover:(rounded-2xl) group-hover:(blur-0 opacity-100)"
