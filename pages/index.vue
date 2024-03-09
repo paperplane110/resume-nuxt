@@ -17,7 +17,7 @@
       </div>
 
       <!-- Projects -->
-      <div class="flex items-center gap-4 -m-3 transform lg:(-translate-x-10)">
+      <div class="group flex items-center gap-4 -m-3 transform lg:(-translate-x-10)">
         <div v-show="width > 1024" class="grid gap-4 grid-cols-4">
           <NuxtLink
             v-for="(info, idx) in projectList"
@@ -25,37 +25,37 @@
             :to="info.link"
           >
             <div
-              class="grid items-center justify-center w-80px h-80px rounded-4xl text-3xl bg-gradient-to-tr text-white dark:border-white select-none filter blur-md transition-all hover:(blur-0 opacity-100)"
+              class="grid items-center justify-center w-80px h-80px rounded-4xl text-3xl bg-gradient-to-tr text-white dark:border-white select-none filter blur-md transition-all hover:(rounded-2xl) group-hover:(blur-0 opacity-100)"
               :class="`bg-gradient-to-br ${info.fromColor} ${info.toColor}`"
             >
               {{ info.abbr }}
             </div>
           </NuxtLink>
         </div>
-        <div v-show="width<=1024" class="w-60px h-60px sm:(w-80px h-80px) rounded-1 bg-gradient-to-tr from-orange-300 to-rose-400 filter blur-md transition-all hover:(blur-sm)"></div>
+        <div v-show="width<=1024" class="w-60px h-60px sm:(w-80px h-80px) rounded-1 bg-gradient-to-tr from-orange-300 to-rose-400 filter blur-md "></div>
         <NuxtLink to="/projects">
           <p class="text-7xl sm:text-8xl lg:text-9xl dark:text-white">Projects</p>
         </NuxtLink>
       </div>
 
       <!-- Articles -->
-      <div class="flex items-center gap-4 -m-3 transform sm:(translate-x-5)">
+      <div class="group flex items-center gap-4 -m-3 transform sm:(translate-x-5)">
         <NuxtLink to="/articles">
           <p class="text-7xl sm:text-8xl lg:text-9xl dark:text-white">Articles</p>
         </NuxtLink>
         <div v-show="width > 1024" class="flex gap-4 items-center">
-          <div class="w-100px h-100px rounded-1 bg-gradient-to-tl from-orange-300 to-rose-400 filter blur-md transition-all hover:(blur-sm)"></div>
-          <div class="w-75px h-100px rounded-1 bg-gradient-to-l from-lime-300 to-green-400 filter blur-md transition-all hover:(blur-sm)"></div>
-          <div class="w-50px h-100px rounded-1 bg-gradient-to-bl from-pink-300 to-purple-400 filter blur-md transition-all hover:(blur-sm)"></div>
+          <div class="w-100px h-100px rounded-1 bg-gradient-to-tl from-lime-300 to-green-400 filter blur-md transition-all group-hover:(w-50px)"></div>
+          <div class="w-75px h-100px rounded-1 bg-gradient-to-br from-red-400 to-yellow-400 filter blur-md transition-all group-hover:(w-90px h-75px)"></div>
+          <div class="w-50px h-100px rounded-1 bg-gradient-to-bl from-pink-300 to-purple-400 filter blur-md transition-all group-hover:(w-100px h-55px)"></div>
         </div>
-        <div v-show="width<=1024" class="w-80px h-80px rounded-1 bg-gradient-to-br from-lime-300 to-sky-400 filter blur-md transition-all hover:(blur-sm)"></div>
+        <div v-show="width<=1024" class="w-80px h-80px rounded-1 bg-gradient-to-br from-lime-300 to-sky-400 filter blur-md "></div>
       </div>
 
       <!-- Arts -->
-      <div class="flex items-center gap-4 -m-3 transform translate-x-10 sm:(translate-x-20)">
-        <div v-show="width > 1024" class="w-50px h-100px rounded-1 bg-gradient-to-tr from-orange-300 to-rose-400 filter blur-md transition-all hover:(blur-sm)"></div>
-        <div v-show="width > 1024" class="w-75px h-100px rounded-1 bg-gradient-to-br from-lime-300 to-sky-400 filter blur-md transition-all hover:(blur-sm)"></div>
-        <div class="w-100px h-100px rounded-1 bg-gradient-to-br from-sky-300 to-purple-400 filter blur-md transition-all hover:(blur-sm)"></div>
+      <div class="group flex items-center gap-4 -m-3 transform translate-x-10 sm:(translate-x-20)">
+        <div v-show="width > 1024" class="w-50px h-100px rounded-1 bg-gradient-to-tr from-orange-300 to-rose-400 filter blur-md transition-all group-hover:(w-100px h-50px)"></div>
+        <div v-show="width > 1024" class="w-75px h-100px rounded-1 bg-gradient-to-br from-lime-300 to-sky-400 filter blur-md transition-all group-hover:(w-75px h-75px)"></div>
+        <div class="w-100px h-100px rounded-1 bg-gradient-to-br from-sky-300 to-purple-400 filter blur-md transition-all group-hover:(w-50px)"></div>
         <NuxtLink to="/gallery">
           <p class="text-7xl sm:text-8xl lg:text-9xl dark:text-white">Arts</p>
         </NuxtLink>
